@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParaglidingWeatherBot</name>
+    </assembly>
+    <members>
+        <member name="T:ParaglidingWeatherBot.Program">
+            <summary>
+            An entry point of the application.
+            </summary>
+        </member>
+    </members>
+</doc>
