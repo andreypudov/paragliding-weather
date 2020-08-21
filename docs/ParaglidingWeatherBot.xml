@@ -4,9 +4,48 @@
         <name>ParaglidingWeatherBot</name>
     </assembly>
     <members>
+        <member name="T:ParaglidingWeatherBot.Core.WeatherBot">
+            <summary>
+            Represents a console running instance for the application.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeatherBot.Core.WeatherBot.#ctor(ParaglidingWeatherBot.Helpers.WeaherBotConfiguration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeatherBot.Core.WeatherBot})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeatherBot.Core.WeatherBot"/> class.
+            </summary>
+            <param name="configuration">The instance of a applicaiton configuration.</param>
+            <param name="logger">The instance of an application logger.</param>
+        </member>
+        <member name="M:ParaglidingWeatherBot.Core.WeatherBot.Run">
+            <summary>
+            The main entry point for the bot.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeatherBot.Helpers.WeaherBotConfiguration">
+            <summary>
+            Represents application configuration.
+            </summary>
+        </member>
+        <member name="P:ParaglidingWeatherBot.Helpers.WeaherBotConfiguration.Token">
+            <summary>
+            Gets or sets authentication token.
+            </summary>
+        </member>
         <member name="T:ParaglidingWeatherBot.Program">
             <summary>
             An entry point of the application.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeatherBot.Program.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configures the application's services.
+            </summary>
+            <param name="services">Specifies the contract for a collection of service descriptors.</param>
+            <param name="configuration">The instance of a applicaiton configuration.</param>
+        </member>
+        <member name="M:ParaglidingWeatherBot.Program.Main">
+            <summary>
+            An entry point method of the application.
             </summary>
         </member>
     </members>

@@ -5,97 +5,76 @@
 namespace ParaglidingWeatherBot
 {
     using System;
-    using System.Text;
-    using HtmlAgilityPack;
-    using Telegram.Bot;
-    using Telegram.Bot.Args;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
+    using NLog;
+    using NLog.Extensions.Logging;
+    using ParaglidingWeatherBot.Core;
+    using ParaglidingWeatherBot.Helpers;
 
     /// <summary>
     /// An entry point of the application.
     /// </summary>
     internal class Program
     {
-        private static ITelegramBotClient botClient = new TelegramBotClient("1352055876:AAEOYes34UWQ8MP6qscrquaB_ojp1brfMes");
+        /// <summary>
+        /// Configures the application's services.
+        /// </summary>
+        /// <param name="services">Specifies the contract for a collection of service descriptors.</param>
+        /// <param name="configuration">The instance of a applicaiton configuration.</param>
+        private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        {
+            var botConfiguration = new WeaherBotConfiguration();
+            configuration.Bind(botConfiguration);
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1303:Do not pass literals as localized parameters", Justification = "To be added later.")]
+            services
+                .AddTransient<WeatherBot>()
+                .AddLogging(builder =>
+                {
+                    builder.ClearProviders();
+                    builder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+                    builder.AddNLog(configuration);
+                })
+                .AddSingleton(botConfiguration);
+        }
+
+        /// <summary>
+        /// An entry point method of the application.
+        /// </summary>
+        /* <param name="args">An array of command-line arguments.</param> */
         private static void Main(/* string[] args */)
         {
-            botClient.OnMessage += OnMessageHandler;
-            botClient.StartReceiving();
+            var logger = LogManager.GetCurrentClassLogger();
 
-            Console.WriteLine("Press any key to exit");
-            Console.ReadKey();
-
-            botClient.StopReceiving();
-        }
-
-        private static async void OnMessageHandler(object? sender, MessageEventArgs e)
-        {
-            if (string.IsNullOrEmpty(e.Message.Text))
+            try
             {
-                return;
-            }
+                var configuration = new ConfigurationBuilder()
+                    .SetBasePath(System.IO.Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                    .Build();
 
-            Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}.");
+                var serviceCollection = new ServiceCollection();
+                ConfigureServices(serviceCollection, configuration);
 
-            switch (e.Message.Text.Trim())
-            {
-                case "/forecast":
-                    OnForecastAsync(e);
-                    break;
-                default:
-                    await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: $"Invalid command: {e.Message.Text}").ConfigureAwait(false);
-                    break;
-            }
-        }
-
-        private static async void OnForecastAsync(MessageEventArgs e)
-        {
-            var web = new HtmlWeb();
-            var document = web.Load(new Uri("http://meteo.paraplan.net/forecast/summary.html?place=3148"));
-
-            var hours = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, 'hour')])");
-            var temperatures = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '213')])");
-            var wind_dirs = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, 'wind_dir ')])");
-            var winds = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, 'wind ')])");
-            var wind_gusts = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '332 ')])");
-            var precipitation = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '222 ')])");
-            var humidity = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '215 ')])");
-
-            var buidler = new StringBuilder();
-            int hour = 0;
-            int today = DateTime.Today.Day;
-
-            buidler.Append("<pre>").Append(today).Append('\n');
-            for (var index = 0; index < hours.Count; ++index)
-            {
-                if (hour == 8)
+                var serviceProvider = serviceCollection.BuildServiceProvider();
+                using (serviceProvider)
                 {
-                    hour = 0;
-                    today = today + 1;
-                    buidler.Append('\n').Append(today).Append('\n');
+                    var paraglidingWeatherBot = serviceProvider.GetService<WeatherBot>();
+                    paraglidingWeatherBot.Run();
                 }
-
-                buidler
-                    .Append($"{hours[index].InnerText.Trim(),-4}, ")
-                    .Append($"{temperatures[index].InnerText.Trim(),4}, ")
-                    .Append($"{wind_dirs[index].InnerText.Trim().ToUpperInvariant(),4}, ")
-                    .Append($"{winds[index].InnerText.Trim(),3}, ")
-                    .Append($"{wind_gusts[index].InnerText.Trim(),3}, ")
-                    .Append($"{humidity[index].InnerText.Trim(),3}, ")
-                    .Append($"{precipitation[index].InnerText.Trim(),4}\n");
-
-                hour = hour + 1;
             }
-
-            buidler.Append("</pre>");
-
-            await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: buidler.ToString(),
-                        parseMode: Telegram.Bot.Types.Enums.ParseMode.Html).ConfigureAwait(false);
+            catch (Exception ex)
+            {
+                // NLog: catch any exception and log it.
+                logger.Error(ex, "Stopped program because of exception");
+                throw;
+            }
+            finally
+            {
+                // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
+                LogManager.Shutdown();
+            }
         }
     }
 }
