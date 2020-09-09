@@ -11,6 +11,7 @@ namespace ParaglidingWeatherBot.Core
     using ParaglidingWeatherBot.Helpers;
     using Telegram.Bot;
     using Telegram.Bot.Args;
+    using Telegram.Bot.Types.ReplyMarkups;
 
     /// <summary>
     /// Represents a console running instance for the application.
@@ -44,6 +45,7 @@ namespace ParaglidingWeatherBot.Core
         public void Run()
         {
             this.client.OnMessage += this.OnMessageHandler;
+            this.client.OnCallbackQuery += this.OnCallbackQueryHandler;
             this.client.StartReceiving();
 
             Console.WriteLine("Press any key to exit...");
@@ -59,12 +61,17 @@ namespace ParaglidingWeatherBot.Core
                 return;
             }
 
-            this.logger.LogInformation($"Received a text message in chat {e.Message.Chat.Id} {e.Message.Chat.FirstName} {e.Message.Chat.LastName}.");
+            this.logger.LogInformation(
+                $"Received a text message in chat "
+                + $"{e.Message.Chat.Id} "
+                + $"{e.Message.Chat.Username} "
+                + $"{e.Message.Chat.FirstName} "
+                + $"{e.Message.Chat.LastName}");
 
             switch (e.Message.Text.Trim())
             {
                 case "/forecast":
-                    this.OnForecastAsync(e);
+                    this.OnForecastAsync(e.Message.Chat.Id);
                     break;
                 default:
                     await this.client.SendTextMessageAsync(
@@ -75,7 +82,50 @@ namespace ParaglidingWeatherBot.Core
             }
         }
 
-        private async void OnForecastAsync(MessageEventArgs e)
+        private async void OnCallbackQueryHandler(object? sender, CallbackQueryEventArgs e)
+        {
+            if (string.IsNullOrEmpty(e.CallbackQuery.Data))
+            {
+                return;
+            }
+
+            this.logger.LogInformation(
+                $"Received a text message in chat "
+                + $"{e.CallbackQuery.Message.Chat.Id} "
+                + $"{e.CallbackQuery.Message.Chat.Username} "
+                + $"{e.CallbackQuery.Message.Chat.FirstName} "
+                + $"{e.CallbackQuery.Message.Chat.LastName} "
+                + $"{e.CallbackQuery.Message.MessageId}");
+
+            /* await this.client.AnswerCallbackQueryAsync(
+                e.CallbackQuery.Id,
+                "Received a text message " + e.CallbackQuery.Data).ConfigureAwait(false); */
+            try
+            {
+                await this.client.EditMessageReplyMarkupAsync(
+                    e.CallbackQuery.Message.Chat.Id,
+                    e.CallbackQuery.Message.MessageId).ConfigureAwait(false);
+            }
+            catch (AggregateException ex)
+            {
+                this.logger.LogError(ex.ToString());
+            }
+
+            switch (e.CallbackQuery.Data.Trim())
+            {
+                case "forecast":
+                    this.OnForecastAsync(e.CallbackQuery.Message.Chat.Id);
+                    break;
+                default:
+                    await this.client.SendTextMessageAsync(
+                        chatId: e.CallbackQuery.Message.Chat,
+                        text: $"Invalid command: {e.CallbackQuery.Data}").ConfigureAwait(false);
+
+                    break;
+            }
+        }
+
+        private async void OnForecastAsync(long chatId)
         {
             var web = new HtmlWeb();
             var document = web.Load(new Uri("http://meteo.paraplan.net/forecast/summary.html?place=3148"));
@@ -88,13 +138,16 @@ namespace ParaglidingWeatherBot.Core
             var precipitation = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '222 ')])");
             var humidity = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '215 ')])");
 
+            var culture = new System.Globalization.CultureInfo("ru-RU");
+
             var buidler = new StringBuilder();
             int hour = 0;
             int day = 0;
 
             buidler
                 .Append("*Время, Температура, Ветер, Поровы, Влажность, Осадки*\n\n")
-                .Append($"*{DateTime.Today.Day}*\n")
+                .Append($"*{DateTime.Today.Day} - ")
+                .Append($"{culture.DateTimeFormat.GetDayName(DateTime.Today.DayOfWeek)}*\n")
                 .Append("```\n");
             for (var index = 0; index < hours.Count; ++index)
             {
@@ -102,7 +155,9 @@ namespace ParaglidingWeatherBot.Core
                 {
                     hour = 0;
                     day = day + 1;
-                    buidler.Append("```\n").Append($"\n*{DateTime.Today.AddDays(day).Day}*\n").Append("```\n");
+                    buidler
+                        .Append($"```\n\n*{DateTime.Today.AddDays(day).Day} - ")
+                        .Append($"{culture.DateTimeFormat.GetDayName(DateTime.Today.AddDays(day).DayOfWeek)}*\n```\n");
                 }
 
                 buidler
@@ -110,7 +165,7 @@ namespace ParaglidingWeatherBot.Core
                     .Append($"{temperatures[index].InnerText.Trim(),3}, [")
                     .Append($"{wind_dirs[index].InnerText.Trim().ToUpperInvariant(),3}, ")
                     .Append($"{winds[index].InnerText.Trim()}, ")
-                    .Append($"{wind_gusts[index].InnerText.Trim()}], ")
+                    .Append($"{wind_gusts[index].InnerText.Trim(),2}], ")
                     .Append($"{humidity[index].InnerText.Trim()}, ")
                     .Append($"{precipitation[index].InnerText.Trim()}\n");
 
@@ -119,17 +174,26 @@ namespace ParaglidingWeatherBot.Core
 
             buidler.Append("```");
 
+            var keyboard = new InlineKeyboardMarkup(new[]
+            {
+                new[]
+                {
+                    new InlineKeyboardButton() { Text = "Повторить запрос", CallbackData = "forecast" },
+                },
+            });
+
             await this.client.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: buidler
-                            .ToString()
-                            .Replace("<", "\\<", StringComparison.InvariantCulture)
-                            .Replace(">", "\\>", StringComparison.InvariantCulture)
-                            .Replace("+", "\\+", StringComparison.InvariantCulture)
-                            .Replace("-", "\\-", StringComparison.InvariantCulture)
-                            .Replace(".", "\\.", StringComparison.InvariantCulture)
-                            .Replace("|", "\\|", StringComparison.InvariantCulture),
-                        parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
+                chatId: chatId,
+                text: buidler
+                    .ToString()
+                    .Replace("<", "\\<", StringComparison.InvariantCulture)
+                    .Replace(">", "\\>", StringComparison.InvariantCulture)
+                    .Replace("+", "\\+", StringComparison.InvariantCulture)
+                    .Replace("-", "\\-", StringComparison.InvariantCulture)
+                    .Replace(".", "\\.", StringComparison.InvariantCulture)
+                    .Replace("|", "\\|", StringComparison.InvariantCulture),
+                replyMarkup: keyboard,
+                parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
         }
     }
 }
