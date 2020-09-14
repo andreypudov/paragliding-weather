@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="North" xml:space="preserve">
+        <value>С</value>
+    </data>
+    <data name="NorthByEast" xml:space="preserve">
+        <value>СтВ</value>
+    </data>
+    <data name="NorthNortheast" xml:space="preserve">
+        <value>ССВ</value>
+    </data>
+    <data name="NortheastByNorth" xml:space="preserve">
+        <value>СВтС</value>
+    </data>
+    <data name="Northeast" xml:space="preserve">
+        <value>СВ</value>
+    </data>
+    <data name="NortheastByEast" xml:space="preserve">
+        <value>СВтВ</value>
+    </data>
+    <data name="EastNortheast" xml:space="preserve">
+        <value>ВСВ</value>
+    </data>
+    <data name="EastByNorth" xml:space="preserve">
+        <value>ВтС</value>
+    </data>
+    <data name="East" xml:space="preserve">
+        <value>В</value>
+    </data>
+    <data name="EastBySouth" xml:space="preserve">
+        <value>ВтЮ</value>
+    </data>
+    <data name="EastSoutheast" xml:space="preserve">
+        <value>ВЮВ</value>
+    </data>
+    <data name="SoutheastByEast" xml:space="preserve">
+        <value>ЮВтВ</value>
+    </data>
+    <data name="Southeast" xml:space="preserve">
+        <value>ЮВ</value>
+    </data>
+    <data name="SoutheastBySouth" xml:space="preserve">
+        <value>ЮВтЮ</value>
+    </data>
+    <data name="SouthSoutheast" xml:space="preserve">
+        <value>ЮЮВ</value>
+    </data>
+    <data name="SouthByEast" xml:space="preserve">
+        <value>ЮтВ</value>
+    </data>
+    <data name="South" xml:space="preserve">
+        <value>Ю</value>
+    </data>
+    <data name="SouthByWest" xml:space="preserve">
+        <value>ЮтЗ</value>
+    </data>
+    <data name="SouthSouthwest" xml:space="preserve">
+        <value>ЮЮЗ</value>
+    </data>
+    <data name="SouthwestBySouth" xml:space="preserve">
+        <value>ЮЗтЮ</value>
+    </data>
+    <data name="Southwest" xml:space="preserve">
+        <value>ЮЗ</value>
+    </data>
+    <data name="SouthwestByWest" xml:space="preserve">
+        <value>ЮЗтЗ</value>
+    </data>
+    <data name="WestSouthwest" xml:space="preserve">
+        <value>ЗЮЗ</value>
+    </data>
+    <data name="WestBySouth" xml:space="preserve">
+        <value>ЗтЮ</value>
+    </data>
+    <data name="West" xml:space="preserve">
+        <value>З</value>
+    </data>
+    <data name="WestByNorth" xml:space="preserve">
+        <value>ЗтС</value>
+    </data>
+    <data name="WestNorthwest" xml:space="preserve">
+        <value>ЗСЗ</value>
+    </data>
+    <data name="NorthwestByWest" xml:space="preserve">
+        <value>СЗтЗ</value>
+    </data>
+    <data name="Northwest" xml:space="preserve">
+        <value>СЗ</value>
+    </data>
+    <data name="NorthwestByNorth" xml:space="preserve">
+        <value>СЗтС</value>
+    </data>
+    <data name="NorthNorthwest" xml:space="preserve">
+        <value>ССЗ</value>
+    </data>
+    <data name="NorthByWest" xml:space="preserve">
+        <value>СтЗ</value>
+    </data>
+</root>

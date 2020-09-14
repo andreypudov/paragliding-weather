@@ -64,10 +64,10 @@ namespace ParaglidingWeatherBot
                     paraglidingWeatherBot.Run();
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
                 // NLog: catch any exception and log it.
-                logger.Error(ex, "Stopped program because of exception");
+                logger.Error(e, "Stopped program because of exception");
                 throw;
             }
             finally

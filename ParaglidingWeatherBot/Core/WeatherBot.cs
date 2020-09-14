@@ -6,6 +6,7 @@ namespace ParaglidingWeatherBot.Core
 {
     using System;
     using System.Text;
+    using System.Threading.Tasks;
     using HtmlAgilityPack;
     using Microsoft.Extensions.Logging;
     using ParaglidingWeatherBot.Helpers;
@@ -71,12 +72,14 @@ namespace ParaglidingWeatherBot.Core
             switch (e.Message.Text.Trim())
             {
                 case "/forecast":
-                    this.OnForecastAsync(e.Message.Chat.Id);
+                    await this.OnForecastAsync(e.Message.Chat.Id)
+                        .ConfigureAwait(false);
                     break;
                 default:
                     await this.client.SendTextMessageAsync(
                         chatId: e.Message.Chat,
-                        text: $"Invalid command: {e.Message.Text}").ConfigureAwait(false);
+                        text: $"Invalid command: {e.Message.Text}")
+                        .ConfigureAwait(false);
 
                     break;
             }
@@ -114,18 +117,20 @@ namespace ParaglidingWeatherBot.Core
             switch (e.CallbackQuery.Data.Trim())
             {
                 case "forecast":
-                    this.OnForecastAsync(e.CallbackQuery.Message.Chat.Id);
+                    await this.OnForecastAsync(e.CallbackQuery.Message.Chat.Id)
+                        .ConfigureAwait(false);
                     break;
                 default:
                     await this.client.SendTextMessageAsync(
                         chatId: e.CallbackQuery.Message.Chat,
-                        text: $"Invalid command: {e.CallbackQuery.Data}").ConfigureAwait(false);
+                        text: $"Invalid command: {e.CallbackQuery.Data}")
+                        .ConfigureAwait(false);
 
                     break;
             }
         }
 
-        private async void OnForecastAsync(long chatId)
+        private async Task OnForecastAsync(long chatId)
         {
             var web = new HtmlWeb();
             var document = web.Load(new Uri("http://meteo.paraplan.net/forecast/summary.html?place=3148"));

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="North" xml:space="preserve">
+        <value>N</value>
+    </data>
+    <data name="NorthByEast" xml:space="preserve">
+        <value>NbE</value>
+    </data>
+    <data name="NorthNortheast" xml:space="preserve">
+        <value>NNE</value>
+    </data>
+    <data name="NortheastByNorth" xml:space="preserve">
+        <value>NEbN</value>
+    </data>
+    <data name="Northeast" xml:space="preserve">
+        <value>NE</value>
+    </data>
+    <data name="NortheastByEast" xml:space="preserve">
+        <value>NEbE</value>
+    </data>
+    <data name="EastNortheast" xml:space="preserve">
+        <value>ENE</value>
+    </data>
+    <data name="EastByNorth" xml:space="preserve">
+        <value>EbN</value>
+    </data>
+    <data name="East" xml:space="preserve">
+        <value>E</value>
+    </data>
+    <data name="EastBySouth" xml:space="preserve">
+        <value>EbS</value>
+    </data>
+    <data name="EastSoutheast" xml:space="preserve">
+        <value>ESE</value>
+    </data>
+    <data name="SoutheastByEast" xml:space="preserve">
+        <value>SEbE</value>
+    </data>
+    <data name="Southeast" xml:space="preserve">
+        <value>SE</value>
+    </data>
+    <data name="SoutheastBySouth" xml:space="preserve">
+        <value>SEbS</value>
+    </data>
+    <data name="SouthSoutheast" xml:space="preserve">
+        <value>SSE</value>
+    </data>
+    <data name="SouthByEast" xml:space="preserve">
+        <value>SbE</value>
+    </data>
+    <data name="South" xml:space="preserve">
+        <value>S</value>
+    </data>
+    <data name="SouthByWest" xml:space="preserve">
+        <value>SbW</value>
+    </data>
+    <data name="SouthSouthwest" xml:space="preserve">
+        <value>SSW</value>
+    </data>
+    <data name="SouthwestBySouth" xml:space="preserve">
+        <value>SWbS</value>
+    </data>
+    <data name="Southwest" xml:space="preserve">
+        <value>SW</value>
+    </data>
+    <data name="SouthwestByWest" xml:space="preserve">
+        <value>SWbW</value>
+    </data>
+    <data name="WestSouthwest" xml:space="preserve">
+        <value>WSW</value>
+    </data>
+    <data name="WestBySouth" xml:space="preserve">
+        <value>WbS</value>
+    </data>
+    <data name="West" xml:space="preserve">
+        <value>W</value>
+    </data>
+    <data name="WestByNorth" xml:space="preserve">
+        <value>WbN</value>
+    </data>
+    <data name="WestNorthwest" xml:space="preserve">
+        <value>WNW</value>
+    </data>
+    <data name="NorthwestByWest" xml:space="preserve">
+        <value>NWbW</value>
+    </data>
+    <data name="Northwest" xml:space="preserve">
+        <value>NW</value>
+    </data>
+    <data name="NorthwestByNorth" xml:space="preserve">
+        <value>NWbN</value>
+    </data>
+    <data name="NorthNorthwest" xml:space="preserve">
+        <value>NNW</value>
+    </data>
+    <data name="NorthByWest" xml:space="preserve">
+        <value>NbW</value>
+    </data>
+</root>
