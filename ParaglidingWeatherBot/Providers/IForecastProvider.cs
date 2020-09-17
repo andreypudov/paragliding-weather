@@ -4,6 +4,7 @@
 
 namespace ParaglidingWeatherBot.Providers
 {
+    using System.Threading.Tasks;
     using ParaglidingWeatherBot.Core;
 
     /// <summary>
@@ -16,5 +17,11 @@ namespace ParaglidingWeatherBot.Providers
         /// </summary>
         /// <returns>Returns the weather forecast.</returns>
         IForecast GetForecast();
+
+        /// <summary>
+        /// Returns the weather forecast for the week or fewer number available days in an asynchronous operation.
+        /// </summary>
+        /// <returns>Returns the task object representing the asynchronous operation.</returns>
+        Task<IForecast> GetForecastAsync();
     }
 }

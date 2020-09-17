@@ -2,7 +2,7 @@
 // Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeatherBotTest
+namespace ParaglidingWeatherBotTest.Core
 {
     using System.Globalization;
     using NUnit.Framework;
@@ -16,7 +16,7 @@ namespace ParaglidingWeatherBotTest
         /// <summary>
         /// Represents a non-localized test case for <see cref="DirectionExtension.GetAbbreviation"/> method.
         /// </summary>
-        /// <param name="abbreviation">The value of abbreviation.</param>
+        /// <param name="abbreviation">The expected value of abbreviation.</param>
         /// <param name="direction">The value of direction.</param>
         [TestCase("N", ParaglidingWeatherBot.Core.Direction.North)]
         [TestCase("NbE", ParaglidingWeatherBot.Core.Direction.NorthByEast)]
@@ -58,7 +58,7 @@ namespace ParaglidingWeatherBotTest
         /// <summary>
         /// Represents a localized test case for <see cref="DirectionExtension.GetAbbreviation"/> method.
         /// </summary>
-        /// <param name="abbreviation">The value of abbreviation.</param>
+        /// <param name="abbreviation">The expected value of abbreviation.</param>
         /// <param name="direction">The value of direction.</param>
         [TestCase("С", ParaglidingWeatherBot.Core.Direction.North)]
         [TestCase("СтВ", ParaglidingWeatherBot.Core.Direction.NorthByEast)]

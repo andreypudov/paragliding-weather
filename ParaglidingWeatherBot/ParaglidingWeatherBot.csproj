@@ -50,11 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Exceptions.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Directions2.resx">
+    <EmbeddedResource Update="Resources\Directions.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Directions.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -62,23 +58,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Directions.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Resources\Exceptions.Designer.cs">
-      <DependentUpon>Exceptions.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Directions.ru.Designer.cs">
-      <DependentUpon>Directions.ru.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Directions2.Designer.cs">
-      <DependentUpon>Directions2.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Directions.Designer.cs">
-      <DependentUpon>Directions.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Directions.ru.Designer.cs">
-      <DependentUpon>Directions.ru.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\appsettings.json">
@@ -89,8 +68,5 @@
       <Link>nlog.config</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Resources\Directions.ru" />
   </ItemGroup>
 </Project>

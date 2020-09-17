@@ -4,6 +4,7 @@
 
 namespace ParaglidingWeatherBot.Providers.SkyMeteo
 {
+    using System.Threading.Tasks;
     using ParaglidingWeatherBot.Core;
 
     /// <summary>
@@ -13,6 +14,12 @@ namespace ParaglidingWeatherBot.Providers.SkyMeteo
     {
         /// <inheritdoc/>
         public IForecast GetForecast()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <inheritdoc/>
+        public Task<IForecast> GetForecastAsync()
         {
             throw new System.NotImplementedException();
         }

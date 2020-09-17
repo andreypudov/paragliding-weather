@@ -4,8 +4,8 @@
 
 namespace ParaglidingWeatherBot.Core
 {
+    using System;
     using System.Globalization;
-    using System.Resources;
 
     /// <summary>
     /// Extends <see cref="Direction"/> enumration by adding factory methods.
@@ -23,17 +23,6 @@ namespace ParaglidingWeatherBot.Core
             var abbreviation = Resources.Directions.ResourceManager.GetString(direction.ToString(), culture);
 
             return abbreviation ?? string.Empty;
-        }
-
-        /// <summary>
-        /// Returns the direction for a given degree.
-        /// </summary>
-        /// <param name="direction">The instance of <see cref="Direction"/> enum.</param>
-        /// <param name="degree">The value of the compass degree.</param>
-        /// <returns>The direction for a give degree.</returns>
-        public static Direction GetDirection(this Direction direction, int degree)
-        {
-            return (degree > 0) ? Direction.East : Direction.North;
         }
     }
 }
