@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParaglidingWeather.Bot</name>
+    </assembly>
+    <members>
+        <member name="T:ParaglidingWeather.Bot.Program">
+            <summary>
+            An entry point of the application.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Program.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configures the application's services.
+            </summary>
+            <param name="services">Specifies the contract for a collection of service descriptors.</param>
+            <param name="configuration">The instance of a applicaiton configuration.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Program.Main">
+            <summary>
+            An entry point method of the application.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.WeaherBotConfiguration">
+            <summary>
+            Represents application configuration.
+            </summary>
+        </member>
+        <member name="P:ParaglidingWeather.Bot.WeaherBotConfiguration.Token">
+            <summary>
+            Gets or sets authentication token.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.WeatherBot">
+            <summary>
+            Represents a console running instance for the application.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.WeatherBot.#ctor(ParaglidingWeather.Bot.WeaherBotConfiguration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeather.Bot.WeatherBot})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.WeatherBot"/> class.
+            </summary>
+            <param name="configuration">The instance of a applicaiton configuration.</param>
+            <param name="logger">The instance of an application logger.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.WeatherBot.Run">
+            <summary>
+            The main entry point for the bot.
+            </summary>
+        </member>
+    </members>
+</doc>

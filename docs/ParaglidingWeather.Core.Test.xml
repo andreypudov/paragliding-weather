@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParaglidingWeather.Core.Test</name>
+    </assembly>
+    <members>
+        <member name="T:ParaglidingWeatherTest.Core.Direction">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Direction"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeatherTest.Core.Direction.GetAbbreviation(System.String,ParaglidingWeather.Core.Direction)">
+            <summary>
+            Represents a non-localized test case for <see cref="M:ParaglidingWeather.Core.DirectionExtension.GetAbbreviation(ParaglidingWeather.Core.Direction,System.Globalization.CultureInfo)"/> method.
+            </summary>
+            <param name="abbreviation">The expected value of abbreviation.</param>
+            <param name="direction">The value of direction.</param>
+        </member>
+        <member name="M:ParaglidingWeatherTest.Core.Direction.GetLocalizedAbbreviation(System.String,ParaglidingWeather.Core.Direction)">
+            <summary>
+            Represents a localized test case for <see cref="M:ParaglidingWeather.Core.DirectionExtension.GetAbbreviation(ParaglidingWeather.Core.Direction,System.Globalization.CultureInfo)"/> method.
+            </summary>
+            <param name="abbreviation">The expected value of abbreviation.</param>
+            <param name="direction">The value of direction.</param>
+        </member>
+    </members>
+</doc>

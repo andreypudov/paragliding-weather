@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParaglidingWeather.Helpers.Test</name>
+    </assembly>
+    <members>
+        <member name="T:ParaglidingWeather.Helpers.Test.DirectionBuilder">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Helpers.DirectionBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Helpers.Test.DirectionBuilder.Get8WindDirection(ParaglidingWeather.Core.Direction,System.Decimal,System.Decimal)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.DirectionBuilder.Get8WindDirection(System.Double)"/> method.
+            </summary>
+            <param name="direction">The expected value of direction.</param>
+            <param name="left">The left boundary of direction in degrees.</param>
+            <param name="right">The right boundary of direction in degrees.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Helpers.Test.DirectionBuilder.Get16WindDirection(ParaglidingWeather.Core.Direction,System.Decimal,System.Decimal)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.DirectionBuilder.Get16WindDirection(System.Double)"/> method.
+            </summary>
+            <param name="direction">The expected value of direction.</param>
+            <param name="left">The left boundary of direction in degrees.</param>
+            <param name="right">The right boundary of direction in degrees.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Helpers.Test.DirectionBuilder.Get32WindDirection(ParaglidingWeather.Core.Direction,System.Decimal,System.Decimal)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.DirectionBuilder.Get32WindDirection(System.Double)"/> method.
+            </summary>
+            <param name="direction">The expected value of direction.</param>
+            <param name="left">The left boundary of direction in degrees.</param>
+            <param name="right">The right boundary of direction in degrees.</param>
+        </member>
+    </members>
+</doc>
