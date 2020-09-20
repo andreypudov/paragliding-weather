@@ -17,7 +17,7 @@ namespace ParaglidingWeather.Core.Types
         /// Initializes a new instance of the <see cref="Speed"/> struct.
         /// </summary>
         /// <param name="speed">The value of speed.</param>
-        /// <param name="unit">THe unit of speed.</param>
+        /// <param name="unit">The unit of speed.</param>
         public Speed(int speed, Units.Speed unit)
         {
             switch (unit)

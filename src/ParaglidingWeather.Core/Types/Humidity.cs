@@ -1,4 +1,4 @@
-﻿// <copyright file="Pressure.cs" company="Andrey Pudov">
+﻿// <copyright file="Humidity.cs" company="Andrey Pudov">
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
@@ -7,60 +7,60 @@ namespace ParaglidingWeather.Core.Types
     using System;
 
     /// <summary>
-    /// Represents a pressure entity.
+    /// Represents a humidity entity.
     /// </summary>
-    public struct Pressure : IPressure, IEquatable<Pressure>
+    public struct Humidity : IHumidity, IEquatable<Humidity>
     {
-        private int pressure;
+        private int humidity;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Pressure"/> struct.
+        /// Initializes a new instance of the <see cref="Humidity"/> struct.
         /// </summary>
-        /// <param name="pressure">The value of pressure.</param>
+        /// <param name="humidity">The value of humidity.</param>
         /// <param name="unit">The unit of pressure.</param>
-        public Pressure(int pressure, Units.Pressure unit)
+        public Humidity(int humidity, Units.Humidity unit)
         {
             switch (unit)
             {
-                case Units.Pressure.Pascal:
+                case Units.Humidity.Relative:
                 default:
-                    this.pressure = pressure;
+                    this.humidity = humidity;
                     break;
             }
         }
 
-        public static bool operator ==(Pressure left, Pressure right)
+        public static bool operator ==(Humidity left, Humidity right)
         {
             return left.Equals(right);
         }
 
-        public static bool operator !=(Pressure left, Pressure right)
+        public static bool operator !=(Humidity left, Humidity right)
         {
             return !(left == right);
         }
 
         /// <inheritdoc/>
-        public int GetPressure(Units.Pressure unit)
+        public int GetHumidity(Units.Humidity unit)
         {
-            return this.pressure;
+            return this.humidity;
         }
 
         /// <inheritdoc/>
         public override bool Equals(object? obj)
         {
-            return obj is Pressure pressure && this.Equals(pressure);
+            return obj is Humidity humidity && this.Equals(humidity);
         }
 
         /// <inheritdoc/>
-        public bool Equals(Pressure other)
+        public bool Equals(Humidity other)
         {
-            return this.pressure == other.pressure;
+            return this.humidity == other.humidity;
         }
 
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return this.pressure.GetHashCode();
+            return this.humidity.GetHashCode();
         }
     }
 }

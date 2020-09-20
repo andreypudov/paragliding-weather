@@ -30,7 +30,7 @@ namespace ParaglidingWeather.Core
         /// <summary>
         /// Gets the value of humidity.
         /// </summary>
-        int Humidity { get; }
+        IHumidity Humidity { get; }
 
         /// <summary>
         /// Gets the value of wind.
@@ -38,13 +38,13 @@ namespace ParaglidingWeather.Core
         IWind Wind { get; }
 
         /// <summary>
-        /// Gets the value of cloudy.
+        /// Gets the value of cloudiness.
         /// </summary>
-        int Cloudy { get; }
+        ICloudiness Cloudiness { get; }
 
         /// <summary>
         /// Gets the value of precipitation.
         /// </summary>
-        int Precipitation { get; }
+        IPrecipitation Precipitation { get; }
     }
 }

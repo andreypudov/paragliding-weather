@@ -17,7 +17,7 @@ namespace ParaglidingWeather.Core.Types
         /// Initializes a new instance of the <see cref="Temperature"/> struct.
         /// </summary>
         /// <param name="temperature">The value of temperature.</param>
-        /// <param name="unit">THe unit of temperature.</param>
+        /// <param name="unit">The unit of temperature.</param>
         public Temperature(int temperature, Units.Temperature unit)
         {
             switch (unit)
