@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Helpers"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Helpers.Test", "test\ParaglidingWeather.Helpers.Test\ParaglidingWeather.Helpers.Test.csproj", "{FE483A9F-D5BA-494E-AF31-7DF6B6E49F68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Bot.Test", "test\ParaglidingWeather.Bot.Test\ParaglidingWeather.Bot.Test.csproj", "{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Providers.Test", "test\ParaglidingWeather.Providers.Test\ParaglidingWeather.Providers.Test.csproj", "{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,5 +53,13 @@ Global
 		{FE483A9F-D5BA-494E-AF31-7DF6B6E49F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE483A9F-D5BA-494E-AF31-7DF6B6E49F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE483A9F-D5BA-494E-AF31-7DF6B6E49F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
