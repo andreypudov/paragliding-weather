@@ -11,7 +11,7 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Precipitation : IPrecipitation, IEquatable<Precipitation>
     {
-        private int precipitation;
+        private readonly int precipitation;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Precipitation"/> struct.

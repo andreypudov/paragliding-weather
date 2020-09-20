@@ -11,7 +11,7 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Pressure : IPressure, IEquatable<Pressure>
     {
-        private int pressure;
+        private readonly int pressure;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Pressure"/> struct.

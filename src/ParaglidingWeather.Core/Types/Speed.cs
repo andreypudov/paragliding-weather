@@ -11,7 +11,7 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Speed : ISpeed, IEquatable<Speed>
     {
-        private int speed;
+        private readonly int speed;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Speed"/> struct.

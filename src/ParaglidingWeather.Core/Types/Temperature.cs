@@ -11,7 +11,7 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Temperature : ITemperature, IEquatable<Temperature>
     {
-        private int temperature;
+        private readonly int temperature;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Temperature"/> struct.

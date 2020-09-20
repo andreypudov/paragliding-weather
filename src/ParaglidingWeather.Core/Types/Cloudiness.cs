@@ -11,7 +11,7 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Cloudiness : ICloudiness, IEquatable<Cloudiness>
     {
-        private int cloudiness;
+        private readonly int cloudiness;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Cloudiness"/> struct.
