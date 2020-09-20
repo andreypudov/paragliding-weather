@@ -21,6 +21,16 @@
             An entry point method of the application.
             </summary>
         </member>
+        <member name="T:ParaglidingWeather.Bot.Query">
+            <summary>
+            Represents a set of queries supported by the Bot.
+            </summary>
+        </member>
+        <member name="F:ParaglidingWeather.Bot.Query.Forecast">
+            <summary>
+            Represents query to receive a five-days weather forecast.
+            </summary>
+        </member>
         <member name="T:ParaglidingWeather.Bot.WeaherBotConfiguration">
             <summary>
             Represents application configuration.

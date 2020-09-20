@@ -4,37 +4,6 @@
         <name>ParaglidingWeather.Core</name>
     </assembly>
     <members>
-        <member name="T:ParaglidingWeather.Core.Coordinate">
-            <summary>
-            Represents a geographic coordinate.
-            </summary>
-        </member>
-        <member name="M:ParaglidingWeather.Core.Coordinate.#ctor(System.Double,System.Double)">
-            <summary>
-            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Coordinate"/> struct.
-            </summary>
-            <param name="latitude">The latitude coordinate of the location.</param>
-            <param name="longitude">The longitude coordinate of the location.</param>
-        </member>
-        <member name="P:ParaglidingWeather.Core.Coordinate.Latitude">
-            <summary>
-            Gets the latitude value of the geographic coordinate.
-            </summary>
-        </member>
-        <member name="P:ParaglidingWeather.Core.Coordinate.Longitude">
-            <summary>
-            Gets the longitude value of the geographic coordinate.
-            </summary>
-        </member>
-        <member name="M:ParaglidingWeather.Core.Coordinate.Equals(System.Object)">
-            <inheritdoc/>
-        </member>
-        <member name="M:ParaglidingWeather.Core.Coordinate.Equals(ParaglidingWeather.Core.Coordinate)">
-            <inheritdoc/>
-        </member>
-        <member name="M:ParaglidingWeather.Core.Coordinate.GetHashCode">
-            <inheritdoc/>
-        </member>
         <member name="T:ParaglidingWeather.Core.Direction">
             <summary>
             Represents the set of 32 compass points. Each point has an angular range of 11.250 degrees where: middle
@@ -265,66 +234,240 @@
             Gets the value of precipitation.
             </summary>
         </member>
-        <member name="T:ParaglidingWeather.Core.IWind">
+        <member name="T:ParaglidingWeather.Core.Types.Coordinate">
+            <summary>
+            Represents a geographic coordinate.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Coordinate.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Coordinate"/> struct.
+            </summary>
+            <param name="latitude">The latitude coordinate of the location.</param>
+            <param name="longitude">The longitude coordinate of the location.</param>
+        </member>
+        <member name="P:ParaglidingWeather.Core.Types.Coordinate.Latitude">
+            <summary>
+            Gets the latitude value of the geographic coordinate.
+            </summary>
+        </member>
+        <member name="P:ParaglidingWeather.Core.Types.Coordinate.Longitude">
+            <summary>
+            Gets the longitude value of the geographic coordinate.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Coordinate.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Coordinate.Equals(ParaglidingWeather.Core.Types.Coordinate)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Coordinate.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.ICoordinate">
+            <summary>
+            Represents a geographic coordinate.
+            </summary>
+        </member>
+        <member name="P:ParaglidingWeather.Core.Types.ICoordinate.Latitude">
+            <summary>
+            Gets the latitude value of the geographic coordinate.
+            </summary>
+        </member>
+        <member name="P:ParaglidingWeather.Core.Types.ICoordinate.Longitude">
+            <summary>
+            Gets the longitude value of the geographic coordinate.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.IPressure">
+            <summary>
+            Represents a pressure entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.IPressure.GetPressure(ParaglidingWeather.Core.Units.Pressure)">
+            <summary>
+            Returns the value of pressure in specified units.
+            </summary>
+            <param name="unit">The unit system to use.</param>
+            <returns>Returns the value of pressure.</returns>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.ISpeed">
+            <summary>
+            Represents a speed entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.ISpeed.GetSpeed(ParaglidingWeather.Core.Units.Speed)">
+            <summary>
+            Returns the value of speed in specified units.
+            </summary>
+            <param name="unit">The unit system to use.</param>
+            <returns>Returns the value of speed.</returns>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.ITemperature">
+            <summary>
+            Represents a temperature entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.ITemperature.GetTemperature(ParaglidingWeather.Core.Units.Temperature)">
+            <summary>
+            Returns the value of temperature in specified units.
+            </summary>
+            <param name="unit">The unit system to use.</param>
+            <returns>Returns the value of temperature.</returns>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.IWind">
             <summary>
             Represents a wind entity.
             </summary>
         </member>
-        <member name="P:ParaglidingWeather.Core.IWind.Speed">
+        <member name="P:ParaglidingWeather.Core.Types.IWind.Speed">
             <summary>
             Gets the value of wind speend.
             </summary>
         </member>
-        <member name="P:ParaglidingWeather.Core.IWind.Direction">
+        <member name="P:ParaglidingWeather.Core.Types.IWind.Direction">
             <summary>
             Gets the value of wind direction.
             </summary>
         </member>
-        <member name="P:ParaglidingWeather.Core.IWind.Gust">
+        <member name="P:ParaglidingWeather.Core.Types.IWind.Gust">
             <summary>
             Gets the value of wind gust.
             </summary>
         </member>
-        <member name="T:ParaglidingWeather.Core.Query">
+        <member name="T:ParaglidingWeather.Core.Types.Pressure">
             <summary>
-            Represents a set of queries supported by the Bot.
+            Represents a pressure entity.
             </summary>
         </member>
-        <member name="F:ParaglidingWeather.Core.Query.Forecast">
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.#ctor(System.Int32,ParaglidingWeather.Core.Units.Pressure)">
             <summary>
-            Represents query to receive a five-days weather forecast.
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Pressure"/> struct.
+            </summary>
+            <param name="pressure">The value of pressure.</param>
+            <param name="unit">THe unit of pressure.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.GetPressure(ParaglidingWeather.Core.Units.Pressure)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.Equals(ParaglidingWeather.Core.Types.Pressure)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.Speed">
+            <summary>
+            Represents a speed entity.
             </summary>
         </member>
-        <member name="T:ParaglidingWeather.Core.Wind">
+        <member name="M:ParaglidingWeather.Core.Types.Speed.#ctor(System.Int32,ParaglidingWeather.Core.Units.Speed)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Speed"/> struct.
+            </summary>
+            <param name="speed">The value of speed.</param>
+            <param name="unit">THe unit of speed.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Speed.GetSpeed(ParaglidingWeather.Core.Units.Speed)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Speed.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Speed.Equals(ParaglidingWeather.Core.Types.Speed)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Speed.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.Temperature">
+            <summary>
+            Represents a temperature entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.#ctor(System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Temperature"/> struct.
+            </summary>
+            <param name="temperature">The value of temperature.</param>
+            <param name="unit">THe unit of temperature.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.GetTemperature(ParaglidingWeather.Core.Units.Temperature)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.Equals(ParaglidingWeather.Core.Types.Temperature)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.Wind">
             <summary>
             Represents a wind entity.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Wind.#ctor(System.Int32,ParaglidingWeather.Core.Direction,System.Int32)">
+        <member name="M:ParaglidingWeather.Core.Types.Wind.#ctor(ParaglidingWeather.Core.Types.ISpeed,ParaglidingWeather.Core.Direction,ParaglidingWeather.Core.Types.ISpeed)">
             <summary>
-            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Wind"/> struct.
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Wind"/> struct.
             </summary>
             <param name="speed">The value of wind speend.</param>
             <param name="direction">The value of wind direction.</param>
             <param name="gust">The value of wind gust.</param>
         </member>
-        <member name="P:ParaglidingWeather.Core.Wind.Speed">
+        <member name="P:ParaglidingWeather.Core.Types.Wind.Speed">
             <inheritdoc/>
         </member>
-        <member name="P:ParaglidingWeather.Core.Wind.Direction">
+        <member name="P:ParaglidingWeather.Core.Types.Wind.Direction">
             <inheritdoc/>
         </member>
-        <member name="P:ParaglidingWeather.Core.Wind.Gust">
+        <member name="P:ParaglidingWeather.Core.Types.Wind.Gust">
             <inheritdoc/>
         </member>
-        <member name="M:ParaglidingWeather.Core.Wind.Equals(System.Object)">
+        <member name="M:ParaglidingWeather.Core.Types.Wind.Equals(System.Object)">
             <inheritdoc/>
         </member>
-        <member name="M:ParaglidingWeather.Core.Wind.Equals(ParaglidingWeather.Core.Wind)">
+        <member name="M:ParaglidingWeather.Core.Types.Wind.Equals(ParaglidingWeather.Core.Types.Wind)">
             <inheritdoc/>
         </member>
-        <member name="M:ParaglidingWeather.Core.Wind.GetHashCode">
+        <member name="M:ParaglidingWeather.Core.Types.Wind.GetHashCode">
             <inheritdoc/>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Units.Pressure">
+            <summary>
+            Represents the unit of pressure.
+            </summary>
+        </member>
+        <member name="F:ParaglidingWeather.Core.Units.Pressure.Pascal">
+            <summary>
+            Metric/SI derived unit of pressure used to quantify internal pressure, stress.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Units.Speed">
+            <summary>
+            Represents the unit of speed.
+            </summary>
+        </member>
+        <member name="F:ParaglidingWeather.Core.Units.Speed.MeterPerSecond">
+            <summary>
+            Metric unit of speed.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Units.Temperature">
+            <summary>
+            Represents the unit of temperature.
+            </summary>
+        </member>
+        <member name="F:ParaglidingWeather.Core.Units.Temperature.Celsius">
+            <summary>
+            Metric unit of speed.
+            </summary>
         </member>
     </members>
 </doc>

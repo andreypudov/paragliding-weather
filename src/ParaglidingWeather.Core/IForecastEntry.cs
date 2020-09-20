@@ -5,6 +5,7 @@
 namespace ParaglidingWeather.Core
 {
     using System;
+    using ParaglidingWeather.Core.Types;
 
     /// <summary>
     /// Represents a weather forecast entry.

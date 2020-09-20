@@ -7,7 +7,7 @@ namespace ParaglidingWeather.Core.Types
     using System;
 
     /// <summary>
-    /// Represents a pressure entity.
+    /// Represents a speed entity.
     /// </summary>
     public struct Speed : ISpeed, IEquatable<Speed>
     {

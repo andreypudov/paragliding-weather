@@ -9,14 +9,14 @@
             Represents a data reader that returns a weather forecast.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.IForecastProvider.GetForecast(ParaglidingWeather.Core.Coordinate)">
+        <member name="M:ParaglidingWeather.Providers.IForecastProvider.GetForecast(ParaglidingWeather.Core.Types.Coordinate)">
             <summary>
             Returns the weather forecast for the week or fewer number available days.
             </summary>
             <param name="coordinate">The geographic coordinate of the location.</param>
             <returns>Returns the weather forecast.</returns>
         </member>
-        <member name="M:ParaglidingWeather.Providers.IForecastProvider.GetForecastAsync(ParaglidingWeather.Core.Coordinate)">
+        <member name="M:ParaglidingWeather.Providers.IForecastProvider.GetForecastAsync(ParaglidingWeather.Core.Types.Coordinate)">
             <summary>
             Returns the weather forecast for the week or fewer number available days in an asynchronous operation.
             </summary>
@@ -28,10 +28,10 @@
             Provides a weather forecast using SkyMeteo public API.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteo.SkyMeteoForecastProvider.GetForecast(ParaglidingWeather.Core.Coordinate)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteo.SkyMeteoForecastProvider.GetForecast(ParaglidingWeather.Core.Types.Coordinate)">
             <inheritdoc/>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteo.SkyMeteoForecastProvider.GetForecastAsync(ParaglidingWeather.Core.Coordinate)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteo.SkyMeteoForecastProvider.GetForecastAsync(ParaglidingWeather.Core.Types.Coordinate)">
             <inheritdoc/>
         </member>
         <member name="T:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider">
@@ -39,10 +39,10 @@
             Provides a weather forecast by fetching a data from a web page of SkyMeteo service.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.GetForecast(ParaglidingWeather.Core.Coordinate)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.GetForecast(ParaglidingWeather.Core.Types.Coordinate)">
             <inheritdoc/>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.GetForecastAsync(ParaglidingWeather.Core.Coordinate)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.GetForecastAsync(ParaglidingWeather.Core.Types.Coordinate)">
             <inheritdoc/>
         </member>
     </members>

@@ -6,6 +6,7 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
 {
     using System.Threading.Tasks;
     using ParaglidingWeather.Core;
+    using ParaglidingWeather.Core.Types;
 
     /// <summary>
     /// Provides a weather forecast by fetching a data from a web page of SkyMeteo service.

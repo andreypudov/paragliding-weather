@@ -6,6 +6,7 @@ namespace ParaglidingWeather.Providers
 {
     using System.Threading.Tasks;
     using ParaglidingWeather.Core;
+    using ParaglidingWeather.Core.Types;
 
     /// <summary>
     /// Represents a data reader that returns a weather forecast.

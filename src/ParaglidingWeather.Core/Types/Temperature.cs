@@ -7,7 +7,7 @@ namespace ParaglidingWeather.Core.Types
     using System;
 
     /// <summary>
-    /// Represents a pressure entity.
+    /// Represents a temperature entity.
     /// </summary>
     public struct Temperature : ITemperature, IEquatable<Temperature>
     {
