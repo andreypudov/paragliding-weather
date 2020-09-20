@@ -1,17 +1,17 @@
-﻿// <copyright file="Query.cs" company="Andrey Pudov">
+﻿// <copyright file="Temperature.cs" company="Andrey Pudov">
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Core
+namespace ParaglidingWeather.Core.Units
 {
     /// <summary>
-    /// Represents a set of queries supported by the Bot.
+    /// Represents the unit of temperature.
     /// </summary>
-    public enum Query
+    public enum Temperature
     {
         /// <summary>
-        /// Represents query to receive a five-days weather forecast.
+        /// Metric unit of speed.
         /// </summary>
-        Forecast,
+        Celsius,
     }
 }

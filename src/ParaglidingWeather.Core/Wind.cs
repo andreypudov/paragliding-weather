@@ -17,7 +17,7 @@ namespace ParaglidingWeather.Core
         /// <param name="speed">The value of wind speend.</param>
         /// <param name="direction">The value of wind direction.</param>
         /// <param name="gust">The value of wind gust.</param>
-        public Wind(int speed, Direction direction, int gust)
+        public Wind(ISpeed speed, Direction direction, ISpeed gust)
         {
             this.Speed = speed;
             this.Direction = direction;
@@ -25,13 +25,13 @@ namespace ParaglidingWeather.Core
         }
 
         /// <inheritdoc/>
-        public int Speed { get; }
+        public ISpeed Speed { get; }
 
         /// <inheritdoc/>
         public Direction Direction { get; }
 
         /// <inheritdoc/>
-        public int Gust { get; }
+        public ISpeed Gust { get; }
 
         public static bool operator ==(Wind left, Wind right)
         {

@@ -19,12 +19,12 @@ namespace ParaglidingWeather.Core
         /// <summary>
         /// Gets the value of temperature.
         /// </summary>
-        int Temperature { get; }
+        ITemperature Temperature { get; }
 
         /// <summary>
         /// Gets the value of atmospheric pressure.
         /// </summary>
-        int Pressure { get; }
+        IPressure Pressure { get; }
 
         /// <summary>
         /// Gets the value of humidity.

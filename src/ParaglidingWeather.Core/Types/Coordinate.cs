@@ -2,14 +2,14 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Core
+namespace ParaglidingWeather.Core.Types
 {
     using System;
 
     /// <summary>
     /// Represents a geographic coordinate.
     /// </summary>
-    public struct Coordinate : IEquatable<Coordinate>
+    public struct Coordinate : ICoordinate, IEquatable<Coordinate>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Coordinate"/> struct.

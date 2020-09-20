@@ -12,7 +12,7 @@ namespace ParaglidingWeather.Core
         /// <summary>
         /// Gets the value of wind speend.
         /// </summary>
-        int Speed { get; }
+        ISpeed Speed { get; }
 
         /// <summary>
         /// Gets the value of wind direction.
@@ -22,6 +22,6 @@ namespace ParaglidingWeather.Core
         /// <summary>
         /// Gets the value of wind gust.
         /// </summary>
-        int Gust { get; }
+        ISpeed Gust { get; }
     }
 }
