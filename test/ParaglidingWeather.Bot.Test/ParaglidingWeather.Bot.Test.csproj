@@ -36,6 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ParaglidingWeather.Core\ParaglidingWeather.Bot.csproj" />
+    <ProjectReference Include="..\..\src\ParaglidingWeather.Bot\ParaglidingWeather.Bot.csproj" />
   </ItemGroup>
 </Project>

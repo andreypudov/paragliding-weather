@@ -224,15 +224,39 @@
             Gets the value of wind.
             </summary>
         </member>
-        <member name="P:ParaglidingWeather.Core.IForecastEntry.Cloudy">
+        <member name="P:ParaglidingWeather.Core.IForecastEntry.Cloudiness">
             <summary>
-            Gets the value of cloudy.
+            Gets the value of cloudiness.
             </summary>
         </member>
         <member name="P:ParaglidingWeather.Core.IForecastEntry.Precipitation">
             <summary>
             Gets the value of precipitation.
             </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.Cloudiness">
+            <summary>
+            Represents a speed entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.#ctor(System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/> struct.
+            </summary>
+            <param name="cloudiness">The value of cloudiness.</param>
+            <param name="unit">The unit of cloudiness.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.GetCloudiness(ParaglidingWeather.Core.Units.Cloudiness)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.Equals(ParaglidingWeather.Core.Types.Cloudiness)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.GetHashCode">
+            <inheritdoc/>
         </member>
         <member name="T:ParaglidingWeather.Core.Types.Coordinate">
             <summary>
@@ -265,6 +289,42 @@
         <member name="M:ParaglidingWeather.Core.Types.Coordinate.GetHashCode">
             <inheritdoc/>
         </member>
+        <member name="T:ParaglidingWeather.Core.Types.Humidity">
+            <summary>
+            Represents a humidity entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.#ctor(System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Humidity"/> struct.
+            </summary>
+            <param name="humidity">The value of humidity.</param>
+            <param name="unit">The unit of pressure.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.GetHumidity(ParaglidingWeather.Core.Units.Humidity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.Equals(ParaglidingWeather.Core.Types.Humidity)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.ICloudiness">
+            <summary>
+            Represents a pressure entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.ICloudiness.GetCloudiness(ParaglidingWeather.Core.Units.Cloudiness)">
+            <summary>
+            Returns the value of cloudiness in specified units.
+            </summary>
+            <param name="unit">The unit system to use.</param>
+            <returns>Returns the value of cloudiness.</returns>
+        </member>
         <member name="T:ParaglidingWeather.Core.Types.ICoordinate">
             <summary>
             Represents a geographic coordinate.
@@ -279,6 +339,30 @@
             <summary>
             Gets the longitude value of the geographic coordinate.
             </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.IHumidity">
+            <summary>
+            Represents a pressure entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.IHumidity.GetHumidity(ParaglidingWeather.Core.Units.Humidity)">
+            <summary>
+            Returns the value of humidity in specified units.
+            </summary>
+            <param name="unit">The unit system to use.</param>
+            <returns>Returns the value of humidity.</returns>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Types.IPrecipitation">
+            <summary>
+            Represents a pressure entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.IPrecipitation.GetPrecipitation(ParaglidingWeather.Core.Units.Precipitation)">
+            <summary>
+            Returns the value of precipitation in specified units.
+            </summary>
+            <param name="unit">The unit system to use.</param>
+            <returns>Returns the value of precipitation.</returns>
         </member>
         <member name="T:ParaglidingWeather.Core.Types.IPressure">
             <summary>
@@ -336,6 +420,30 @@
             Gets the value of wind gust.
             </summary>
         </member>
+        <member name="T:ParaglidingWeather.Core.Types.Precipitation">
+            <summary>
+            Represents a speed entity.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.#ctor(System.Int32,ParaglidingWeather.Core.Units.Precipitation)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Precipitation"/> struct.
+            </summary>
+            <param name="precipitation">The value of precipitation.</param>
+            <param name="unit">The unit of precipitation.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.GetPrecipitation(ParaglidingWeather.Core.Units.Precipitation)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.Equals(ParaglidingWeather.Core.Types.Precipitation)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.GetHashCode">
+            <inheritdoc/>
+        </member>
         <member name="T:ParaglidingWeather.Core.Types.Pressure">
             <summary>
             Represents a pressure entity.
@@ -346,7 +454,7 @@
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Pressure"/> struct.
             </summary>
             <param name="pressure">The value of pressure.</param>
-            <param name="unit">THe unit of pressure.</param>
+            <param name="unit">The unit of pressure.</param>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Pressure.GetPressure(ParaglidingWeather.Core.Units.Pressure)">
             <inheritdoc/>
@@ -370,7 +478,7 @@
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Speed"/> struct.
             </summary>
             <param name="speed">The value of speed.</param>
-            <param name="unit">THe unit of speed.</param>
+            <param name="unit">The unit of speed.</param>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Speed.GetSpeed(ParaglidingWeather.Core.Units.Speed)">
             <inheritdoc/>
@@ -394,7 +502,7 @@
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Temperature"/> struct.
             </summary>
             <param name="temperature">The value of temperature.</param>
-            <param name="unit">THe unit of temperature.</param>
+            <param name="unit">The unit of temperature.</param>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Temperature.GetTemperature(ParaglidingWeather.Core.Units.Temperature)">
             <inheritdoc/>
@@ -438,6 +546,36 @@
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Wind.GetHashCode">
             <inheritdoc/>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Units.Cloudiness">
+            <summary>
+            Represents the unit of cloudiness.
+            </summary>
+        </member>
+        <member name="F:ParaglidingWeather.Core.Units.Cloudiness.Relative">
+            <summary>
+             Expressed as a percentage, indicates a fraction of the sky obscured by clouds when observed from a particular location.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Units.Humidity">
+            <summary>
+            Represents the unit of humidity.
+            </summary>
+        </member>
+        <member name="F:ParaglidingWeather.Core.Units.Humidity.Relative">
+            <summary>
+            Expressed as a percentage, indicates a present state of absolute humidity relative to a maximum humidity given the same temperature.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Units.Precipitation">
+            <summary>
+            Represents the unit of precipitation.
+            </summary>
+        </member>
+        <member name="F:ParaglidingWeather.Core.Units.Precipitation.Millimetres">
+            <summary>
+            Millimetres (mm) of liquid water equivalent for the preceeding time interval.
+            </summary>
         </member>
         <member name="T:ParaglidingWeather.Core.Units.Pressure">
             <summary>

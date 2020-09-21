@@ -36,6 +36,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ParaglidingWeather.Core\ParaglidingWeather.Providers.csproj" />
+    <Folder Include="SkyMeteoWeb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ParaglidingWeather.Providers\ParaglidingWeather.Providers.csproj" />
   </ItemGroup>
 </Project>
