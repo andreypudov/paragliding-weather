@@ -9,20 +9,19 @@
     <LangVersion>8.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Nullable>enable</Nullable>
-    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1</DefineConstants>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.xml</DocumentationFile>
-    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteo.Test.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType></DebugType>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.xml</DocumentationFile>
+    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteo.Test.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,11 +30,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0" />
-    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
-    <PackageReference Include="NLog" Version="4.7.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\ParaglidingWeather.Core\ParaglidingWeather.Core.csproj" />
+    <ProjectReference Include="..\..\src\ParaglidingWeather.Providers.SkyMeteo\ParaglidingWeather.Providers.SkyMeteo.csproj" />
   </ItemGroup>
 </Project>

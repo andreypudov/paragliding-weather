@@ -4,6 +4,18 @@
         <name>ParaglidingWeather.Providers.Test</name>
     </assembly>
     <members>
+        <member name="T:ParaglidingWeather.Providers.Test.Mocks.IHtmlWeb">
+            <summary>
+            Represents a mock object for <see cref="T:HtmlAgilityPack.HtmlWeb"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Providers.Test.Mocks.IHtmlWeb.Load(System.Uri)">
+            <summary>
+            Gets an HTML document from an Internet resource.
+            </summary>
+            <param name="uri">The requested Uri, such as new Uri("http://Myserver/Mypath/Myfile.asp").</param>
+            <returns>A new HTML document.</returns>
+        </member>
         <member name="T:ParaglidingWeather.Providers.Test.SkyMeteoWeb.SkyMeteoWebForecastProvider">
             <summary>
             Represents a test class for <see cref="T:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider"/>.

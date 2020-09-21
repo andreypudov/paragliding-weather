@@ -4,8 +4,12 @@
 
 namespace ParaglidingWeather.Providers.Test.SkyMeteoWeb
 {
+    using System;
+    using HtmlAgilityPack;
+    using Moq;
     using NUnit.Framework;
     using ParaglidingWeather.Core.Types;
+    using ParaglidingWeather.Providers.Test.Mocks;
 
     /// <summary>
     /// Represents a test class for <see cref="ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider"/>.
@@ -18,11 +22,17 @@ namespace ParaglidingWeather.Providers.Test.SkyMeteoWeb
         [Test]
         public void GetForecast()
         {
+            var htmlWebMock = new Mock<HtmlWeb>();
+            var document = new HtmlDocument();
+
+            document.LoadHtml(Resources.TestCase.SkyMeteo_Forecast_NizhnyNovgorod_Valid);
+            htmlWebMock.Setup(_ => _.Load(It.IsAny<Uri>())).Returns(new HtmlDocument());
+
+            // the geographic coordinate of Nizhny Novgorod
             var coordintae = new Coordinate(latitude: 56.31, longitude: 44.02);
             var provider = new ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider();
 
             var result = provider.GetForecast(coordintae);
-
             Assert.AreEqual(string.Empty, result);
         }
     }

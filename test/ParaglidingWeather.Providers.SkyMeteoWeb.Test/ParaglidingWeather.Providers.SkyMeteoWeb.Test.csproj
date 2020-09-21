@@ -9,20 +9,19 @@
     <LangVersion>8.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Nullable>enable</Nullable>
-    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1</DefineConstants>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.xml</DocumentationFile>
-    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteoWeb.Test.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType></DebugType>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.xml</DocumentationFile>
+    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteoWeb.Test.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,11 +30,28 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0" />
-    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
-    <PackageReference Include="NLog" Version="4.7.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+    <PackageReference Include="Moq" Version="4.14.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ParaglidingWeather.Core\ParaglidingWeather.Core.csproj" />
+    <ProjectReference Include="..\..\src\ParaglidingWeather.Providers.SkyMeteoWeb\ParaglidingWeather.Providers.SkyMeteoWeb.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\TestCase.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TestCase.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\TestCase.Designer.cs">
+      <DependentUpon>TestCase.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

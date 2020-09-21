@@ -16,13 +16,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1</DefineConstants>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.xml</DocumentationFile>
+    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteoWeb.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType></DebugType>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.xml</DocumentationFile>
+    <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteoWeb.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
     <PackageReference Include="NLog" Version="4.7.4" />
@@ -37,5 +38,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ParaglidingWeather.Core\ParaglidingWeather.Core.csproj" />
+    <ProjectReference Include="..\ParaglidingWeather.Providers\ParaglidingWeather.Providers.csproj" />
   </ItemGroup>
 </Project>
