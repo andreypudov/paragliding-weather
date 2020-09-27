@@ -39,5 +39,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ParaglidingWeather.Core\ParaglidingWeather.Core.csproj" />
     <ProjectReference Include="..\ParaglidingWeather.Providers\ParaglidingWeather.Providers.csproj" />
+    <ProjectReference Include="..\ParaglidingWeather.Helpers\ParaglidingWeather.Helpers.csproj" />
   </ItemGroup>
 </Project>

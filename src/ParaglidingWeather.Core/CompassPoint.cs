@@ -1,4 +1,4 @@
-﻿// <copyright file = "Direction.cs" company = "Andrey Pudov">
+﻿// <copyright file = "CompassPoint.cs" company = "Andrey Pudov">
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
@@ -9,7 +9,7 @@ namespace ParaglidingWeather.Core
     /// azimuth is the horizontal angular direction (from north) of the given compass bearing; minimum is the lower
     /// angular limit of the compass point; and maximum is the upper angular limit of the compass point.
     /// </summary>
-    public enum Direction
+    public enum CompassPoint
     {
         /// <summary>
         /// North, N, Tramontana, 354.375°, 0.000°, 5.625°

@@ -4,6 +4,7 @@
 
 namespace ParaglidingWeather.Providers
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using ParaglidingWeather.Core;
     using ParaglidingWeather.Core.Types;
@@ -18,13 +19,13 @@ namespace ParaglidingWeather.Providers
         /// </summary>
         /// <param name="coordinate">The geographic coordinate of the location.</param>
         /// <returns>Returns the weather forecast.</returns>
-        IForecast GetForecast(Coordinate coordinate);
+        List<IWeatherReport> GetForecast(Coordinate coordinate);
 
         /// <summary>
         /// Returns the weather forecast for the week or fewer number available days in an asynchronous operation.
         /// </summary>
         /// <param name="coordinate">The geographic coordinate of the location.</param>
         /// <returns>Returns the task object representing the asynchronous operation.</returns>
-        Task<IForecast> GetForecastAsync(Coordinate coordinate);
+        Task<List<IWeatherReport>> GetForecastAsync(Coordinate coordinate);
     }
 }

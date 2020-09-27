@@ -1,4 +1,4 @@
-﻿// <copyright file="IForecastEntry.cs" company="Andrey Pudov">
+﻿// <copyright file="IWeatherReport.cs" company="Andrey Pudov">
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
@@ -10,7 +10,7 @@ namespace ParaglidingWeather.Core
     /// <summary>
     /// Represents a weather forecast entry.
     /// </summary>
-    public interface IForecastEntry
+    public interface IWeatherReport
     {
         /// <summary>
         /// Gets the value of time.

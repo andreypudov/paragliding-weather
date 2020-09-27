@@ -4,24 +4,24 @@
         <name>ParaglidingWeather.Core.Test</name>
     </assembly>
     <members>
-        <member name="T:ParaglidingWeatherTest.Core.Direction">
+        <member name="T:ParaglidingWeatherTest.Core.CompassPoint">
             <summary>
-            Represents a test class for <see cref="T:ParaglidingWeather.Core.Direction"/>.
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.CompassPoint"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeatherTest.Core.Direction.GetAbbreviation(System.String,ParaglidingWeather.Core.Direction)">
+        <member name="M:ParaglidingWeatherTest.Core.CompassPoint.GetAbbreviation(System.String,ParaglidingWeather.Core.CompassPoint)">
             <summary>
-            Represents a non-localized test case for <see cref="M:ParaglidingWeather.Core.DirectionExtension.GetAbbreviation(ParaglidingWeather.Core.Direction,System.Globalization.CultureInfo)"/> method.
+            Represents a non-localized test case for <see cref="M:ParaglidingWeather.Core.CompassPointExtension.GetAbbreviation(ParaglidingWeather.Core.CompassPoint,System.Globalization.CultureInfo)"/> method.
             </summary>
             <param name="abbreviation">The expected value of abbreviation.</param>
-            <param name="direction">The value of direction.</param>
+            <param name="point">The value of compass point.</param>
         </member>
-        <member name="M:ParaglidingWeatherTest.Core.Direction.GetLocalizedAbbreviation(System.String,ParaglidingWeather.Core.Direction)">
+        <member name="M:ParaglidingWeatherTest.Core.CompassPoint.GetLocalizedAbbreviation(System.String,ParaglidingWeather.Core.CompassPoint)">
             <summary>
-            Represents a localized test case for <see cref="M:ParaglidingWeather.Core.DirectionExtension.GetAbbreviation(ParaglidingWeather.Core.Direction,System.Globalization.CultureInfo)"/> method.
+            Represents a localized test case for <see cref="M:ParaglidingWeather.Core.CompassPointExtension.GetAbbreviation(ParaglidingWeather.Core.CompassPoint,System.Globalization.CultureInfo)"/> method.
             </summary>
             <param name="abbreviation">The expected value of abbreviation.</param>
-            <param name="direction">The value of direction.</param>
+            <param name="point">The value of compass point.</param>
         </member>
     </members>
 </doc>

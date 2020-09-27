@@ -22,14 +22,10 @@ namespace ParaglidingWeather.Core.Types
             this.Longitude = longitude;
         }
 
-        /// <summary>
-        /// Gets the latitude value of the geographic coordinate.
-        /// </summary>
+        /// <inheritdoc/>
         public double Latitude { get; }
 
-        /// <summary>
-        /// Gets the longitude value of the geographic coordinate.
-        /// </summary>
+        /// <inheritdoc/>
         public double Longitude { get; }
 
         public static bool operator ==(Coordinate left, Coordinate right)

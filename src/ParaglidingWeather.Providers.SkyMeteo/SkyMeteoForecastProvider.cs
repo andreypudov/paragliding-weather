@@ -4,6 +4,7 @@
 
 namespace ParaglidingWeather.Providers.SkyMeteo
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using ParaglidingWeather.Core;
     using ParaglidingWeather.Core.Types;
@@ -14,13 +15,13 @@ namespace ParaglidingWeather.Providers.SkyMeteo
     public class SkyMeteoForecastProvider : IForecastProvider
     {
         /// <inheritdoc/>
-        public IForecast GetForecast(Coordinate coordinate)
+        public List<IWeatherReport> GetForecast(Coordinate coordinate)
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc/>
-        public Task<IForecast> GetForecastAsync(Coordinate coordinate)
+        public Task<List<IWeatherReport>> GetForecastAsync(Coordinate coordinate)
         {
             throw new System.NotImplementedException();
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ParaglidingWeather.Providers.Test.Resources {
+namespace ParaglidingWeather.Providers.SkyMeteoWeb.Test.Resources {
     using System;
     using System.Reflection;
     
@@ -30,7 +30,7 @@ namespace ParaglidingWeather.Providers.Test.Resources {
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("ParaglidingWeather.Providers.Test.Resources.TestCase", typeof(TestCase).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("ParaglidingWeather.Providers.SkyMeteoWeb.Test.Resources.TestCase", typeof(TestCase).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

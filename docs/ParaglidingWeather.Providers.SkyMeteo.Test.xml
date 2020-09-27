@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>ParaglidingWeather.Providers.Test</name>
+        <name>ParaglidingWeather.Providers.SkyMeteo.Test</name>
     </assembly>
     <members>
     </members>

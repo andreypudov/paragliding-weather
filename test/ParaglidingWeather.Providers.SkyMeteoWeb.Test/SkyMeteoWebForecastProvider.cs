@@ -2,38 +2,42 @@
 // Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Providers.Test.SkyMeteoWeb
+namespace ParaglidingWeather.Providers.SkyMeteoWeb.Test
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
     using HtmlAgilityPack;
     using Moq;
     using NUnit.Framework;
+    using ParaglidingWeather.Core;
     using ParaglidingWeather.Core.Types;
-    using ParaglidingWeather.Providers.Test.Mocks;
+    using ParaglidingWeather.Providers.SkyMeteoWeb;
 
     /// <summary>
-    /// Represents a test class for <see cref="ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider"/>.
+    /// Represents a test class for <see cref="SkyMeteoWeb.SkyMeteoWebForecastProvider"/>.
     /// </summary>
     public class SkyMeteoWebForecastProvider
     {
         /// <summary>
-        /// Represents a test case for <see cref="ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.GetForecast"/> method.
+        /// Represents a test case for <see cref="SkyMeteoWeb.SkyMeteoWebForecastProvider.GetForecast"/> method.
         /// </summary>
         [Test]
         public void GetForecast()
         {
-            var htmlWebMock = new Mock<HtmlWeb>();
+            var fetcherMock = new Mock<IFetcher>();
             var document = new HtmlDocument();
 
-            document.LoadHtml(Resources.TestCase.SkyMeteo_Forecast_NizhnyNovgorod_Valid);
-            htmlWebMock.Setup(_ => _.Load(It.IsAny<Uri>())).Returns(new HtmlDocument());
+            document.LoadHtml(ParaglidingWeather.Providers.SkyMeteoWeb.Test.Resources.TestCase.SkyMeteo_Forecast_NizhnyNovgorod_Valid);
+            fetcherMock.Setup(_ => _.Fetch()).Returns(document);
 
             // the geographic coordinate of Nizhny Novgorod
             var coordintae = new Coordinate(latitude: 56.31, longitude: 44.02);
-            var provider = new ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider();
+            var provider = new ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider(fetcherMock.Object);
 
-            var result = provider.GetForecast(coordintae);
-            Assert.AreEqual(string.Empty, result);
+            var forecast = provider.GetForecast(coordintae);
+
+            Assert.IsTrue(Enumerable.SequenceEqual(new List<IWeatherReport>(), forecast));
         }
     }
 }

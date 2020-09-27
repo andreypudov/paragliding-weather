@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\TestCase.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>TestCase.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

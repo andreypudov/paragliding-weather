@@ -4,32 +4,32 @@
         <name>ParaglidingWeather.Helpers.Test</name>
     </assembly>
     <members>
-        <member name="T:ParaglidingWeather.Helpers.Test.DirectionBuilder">
+        <member name="T:ParaglidingWeather.Helpers.Test.CompassPointBuilder">
             <summary>
-            Represents a test class for <see cref="T:ParaglidingWeather.Helpers.DirectionBuilder"/>.
+            Represents a test class for <see cref="T:ParaglidingWeather.Helpers.CompassPointBuilder"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Helpers.Test.DirectionBuilder.Get8WindDirection(ParaglidingWeather.Core.Direction,System.Decimal,System.Decimal)">
+        <member name="M:ParaglidingWeather.Helpers.Test.CompassPointBuilder.Get8WindCompassPoint(ParaglidingWeather.Core.CompassPoint,System.Decimal,System.Decimal)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.DirectionBuilder.Get8WindDirection(System.Double)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.CompassPointBuilder.Get8WindCompassPoint(System.Double)"/> method.
             </summary>
-            <param name="direction">The expected value of direction.</param>
+            <param name="point">The expected value of compass point.</param>
             <param name="left">The left boundary of direction in degrees.</param>
             <param name="right">The right boundary of direction in degrees.</param>
         </member>
-        <member name="M:ParaglidingWeather.Helpers.Test.DirectionBuilder.Get16WindDirection(ParaglidingWeather.Core.Direction,System.Decimal,System.Decimal)">
+        <member name="M:ParaglidingWeather.Helpers.Test.CompassPointBuilder.Get16WindCompassPoint(ParaglidingWeather.Core.CompassPoint,System.Decimal,System.Decimal)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.DirectionBuilder.Get16WindDirection(System.Double)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.CompassPointBuilder.Get16WindCompassPoint(System.Double)"/> method.
             </summary>
-            <param name="direction">The expected value of direction.</param>
+            <param name="point">The expected value of compass point.</param>
             <param name="left">The left boundary of direction in degrees.</param>
             <param name="right">The right boundary of direction in degrees.</param>
         </member>
-        <member name="M:ParaglidingWeather.Helpers.Test.DirectionBuilder.Get32WindDirection(ParaglidingWeather.Core.Direction,System.Decimal,System.Decimal)">
+        <member name="M:ParaglidingWeather.Helpers.Test.CompassPointBuilder.Get32WindCompassPoint(ParaglidingWeather.Core.CompassPoint,System.Decimal,System.Decimal)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.DirectionBuilder.Get32WindDirection(System.Double)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Helpers.CompassPointBuilder.Get32WindCompassPoint(System.Double)"/> method.
             </summary>
-            <param name="direction">The expected value of direction.</param>
+            <param name="point">The expected value of compass point.</param>
             <param name="left">The left boundary of direction in degrees.</param>
             <param name="right">The right boundary of direction in degrees.</param>
         </member>

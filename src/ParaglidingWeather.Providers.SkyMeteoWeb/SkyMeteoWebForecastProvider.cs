@@ -5,8 +5,8 @@
 namespace ParaglidingWeather.Providers.SkyMeteoWeb
 {
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
-    using HtmlAgilityPack;
     using ParaglidingWeather.Core;
     using ParaglidingWeather.Core.Types;
 
@@ -15,19 +15,28 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
     /// </summary>
     public class SkyMeteoWebForecastProvider : IForecastProvider
     {
-        /// <inheritdoc/>
-        public IForecast GetForecast(Coordinate coordinate)
+        private readonly IFetcher fetcher;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SkyMeteoWebForecastProvider"/> class.
+        /// </summary>
+        /// <param name="fetcher">The instance of the data fetcher.</param>
+        public SkyMeteoWebForecastProvider(IFetcher fetcher)
         {
-            var web = new HtmlWeb();
-            var document = web.Load(new Uri("http://meteo.paraplan.net/forecast/summary.html?place=3148"));
-
-            Console.WriteLine(document);
-
-            throw new System.NotImplementedException();
+            this.fetcher = fetcher;
         }
 
         /// <inheritdoc/>
-        public Task<IForecast> GetForecastAsync(Coordinate coordinate)
+        public List<IWeatherReport> GetForecast(Coordinate coordinate)
+        {
+            var document = this.fetcher.Fetch();
+            var parser = new DocumentParser(document);
+
+            return parser.Parse();
+        }
+
+        /// <inheritdoc/>
+        public Task<List<IWeatherReport>> GetForecastAsync(Coordinate coordinate)
         {
             throw new System.NotImplementedException();
         }

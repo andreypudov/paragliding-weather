@@ -11,14 +11,14 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Precipitation : IPrecipitation, IEquatable<Precipitation>
     {
-        private readonly int precipitation;
+        private readonly double precipitation;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Precipitation"/> struct.
         /// </summary>
         /// <param name="precipitation">The value of precipitation.</param>
         /// <param name="unit">The unit of precipitation.</param>
-        public Precipitation(int precipitation, Units.Precipitation unit)
+        public Precipitation(double precipitation, Units.Precipitation unit)
         {
             switch (unit)
             {
@@ -40,7 +40,7 @@ namespace ParaglidingWeather.Core.Types
         }
 
         /// <inheritdoc/>
-        public int GetPrecipitation(Units.Precipitation unit)
+        public double GetPrecipitation(Units.Precipitation unit)
         {
             return this.precipitation;
         }
