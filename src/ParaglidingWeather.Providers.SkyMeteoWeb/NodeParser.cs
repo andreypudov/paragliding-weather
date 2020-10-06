@@ -16,40 +16,46 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
     public class NodeParser
     {
         private readonly HtmlNode node;
-        private readonly DateTime date;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NodeParser"/> class.
         /// </summary>
         /// <param name="node">The HTML node to parse.</param>
-        /// <param name="date">The date of the forecast.</param>
-        public NodeParser(HtmlNode node, DateTime date)
+        public NodeParser(HtmlNode node)
         {
             this.node = node;
-            this.date = date;
         }
 
         /// <summary>
         /// Parses the node and returns weather information.
         /// </summary>
+        /// <param name="date">The date of the forecast.</param>
         /// <returns>The instance of weather reports.</returns>
-        public IWeatherReport? Parse()
+        public IWeatherReport? Parse(ref DateTime date)
         {
             int columns = this.node.SelectNodes("*").Count;
 
             if (columns == 12)
             {
-                return this.ParseDateRow();
+                return this.ParseDateRow(ref date);
             }
             else if (columns == 11)
             {
-                return this.ParseGeneralRow();
+                return this.ParseGeneralRow(ref date);
             }
 
             return null;
         }
 
-        private IWeatherReport? ParseDateRow()
+        private static void UpdateDate(ref DateTime date, int day)
+        {
+            while (date.Day != day)
+            {
+                date = date.AddDays(1);
+            }
+        }
+
+        private IWeatherReport? ParseDateRow(ref DateTime date)
         {
             const int DATE_COLUMN = 0;
             const int TIME_COLUMN = 1;
@@ -70,7 +76,7 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
                 return null;
             }
 
-            if (int.TryParse(new string(columns[DATE_COLUMN].SelectNodes("*")[1].InnerText.Where(char.IsDigit).ToArray()), out int date)
+            if (int.TryParse(new string(columns[DATE_COLUMN].SelectNodes("*")[1].InnerText.Where(char.IsDigit).ToArray()), out int day)
                 && int.TryParse(new string(columns[TIME_COLUMN].InnerText.Where(char.IsDigit).ToArray()), out int time)
                 && int.TryParse(columns[TEMPERATURE_COLUMN].InnerText, out int temperature)
                 && double.TryParse(columns[WIND_DIRECTION_COLUMN].LastChild.GetAttributeValue("alt", "0"), out double wind_direction)
@@ -81,8 +87,10 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
                 && double.TryParse(columns[PRECIPITATION_COLUMN].InnerText, out double precipitation)
                 && int.TryParse(columns[PRESSURE_COLUMN].InnerText, out int pressure))
             {
+                UpdateDate(ref date, day);
+
                 return new WeatherReport(
-                    time: this.date.AddHours(time),
+                    time: date.AddHours(time),
                     temperature: new Temperature(temperature, Core.Units.Temperature.Celsius),
                     pressure: new Pressure(pressure, Core.Units.Pressure.Pascal),
                     humidity: new Humidity(humidity, Core.Units.Humidity.Relative),
@@ -97,7 +105,7 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
             return null;
         }
 
-        private IWeatherReport? ParseGeneralRow()
+        private IWeatherReport? ParseGeneralRow(ref DateTime date)
         {
             const int TIME_COLUMN = 0;
             const int TEMPERATURE_COLUMN = 1;
@@ -126,7 +134,7 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
                 && int.TryParse(columns[PRESSURE_COLUMN].InnerText, out int pressure))
             {
                 return new WeatherReport(
-                    time: this.date.AddHours(time),
+                    time: date.AddHours(time),
                     temperature: new Temperature(temperature, Core.Units.Temperature.Celsius),
                     pressure: new Pressure(pressure, Core.Units.Pressure.Pascal),
                     humidity: new Humidity(humidity, Core.Units.Humidity.Relative),

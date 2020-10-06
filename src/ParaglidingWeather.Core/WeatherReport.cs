@@ -5,7 +5,6 @@
 namespace ParaglidingWeather.Core
 {
     using System;
-    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Text;
     using ParaglidingWeather.Core.Types;
@@ -65,13 +64,13 @@ namespace ParaglidingWeather.Core
         public IPrecipitation Precipitation { get; }
 
         /// <inheritdoc/>
-        public override bool Equals([AllowNull] object obj)
+        public override bool Equals(object? obj)
         {
             return this.Equals(obj as WeatherReport);
         }
 
         /// <inheritdoc/>
-        public bool Equals([AllowNull] WeatherReport other)
+        public bool Equals(WeatherReport? other)
         {
             return other != null &&
                 this.Time.Equals(other.Time) &&

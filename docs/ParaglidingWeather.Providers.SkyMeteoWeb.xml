@@ -9,17 +9,17 @@
             Provides methods to parse HTML document.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser.#ctor(HtmlAgilityPack.HtmlDocument,System.DateTime)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser.#ctor(HtmlAgilityPack.HtmlDocument)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser"/> class.
             </summary>
             <param name="document">The HTML document to parse.</param>
-            <param name="date">The date of the forecast.</param>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser.Parse">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser.Parse(System.DateTime)">
             <summary>
             Parses the document and returns weather information.
             </summary>
+            <param name="date">The date of the forecast.</param>
             <returns>The list of weather reports.</returns>
         </member>
         <member name="T:ParaglidingWeather.Providers.SkyMeteoWeb.Fetcher">
@@ -67,17 +67,17 @@
             Provides methods to parse HTML node.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser.#ctor(HtmlAgilityPack.HtmlNode,System.DateTime)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser.#ctor(HtmlAgilityPack.HtmlNode)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser"/> class.
             </summary>
             <param name="node">The HTML node to parse.</param>
-            <param name="date">The date of the forecast.</param>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser.Parse">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser.Parse(System.DateTime@)">
             <summary>
             Parses the node and returns weather information.
             </summary>
+            <param name="date">The date of the forecast.</param>
             <returns>The instance of weather reports.</returns>
         </member>
         <member name="T:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider">

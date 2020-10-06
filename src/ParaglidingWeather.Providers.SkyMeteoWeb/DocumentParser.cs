@@ -16,28 +16,26 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
     public class DocumentParser
     {
         private readonly HtmlDocument document;
-        private readonly DateTime date;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentParser"/> class.
         /// </summary>
         /// <param name="document">The HTML document to parse.</param>
-        /// <param name="date">The date of the forecast.</param>
-        public DocumentParser(HtmlDocument document, DateTime date)
+        public DocumentParser(HtmlDocument document)
         {
             this.document = document;
-            this.date = date;
         }
 
         /// <summary>
         /// Parses the document and returns weather information.
         /// </summary>
+        /// <param name="date">The date of the forecast.</param>
         /// <returns>The list of weather reports.</returns>
-        public List<IWeatherReport> Parse()
+        public List<IWeatherReport> Parse(DateTime date)
         {
             var entries = this.document.DocumentNode.SelectNodes("(//table[@id='forecast']//tr)");
             var reports = (List<IWeatherReport>)entries
-                .Select(n => new NodeParser(n, this.date).Parse())
+                .Select(n => new NodeParser(n).Parse(ref date))
                 .Where(w => w != null)
                 .ToList() !;
 

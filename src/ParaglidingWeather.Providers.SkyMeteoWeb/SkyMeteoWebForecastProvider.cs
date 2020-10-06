@@ -33,9 +33,9 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
         public List<IWeatherReport> GetForecast(Coordinate coordinate)
         {
             var document = this.fetcher.Fetch();
-            var parser = new DocumentParser(document, this.date);
+            var parser = new DocumentParser(document);
 
-            return parser.Parse();
+            return parser.Parse(this.date);
         }
 
         /// <inheritdoc/>
