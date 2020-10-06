@@ -110,6 +110,13 @@
             </summary>
             <param name="degree">The value of the compass degree.</param>
         </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Direction.ToString(System.String,System.Double)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Direction.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
+            <param name="degree">The value of the compass degree.</param>
+        </member>
         <member name="T:ParaglidingWeather.Core.Test.Types.Humidity">
             <summary>
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Humidity"/>.
@@ -119,6 +126,14 @@
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Humidity.#ctor(System.Int32,ParaglidingWeather.Core.Units.Humidity)"/> method.
             </summary>
+            <param name="humidity">The value of humidity.</param>
+            <param name="unit">The unit of pressure.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Humidity.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
             <param name="humidity">The value of humidity.</param>
             <param name="unit">The unit of pressure.</param>
         </member>
@@ -134,6 +149,14 @@
             <param name="precipitation">The value of precipitation.</param>
             <param name="unit">The unit of precipitation.</param>
         </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Precipitation.ToString(System.String,System.Double,ParaglidingWeather.Core.Units.Precipitation)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Precipitation.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
+            <param name="precipitation">The value of precipitation.</param>
+            <param name="unit">The unit of precipitation.</param>
+        </member>
         <member name="T:ParaglidingWeather.Core.Test.Types.Pressure">
             <summary>
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Pressure"/>.
@@ -143,6 +166,14 @@
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Pressure.#ctor(System.Int32,ParaglidingWeather.Core.Units.Pressure)"/> method.
             </summary>
+            <param name="pressure">The value of pressure.</param>
+            <param name="unit">The unit of pressure.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Pressure)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Pressure.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
             <param name="pressure">The value of pressure.</param>
             <param name="unit">The unit of pressure.</param>
         </member>
@@ -158,6 +189,14 @@
             <param name="speed">The value of speed.</param>
             <param name="unit">The unit of speed.</param>
         </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Speed)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Speed.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
+            <param name="speed">The value of speed.</param>
+            <param name="unit">The unit of speed.</param>
+        </member>
         <member name="T:ParaglidingWeather.Core.Test.Types.Temperature">
             <summary>
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Temperature"/>.
@@ -170,6 +209,14 @@
             <param name="temperature">The value of temperature.</param>
             <param name="unit">The unit of temperature.</param>
         </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Temperature.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
+            <param name="temperature">The value of temperature.</param>
+            <param name="unit">The unit of temperature.</param>
+        </member>
         <member name="T:ParaglidingWeather.Core.Test.Types.Wind">
             <summary>
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Wind"/>.
@@ -179,6 +226,15 @@
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Wind.#ctor(ParaglidingWeather.Core.Types.ISpeed,ParaglidingWeather.Core.Types.Direction,ParaglidingWeather.Core.Types.ISpeed)"/> method.
             </summary>
+            <param name="speed">The value of wind speend.</param>
+            <param name="direction">The value of wind direction.</param>
+            <param name="gust">The value of wind gust.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.ToString(System.String,System.Int32,System.Double,System.Int32)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Temperature.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
             <param name="speed">The value of wind speend.</param>
             <param name="direction">The value of wind direction.</param>
             <param name="gust">The value of wind gust.</param>

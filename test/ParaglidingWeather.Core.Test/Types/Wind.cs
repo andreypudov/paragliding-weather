@@ -29,5 +29,22 @@ namespace ParaglidingWeather.Core.Test.Types
             Assert.AreEqual(direction, instance.Direction.Degree);
             Assert.AreEqual(gust, instance.Gust.GetSpeed(Units.Speed.MeterPerSecond));
         }
+
+        /// <summary>
+        /// Represents a test case for <see cref="Core.Types.Temperature.ToString"/> method.
+        /// </summary>
+        /// <param name="expected">The value of expected return.</param>
+        /// <param name="speed">The value of wind speend.</param>
+        /// <param name="direction">The value of wind direction.</param>
+        /// <param name="gust">The value of wind gust.</param>
+        [TestCase("[10, 20.0, 5]", 10, 20.0, 5)]
+        public void ToString(string expected, int speed, double direction, int gust)
+        {
+            var instance = new Core.Types.Wind(
+                new Core.Types.Speed(speed, Units.Speed.MeterPerSecond),
+                new Core.Types.Direction(direction),
+                new Core.Types.Speed(gust, Units.Speed.MeterPerSecond));
+            Assert.AreEqual(expected, instance.ToString());
+        }
     }
 }

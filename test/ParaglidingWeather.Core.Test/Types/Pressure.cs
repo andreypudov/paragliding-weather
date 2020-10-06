@@ -24,5 +24,17 @@ namespace ParaglidingWeather.Core.Test.Types
             var instance = new Core.Types.Pressure(pressure, unit);
             Assert.AreEqual(pressure, instance.GetPressure(unit));
         }
+
+        /// <summary>
+        /// Represents a test case for <see cref="Core.Types.Pressure.ToString"/> method.
+        /// </summary>
+        /// <param name="expected">The value of expected return.</param>
+        /// <param name="pressure">The value of pressure.</param>
+        /// <param name="unit">The unit of pressure.</param>
+        [TestCase("10", 10, Units.Pressure.Pascal)]
+        public void ToString(string expected, int pressure, Units.Pressure unit)
+        {
+            Assert.AreEqual(expected, new Core.Types.Pressure(pressure, unit).ToString());
+        }
     }
 }

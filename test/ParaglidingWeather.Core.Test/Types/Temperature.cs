@@ -24,5 +24,17 @@ namespace ParaglidingWeather.Core.Test.Types
             var instance = new Core.Types.Temperature(temperature, unit);
             Assert.AreEqual(temperature, instance.GetTemperature(unit));
         }
+
+        /// <summary>
+        /// Represents a test case for <see cref="Core.Types.Temperature.ToString"/> method.
+        /// </summary>
+        /// <param name="expected">The value of expected return.</param>
+        /// <param name="temperature">The value of temperature.</param>
+        /// <param name="unit">The unit of temperature.</param>
+        [TestCase("10", 10, Units.Temperature.Celsius)]
+        public void ToString(string expected, int temperature, Units.Temperature unit)
+        {
+            Assert.AreEqual(expected, new Core.Types.Temperature(temperature, unit).ToString());
+        }
     }
 }

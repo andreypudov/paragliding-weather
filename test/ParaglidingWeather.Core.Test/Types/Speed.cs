@@ -24,5 +24,17 @@ namespace ParaglidingWeather.Core.Test.Types
             var instance = new Core.Types.Speed(speed, unit);
             Assert.AreEqual(speed, instance.GetSpeed(unit));
         }
+
+        /// <summary>
+        /// Represents a test case for <see cref="Core.Types.Speed.ToString"/> method.
+        /// </summary>
+        /// <param name="expected">The value of expected return.</param>
+        /// <param name="speed">The value of speed.</param>
+        /// <param name="unit">The unit of speed.</param>
+        [TestCase("10", 10, Units.Speed.MeterPerSecond)]
+        public void ToString(string expected, int speed, Units.Speed unit)
+        {
+            Assert.AreEqual(expected, new Core.Types.Speed(speed, unit).ToString());
+        }
     }
 }

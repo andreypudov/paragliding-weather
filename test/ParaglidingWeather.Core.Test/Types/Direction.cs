@@ -23,5 +23,16 @@ namespace ParaglidingWeather.Core.Test.Types
             var instance = new Core.Types.Direction(degree);
             Assert.AreEqual(degree, instance.Degree);
         }
+
+        /// <summary>
+        /// Represents a test case for <see cref="Core.Types.Direction.ToString"/> method.
+        /// </summary>
+        /// <param name="expected">The value of expected return.</param>
+        /// <param name="degree">The value of the compass degree.</param>
+        [TestCase("10.0", 10.0)]
+        public void ToString(string expected, double degree)
+        {
+            Assert.AreEqual(expected, new Core.Types.Direction(degree).ToString());
+        }
     }
 }
