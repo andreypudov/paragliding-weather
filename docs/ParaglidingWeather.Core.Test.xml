@@ -99,5 +99,89 @@
             <param name="latitude">The latitude coordinate of the location.</param>
             <param name="longitude">The longitude coordinate of the location.</param>
         </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Direction">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Direction"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Direction.Constructor(System.Double)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Direction.#ctor(System.Double)"/> method.
+            </summary>
+            <param name="degree">The value of the compass degree.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Humidity">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Humidity"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.Constructor(System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Humidity.#ctor(System.Int32,ParaglidingWeather.Core.Units.Humidity)"/> method.
+            </summary>
+            <param name="humidity">The value of humidity.</param>
+            <param name="unit">The unit of pressure.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Precipitation">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Precipitation"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Precipitation.Constructor(System.Double,ParaglidingWeather.Core.Units.Precipitation)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Precipitation.#ctor(System.Double,ParaglidingWeather.Core.Units.Precipitation)"/> method.
+            </summary>
+            <param name="precipitation">The value of precipitation.</param>
+            <param name="unit">The unit of precipitation.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Pressure">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Pressure"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.Constructor(System.Int32,ParaglidingWeather.Core.Units.Pressure)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Pressure.#ctor(System.Int32,ParaglidingWeather.Core.Units.Pressure)"/> method.
+            </summary>
+            <param name="pressure">The value of pressure.</param>
+            <param name="unit">The unit of pressure.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Speed">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Speed"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.Constructor(System.Int32,ParaglidingWeather.Core.Units.Speed)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Speed.#ctor(System.Int32,ParaglidingWeather.Core.Units.Speed)"/> method.
+            </summary>
+            <param name="speed">The value of speed.</param>
+            <param name="unit">The unit of speed.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Temperature">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Temperature"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.Constructor(System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Temperature.#ctor(System.Int32,ParaglidingWeather.Core.Units.Temperature)"/> method.
+            </summary>
+            <param name="temperature">The value of temperature.</param>
+            <param name="unit">The unit of temperature.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Wind">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Wind"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.Constructor(System.Int32,System.Double,System.Int32)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Wind.#ctor(ParaglidingWeather.Core.Types.ISpeed,ParaglidingWeather.Core.Types.Direction,ParaglidingWeather.Core.Types.ISpeed)"/> method.
+            </summary>
+            <param name="speed">The value of wind speend.</param>
+            <param name="direction">The value of wind direction.</param>
+            <param name="gust">The value of wind gust.</param>
+        </member>
     </members>
 </doc>

@@ -54,7 +54,7 @@ namespace ParaglidingWeather.Core.Types
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"{this.Degree}";
+            return $"{this.Degree:0.0}";
         }
     }
 }
