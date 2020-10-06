@@ -5,6 +5,7 @@
 namespace ParaglidingWeather.Core
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Text;
     using ParaglidingWeather.Core.Types;
@@ -12,7 +13,7 @@ namespace ParaglidingWeather.Core
     /// <summary>
     /// Represents a weather forecast entry.
     /// </summary>
-    public class WeatherReport : IWeatherReport
+    public class WeatherReport : IWeatherReport, IEquatable<WeatherReport>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WeatherReport"/> class.
@@ -62,6 +63,38 @@ namespace ParaglidingWeather.Core
 
         /// <inheritdoc/>
         public IPrecipitation Precipitation { get; }
+
+        /// <inheritdoc/>
+        public override bool Equals([AllowNull] object obj)
+        {
+            return this.Equals(obj as WeatherReport);
+        }
+
+        /// <inheritdoc/>
+        public bool Equals([AllowNull] WeatherReport other)
+        {
+            return other != null &&
+                this.Time.Equals(other.Time) &&
+                this.Temperature.Equals(other.Temperature) &&
+                this.Pressure.Equals(other.Pressure) &&
+                this.Humidity.Equals(other.Humidity) &&
+                this.Wind.Equals(other.Wind) &&
+                this.Cloudiness.Equals(other.Cloudiness) &&
+                this.Precipitation.Equals(other.Precipitation);
+        }
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(
+                this.Time,
+                this.Temperature,
+                this.Pressure,
+                this.Humidity,
+                this.Wind,
+                this.Cloudiness,
+                this.Precipitation);
+        }
 
         /// <inheritdoc/>
         public override string ToString()

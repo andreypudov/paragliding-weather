@@ -691,6 +691,15 @@
         <member name="P:ParaglidingWeather.Core.WeatherReport.Precipitation">
             <inheritdoc/>
         </member>
+        <member name="M:ParaglidingWeather.Core.WeatherReport.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.WeatherReport.Equals(ParaglidingWeather.Core.WeatherReport)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.WeatherReport.GetHashCode">
+            <inheritdoc/>
+        </member>
         <member name="M:ParaglidingWeather.Core.WeatherReport.ToString">
             <inheritdoc/>
         </member>
