@@ -11,14 +11,14 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Pressure : IPressure, IEquatable<Pressure>
     {
-        private readonly int pressure;
+        private readonly double pressure;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Pressure"/> struct.
         /// </summary>
         /// <param name="pressure">The value of pressure.</param>
         /// <param name="unit">The unit of pressure.</param>
-        public Pressure(int pressure, Units.Pressure unit)
+        public Pressure(double pressure, Units.Pressure unit)
         {
             switch (unit)
             {
@@ -40,7 +40,7 @@ namespace ParaglidingWeather.Core.Types
         }
 
         /// <inheritdoc/>
-        public int GetPressure(Units.Pressure unit)
+        public double GetPressure(Units.Pressure unit)
         {
             return this.pressure;
         }
@@ -66,7 +66,7 @@ namespace ParaglidingWeather.Core.Types
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"{this.pressure}";
+            return $"{this.pressure:0.0}";
         }
     }
 }

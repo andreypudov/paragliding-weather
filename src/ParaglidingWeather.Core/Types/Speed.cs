@@ -11,14 +11,14 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Speed : ISpeed, IEquatable<Speed>
     {
-        private readonly int speed;
+        private readonly double speed;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Speed"/> struct.
         /// </summary>
         /// <param name="speed">The value of speed.</param>
         /// <param name="unit">The unit of speed.</param>
-        public Speed(int speed, Units.Speed unit)
+        public Speed(double speed, Units.Speed unit)
         {
             switch (unit)
             {
@@ -40,7 +40,7 @@ namespace ParaglidingWeather.Core.Types
         }
 
         /// <inheritdoc/>
-        public int GetSpeed(Units.Speed unit)
+        public double GetSpeed(Units.Speed unit)
         {
             return this.speed;
         }
@@ -66,7 +66,7 @@ namespace ParaglidingWeather.Core.Types
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"{this.speed}";
+            return $"{this.speed:0.0}";
         }
     }
 }

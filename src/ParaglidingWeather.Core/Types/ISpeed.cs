@@ -14,6 +14,6 @@ namespace ParaglidingWeather.Core.Types
         /// </summary>
         /// <param name="unit">The unit system to use.</param>
         /// <returns>Returns the value of speed.</returns>
-        int GetSpeed(Units.Speed unit);
+        double GetSpeed(Units.Speed unit);
     }
 }

@@ -12,14 +12,14 @@ namespace ParaglidingWeather.Core.Test.Types
     public class Cloudiness
     {
         /// <summary>
-        /// Represents a test case for <see cref="Core.Types.Cloudiness.Cloudiness(int, Units.Cloudiness)"/> method.
+        /// Represents a test case for <see cref="Core.Types.Cloudiness.Cloudiness(double, Units.Cloudiness)"/> method.
         /// </summary>
         /// <param name="cloudiness">The value of cloudiness.</param>
         /// <param name="unit">The unit of cloudiness.</param>
-        [TestCase(10, Units.Cloudiness.Relative)]
-        [TestCase(int.MaxValue, Units.Cloudiness.Relative)]
-        [TestCase(int.MinValue, Units.Cloudiness.Relative)]
-        public void Constructor(int cloudiness, Units.Cloudiness unit)
+        [TestCase(10.0, Units.Cloudiness.Relative)]
+        [TestCase(double.MaxValue, Units.Cloudiness.Relative)]
+        [TestCase(double.MinValue, Units.Cloudiness.Relative)]
+        public void Constructor(double cloudiness, Units.Cloudiness unit)
         {
             var instance = new Core.Types.Cloudiness(cloudiness, unit);
             Assert.AreEqual(cloudiness, instance.GetCloudiness(unit));
@@ -32,10 +32,10 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="unitA">The unit of cloudiness of the first instance.</param>
         /// <param name="valueB">The value of cloudiness of the second instance.</param>
         /// <param name="unitB">The unit of cloudiness of the second instance.</param>
-        [TestCase(10, Units.Cloudiness.Relative, 10, Units.Cloudiness.Relative)]
-        [TestCase(int.MaxValue, Units.Cloudiness.Relative, int.MaxValue, Units.Cloudiness.Relative)]
-        [TestCase(int.MinValue, Units.Cloudiness.Relative, int.MinValue, Units.Cloudiness.Relative)]
-        public void EqualityPositive(int valueA, Units.Cloudiness unitA, int valueB, Units.Cloudiness unitB)
+        [TestCase(10.0, Units.Cloudiness.Relative, 10.0, Units.Cloudiness.Relative)]
+        [TestCase(double.MaxValue, Units.Cloudiness.Relative, double.MaxValue, Units.Cloudiness.Relative)]
+        [TestCase(double.MinValue, Units.Cloudiness.Relative, double.MinValue, Units.Cloudiness.Relative)]
+        public void EqualityPositive(double valueA, Units.Cloudiness unitA, double valueB, Units.Cloudiness unitB)
         {
             var first = new Core.Types.Cloudiness(valueA, unitA);
             var second = new Core.Types.Cloudiness(valueB, unitB);
@@ -53,9 +53,9 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="unitA">The unit of cloudiness of the first instance.</param>
         /// <param name="valueB">The value of cloudiness of the second instance.</param>
         /// <param name="unitB">The unit of cloudiness of the second instance.</param>
-        [TestCase(10, Units.Cloudiness.Relative, 20, Units.Cloudiness.Relative)]
-        [TestCase(int.MinValue, Units.Cloudiness.Relative, int.MaxValue, Units.Cloudiness.Relative)]
-        public void InequalityPositive(int valueA, Units.Cloudiness unitA, int valueB, Units.Cloudiness unitB)
+        [TestCase(10.0, Units.Cloudiness.Relative, 20.0, Units.Cloudiness.Relative)]
+        [TestCase(double.MinValue, Units.Cloudiness.Relative, double.MaxValue, Units.Cloudiness.Relative)]
+        public void InequalityPositive(double valueA, Units.Cloudiness unitA, double valueB, Units.Cloudiness unitB)
         {
             var first = new Core.Types.Cloudiness(valueA, unitA);
             var second = new Core.Types.Cloudiness(valueB, unitB);
@@ -72,8 +72,8 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="expected">The value of expected return.</param>
         /// <param name="cloudiness">The value of cloudiness.</param>
         /// <param name="unit">The unit of cloudiness.</param>
-        [TestCase("10", 10, Units.Cloudiness.Relative)]
-        public void ToString(string expected, int cloudiness, Units.Cloudiness unit)
+        [TestCase("10.0", 10.0, Units.Cloudiness.Relative)]
+        public void ToString(string expected, double cloudiness, Units.Cloudiness unit)
         {
             Assert.AreEqual(expected, new Core.Types.Cloudiness(cloudiness, unit).ToString());
         }

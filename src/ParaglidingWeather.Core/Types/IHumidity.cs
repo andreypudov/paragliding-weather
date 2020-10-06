@@ -14,6 +14,6 @@ namespace ParaglidingWeather.Core.Types
         /// </summary>
         /// <param name="unit">The unit system to use.</param>
         /// <returns>Returns the value of humidity.</returns>
-        int GetHumidity(Units.Humidity unit);
+        double GetHumidity(Units.Humidity unit);
     }
 }

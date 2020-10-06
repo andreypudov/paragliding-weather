@@ -11,14 +11,14 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Humidity : IHumidity, IEquatable<Humidity>
     {
-        private readonly int humidity;
+        private readonly double humidity;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Humidity"/> struct.
         /// </summary>
         /// <param name="humidity">The value of humidity.</param>
         /// <param name="unit">The unit of pressure.</param>
-        public Humidity(int humidity, Units.Humidity unit)
+        public Humidity(double humidity, Units.Humidity unit)
         {
             switch (unit)
             {
@@ -40,7 +40,7 @@ namespace ParaglidingWeather.Core.Types
         }
 
         /// <inheritdoc/>
-        public int GetHumidity(Units.Humidity unit)
+        public double GetHumidity(Units.Humidity unit)
         {
             return this.humidity;
         }
@@ -66,7 +66,7 @@ namespace ParaglidingWeather.Core.Types
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"{this.humidity}";
+            return $"{this.humidity:0.0}";
         }
     }
 }

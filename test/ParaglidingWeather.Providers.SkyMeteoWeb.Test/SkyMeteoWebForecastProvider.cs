@@ -1,5 +1,5 @@
 ﻿// <copyright file="SkyMeteoWebForecastProvider.cs" company="Andrey Pudov">
-// Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
+//     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
 namespace ParaglidingWeather.Providers.SkyMeteoWeb.Test
@@ -7,7 +7,6 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb.Test
     using System;
     using System.Collections.Generic;
     using System.Globalization;
-    using System.Linq;
     using HtmlAgilityPack;
     using Moq;
     using NUnit.Framework;
@@ -90,13 +89,13 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb.Test
 
         private static WeatherReport MakeWeatherReport(
             string time,
-            int temperature,
-            int pressure,
-            int humidity,
-            int windSpeed,
+            double temperature,
+            double pressure,
+            double humidity,
+            double windSpeed,
             double windDirection,
-            int gustSpeed,
-            int cloudiness,
+            double gustSpeed,
+            double cloudiness,
             double precipitation)
         {
             return new WeatherReport(

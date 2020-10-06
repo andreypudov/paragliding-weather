@@ -14,6 +14,6 @@ namespace ParaglidingWeather.Core.Types
         /// </summary>
         /// <param name="unit">The unit system to use.</param>
         /// <returns>Returns the value of cloudiness.</returns>
-        int GetCloudiness(Units.Cloudiness unit);
+        double GetCloudiness(Units.Cloudiness unit);
     }
 }

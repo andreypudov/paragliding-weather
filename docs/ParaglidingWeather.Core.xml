@@ -229,7 +229,7 @@
             Represents a speed entity.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.#ctor(System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.#ctor(System.Double,ParaglidingWeather.Core.Units.Cloudiness)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/> struct.
             </summary>
@@ -312,7 +312,7 @@
             Represents a humidity entity.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Types.Humidity.#ctor(System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.#ctor(System.Double,ParaglidingWeather.Core.Units.Humidity)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Humidity"/> struct.
             </summary>
@@ -483,7 +483,7 @@
             Represents a pressure entity.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Types.Pressure.#ctor(System.Int32,ParaglidingWeather.Core.Units.Pressure)">
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.#ctor(System.Double,ParaglidingWeather.Core.Units.Pressure)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Pressure"/> struct.
             </summary>
@@ -510,7 +510,7 @@
             Represents a speed entity.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Types.Speed.#ctor(System.Int32,ParaglidingWeather.Core.Units.Speed)">
+        <member name="M:ParaglidingWeather.Core.Types.Speed.#ctor(System.Double,ParaglidingWeather.Core.Units.Speed)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Speed"/> struct.
             </summary>
@@ -537,7 +537,7 @@
             Represents a temperature entity.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Types.Temperature.#ctor(System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.#ctor(System.Double,ParaglidingWeather.Core.Units.Temperature)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Temperature"/> struct.
             </summary>

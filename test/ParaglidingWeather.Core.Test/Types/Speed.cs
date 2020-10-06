@@ -12,14 +12,14 @@ namespace ParaglidingWeather.Core.Test.Types
     public class Speed
     {
         /// <summary>
-        /// Represents a test case for <see cref="Core.Types.Speed.Speed(int, Units.Speed)"/> method.
+        /// Represents a test case for <see cref="Core.Types.Speed.Speed(double, Units.Speed)"/> method.
         /// </summary>
         /// <param name="speed">The value of speed.</param>
         /// <param name="unit">The unit of speed.</param>
-        [TestCase(10, Units.Speed.MeterPerSecond)]
-        [TestCase(int.MaxValue, Units.Speed.MeterPerSecond)]
-        [TestCase(int.MinValue, Units.Speed.MeterPerSecond)]
-        public void Constructor(int speed, Units.Speed unit)
+        [TestCase(10.0, Units.Speed.MeterPerSecond)]
+        [TestCase(double.MaxValue, Units.Speed.MeterPerSecond)]
+        [TestCase(double.MinValue, Units.Speed.MeterPerSecond)]
+        public void Constructor(double speed, Units.Speed unit)
         {
             var instance = new Core.Types.Speed(speed, unit);
             Assert.AreEqual(speed, instance.GetSpeed(unit));
@@ -32,10 +32,10 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="unitA">The unit of speed of the first instance.</param>
         /// <param name="valueB">The value of speed of the second instance.</param>
         /// <param name="unitB">The unit of speed of the second instance.</param>
-        [TestCase(10, Units.Speed.MeterPerSecond, 10, Units.Speed.MeterPerSecond)]
-        [TestCase(int.MaxValue, Units.Speed.MeterPerSecond, int.MaxValue, Units.Speed.MeterPerSecond)]
-        [TestCase(int.MinValue, Units.Speed.MeterPerSecond, int.MinValue, Units.Speed.MeterPerSecond)]
-        public void EqualityPositive(int valueA, Units.Speed unitA, int valueB, Units.Speed unitB)
+        [TestCase(10.0, Units.Speed.MeterPerSecond, 10.0, Units.Speed.MeterPerSecond)]
+        [TestCase(double.MaxValue, Units.Speed.MeterPerSecond, double.MaxValue, Units.Speed.MeterPerSecond)]
+        [TestCase(double.MinValue, Units.Speed.MeterPerSecond, double.MinValue, Units.Speed.MeterPerSecond)]
+        public void EqualityPositive(double valueA, Units.Speed unitA, double valueB, Units.Speed unitB)
         {
             var first = new Core.Types.Speed(valueA, unitA);
             var second = new Core.Types.Speed(valueB, unitB);
@@ -53,9 +53,9 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="unitA">The unit of speed of the first instance.</param>
         /// <param name="valueB">The value of speed of the second instance.</param>
         /// <param name="unitB">The unit of speed of the second instance.</param>
-        [TestCase(10, Units.Speed.MeterPerSecond, 20, Units.Speed.MeterPerSecond)]
-        [TestCase(int.MinValue, Units.Speed.MeterPerSecond, int.MaxValue, Units.Speed.MeterPerSecond)]
-        public void InequalityPositive(int valueA, Units.Speed unitA, int valueB, Units.Speed unitB)
+        [TestCase(10.0, Units.Speed.MeterPerSecond, 20.0, Units.Speed.MeterPerSecond)]
+        [TestCase(double.MinValue, Units.Speed.MeterPerSecond, double.MaxValue, Units.Speed.MeterPerSecond)]
+        public void InequalityPositive(double valueA, Units.Speed unitA, double valueB, Units.Speed unitB)
         {
             var first = new Core.Types.Speed(valueA, unitA);
             var second = new Core.Types.Speed(valueB, unitB);
@@ -72,8 +72,8 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="expected">The value of expected return.</param>
         /// <param name="speed">The value of speed.</param>
         /// <param name="unit">The unit of speed.</param>
-        [TestCase("10", 10, Units.Speed.MeterPerSecond)]
-        public void ToString(string expected, int speed, Units.Speed unit)
+        [TestCase("10.0", 10.0, Units.Speed.MeterPerSecond)]
+        public void ToString(string expected, double speed, Units.Speed unit)
         {
             Assert.AreEqual(expected, new Core.Types.Speed(speed, unit).ToString());
         }

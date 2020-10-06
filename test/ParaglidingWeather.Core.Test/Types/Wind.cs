@@ -18,8 +18,8 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="speed">The value of wind speend.</param>
         /// <param name="direction">The value of wind direction.</param>
         /// <param name="gust">The value of wind gust.</param>
-        [TestCase(10, 20.0, 5)]
-        public void Constructor(int speed, double direction, int gust)
+        [TestCase(10.0, 20.0, 5.0)]
+        public void Constructor(double speed, double direction, double gust)
         {
             var instance = new Core.Types.Wind(
                 new Core.Types.Speed(speed, Units.Speed.MeterPerSecond),
@@ -39,8 +39,8 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="speedB">The value of wind speend of the second instance.</param>
         /// <param name="directionB">The value of wind direction of the second instance.</param>
         /// <param name="gustB">The value of wind gust of the second instance.</param>
-        [TestCase(10, 20.0, 5, 10, 20.0, 5)]
-        public void EqualityPositive(int speedA, double directionA, int gustA, int speedB, double directionB, int gustB)
+        [TestCase(10.0, 20.0, 5.0, 10.0, 20.0, 5.0)]
+        public void EqualityPositive(double speedA, double directionA, double gustA, double speedB, double directionB, double gustB)
         {
             var first = new Core.Types.Wind(
                 new Core.Types.Speed(speedA, Units.Speed.MeterPerSecond),
@@ -66,10 +66,10 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="speedB">The value of wind speend of the second instance.</param>
         /// <param name="directionB">The value of wind direction of the second instance.</param>
         /// <param name="gustB">The value of wind gust of the second instance.</param>
-        [TestCase(10, 20.0, 5, 20, 20.0, 5)]
-        [TestCase(10, 20.0, 5, 10, 20.5, 5)]
-        [TestCase(10, 20.0, 5, 10, 20.0, 0)]
-        public void InequalityPositive(int speedA, double directionA, int gustA, int speedB, double directionB, int gustB)
+        [TestCase(10.0, 20.0, 5.0, 20.0, 20.0, 5.0)]
+        [TestCase(10.0, 20.0, 5.0, 10.0, 20.5, 5.0)]
+        [TestCase(10.0, 20.0, 5.0, 10.0, 20.0, 0.0)]
+        public void InequalityPositive(double speedA, double directionA, double gustA, double speedB, double directionB, double gustB)
         {
             var first = new Core.Types.Wind(
                 new Core.Types.Speed(speedA, Units.Speed.MeterPerSecond),
@@ -93,8 +93,8 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="speed">The value of wind speend.</param>
         /// <param name="direction">The value of wind direction.</param>
         /// <param name="gust">The value of wind gust.</param>
-        [TestCase("[10, 20.0, 5]", 10, 20.0, 5)]
-        public void ToString(string expected, int speed, double direction, int gust)
+        [TestCase("[10.0, 20.0, 5.0]", 10.0, 20.0, 5.0)]
+        public void ToString(string expected, double speed, double direction, double gust)
         {
             var instance = new Core.Types.Wind(
                 new Core.Types.Speed(speed, Units.Speed.MeterPerSecond),

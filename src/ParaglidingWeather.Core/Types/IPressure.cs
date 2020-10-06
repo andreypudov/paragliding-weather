@@ -14,6 +14,6 @@ namespace ParaglidingWeather.Core.Types
         /// </summary>
         /// <param name="unit">The unit system to use.</param>
         /// <returns>Returns the value of pressure.</returns>
-        int GetPressure(Units.Pressure unit);
+        double GetPressure(Units.Pressure unit);
     }
 }

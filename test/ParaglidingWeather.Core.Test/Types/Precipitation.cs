@@ -17,8 +17,8 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="precipitation">The value of precipitation.</param>
         /// <param name="unit">The unit of precipitation.</param>
         [TestCase(10.0, Units.Humidity.Relative)]
-        [TestCase(double.MaxValue, Units.Humidity.Relative)]
-        [TestCase(double.MinValue, Units.Humidity.Relative)]
+        [TestCase(double.MaxValue, Units.Precipitation.Millimetres)]
+        [TestCase(double.MinValue, Units.Precipitation.Millimetres)]
         public void Constructor(double precipitation, Units.Precipitation unit)
         {
             var instance = new Core.Types.Precipitation(precipitation, unit);

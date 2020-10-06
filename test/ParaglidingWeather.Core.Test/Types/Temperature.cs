@@ -12,14 +12,14 @@ namespace ParaglidingWeather.Core.Test.Types
     public class Temperature
     {
         /// <summary>
-        /// Represents a test case for <see cref="Core.Types.Temperature.Temperature(int, Units.Temperature)"/> method.
+        /// Represents a test case for <see cref="Core.Types.Temperature.Temperature(double, Units.Temperature)"/> method.
         /// </summary>
         /// <param name="temperature">The value of temperature.</param>
         /// <param name="unit">The unit of temperature.</param>
-        [TestCase(10, Units.Temperature.Celsius)]
-        [TestCase(int.MaxValue, Units.Temperature.Celsius)]
-        [TestCase(int.MinValue, Units.Temperature.Celsius)]
-        public void Constructor(int temperature, Units.Temperature unit)
+        [TestCase(10.0, Units.Temperature.Celsius)]
+        [TestCase(double.MaxValue, Units.Temperature.Celsius)]
+        [TestCase(double.MinValue, Units.Temperature.Celsius)]
+        public void Constructor(double temperature, Units.Temperature unit)
         {
             var instance = new Core.Types.Temperature(temperature, unit);
             Assert.AreEqual(temperature, instance.GetTemperature(unit));
@@ -32,10 +32,10 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="unitA">The unit of temperature of the first instance.</param>
         /// <param name="valueB">The value of temperature of the second instance.</param>
         /// <param name="unitB">The unit of temperature of the second instance.</param>
-        [TestCase(10, Units.Temperature.Celsius, 10, Units.Temperature.Celsius)]
-        [TestCase(int.MaxValue, Units.Temperature.Celsius, int.MaxValue, Units.Temperature.Celsius)]
-        [TestCase(int.MinValue, Units.Temperature.Celsius, int.MinValue, Units.Temperature.Celsius)]
-        public void EqualityPositive(int valueA, Units.Temperature unitA, int valueB, Units.Temperature unitB)
+        [TestCase(10.0, Units.Temperature.Celsius, 10.0, Units.Temperature.Celsius)]
+        [TestCase(double.MaxValue, Units.Temperature.Celsius, double.MaxValue, Units.Temperature.Celsius)]
+        [TestCase(double.MinValue, Units.Temperature.Celsius, double.MinValue, Units.Temperature.Celsius)]
+        public void EqualityPositive(double valueA, Units.Temperature unitA, double valueB, Units.Temperature unitB)
         {
             var first = new Core.Types.Temperature(valueA, unitA);
             var second = new Core.Types.Temperature(valueB, unitB);
@@ -53,9 +53,9 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="unitA">The unit of temperature of the first instance.</param>
         /// <param name="valueB">The value of temperature of the second instance.</param>
         /// <param name="unitB">The unit of temperature of the second instance.</param>
-        [TestCase(10, Units.Temperature.Celsius, 20, Units.Temperature.Celsius)]
-        [TestCase(int.MinValue, Units.Temperature.Celsius, int.MaxValue, Units.Temperature.Celsius)]
-        public void InequalityPositive(int valueA, Units.Temperature unitA, int valueB, Units.Temperature unitB)
+        [TestCase(10.0, Units.Temperature.Celsius, 20.0, Units.Temperature.Celsius)]
+        [TestCase(double.MinValue, Units.Temperature.Celsius, double.MaxValue, Units.Temperature.Celsius)]
+        public void InequalityPositive(double valueA, Units.Temperature unitA, double valueB, Units.Temperature unitB)
         {
             var first = new Core.Types.Temperature(valueA, unitA);
             var second = new Core.Types.Temperature(valueB, unitB);
@@ -72,8 +72,8 @@ namespace ParaglidingWeather.Core.Test.Types
         /// <param name="expected">The value of expected return.</param>
         /// <param name="temperature">The value of temperature.</param>
         /// <param name="unit">The unit of temperature.</param>
-        [TestCase("10", 10, Units.Temperature.Celsius)]
-        public void ToString(string expected, int temperature, Units.Temperature unit)
+        [TestCase("10.0", 10.0, Units.Temperature.Celsius)]
+        public void ToString(string expected, double temperature, Units.Temperature unit)
         {
             Assert.AreEqual(expected, new Core.Types.Temperature(temperature, unit).ToString());
         }

@@ -11,14 +11,14 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Temperature : ITemperature, IEquatable<Temperature>
     {
-        private readonly int temperature;
+        private readonly double temperature;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Temperature"/> struct.
         /// </summary>
         /// <param name="temperature">The value of temperature.</param>
         /// <param name="unit">The unit of temperature.</param>
-        public Temperature(int temperature, Units.Temperature unit)
+        public Temperature(double temperature, Units.Temperature unit)
         {
             switch (unit)
             {
@@ -40,7 +40,7 @@ namespace ParaglidingWeather.Core.Types
         }
 
         /// <inheritdoc/>
-        public int GetTemperature(Units.Temperature unit)
+        public double GetTemperature(Units.Temperature unit)
         {
             return this.temperature;
         }
@@ -66,7 +66,7 @@ namespace ParaglidingWeather.Core.Types
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"{this.temperature}";
+            return $"{this.temperature:0.0}";
         }
     }
 }

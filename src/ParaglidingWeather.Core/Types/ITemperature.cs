@@ -14,6 +14,6 @@ namespace ParaglidingWeather.Core.Types
         /// </summary>
         /// <param name="unit">The unit system to use.</param>
         /// <returns>Returns the value of temperature.</returns>
-        int GetTemperature(Units.Temperature unit);
+        double GetTemperature(Units.Temperature unit);
     }
 }

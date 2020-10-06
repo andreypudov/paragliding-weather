@@ -11,14 +11,14 @@ namespace ParaglidingWeather.Core.Types
     /// </summary>
     public struct Cloudiness : ICloudiness, IEquatable<Cloudiness>
     {
-        private readonly int cloudiness;
+        private readonly double cloudiness;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Cloudiness"/> struct.
         /// </summary>
         /// <param name="cloudiness">The value of cloudiness.</param>
         /// <param name="unit">The unit of cloudiness.</param>
-        public Cloudiness(int cloudiness, Units.Cloudiness unit)
+        public Cloudiness(double cloudiness, Units.Cloudiness unit)
         {
             switch (unit)
             {
@@ -40,7 +40,7 @@ namespace ParaglidingWeather.Core.Types
         }
 
         /// <inheritdoc/>
-        public int GetCloudiness(Units.Cloudiness unit)
+        public double GetCloudiness(Units.Cloudiness unit)
         {
             return this.cloudiness;
         }
@@ -66,7 +66,7 @@ namespace ParaglidingWeather.Core.Types
         /// <inheritdoc/>
         public override string ToString()
         {
-            return $"{this.cloudiness}";
+            return $"{this.cloudiness:0.0}";
         }
     }
 }

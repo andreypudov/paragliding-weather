@@ -28,14 +28,14 @@
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.Constructor(System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.Constructor(System.Double,ParaglidingWeather.Core.Units.Cloudiness)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Cloudiness.#ctor(System.Int32,ParaglidingWeather.Core.Units.Cloudiness)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Cloudiness.#ctor(System.Double,ParaglidingWeather.Core.Units.Cloudiness)"/> method.
             </summary>
             <param name="cloudiness">The value of cloudiness.</param>
             <param name="unit">The unit of cloudiness.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.EqualityPositive(System.Int32,ParaglidingWeather.Core.Units.Cloudiness,System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.EqualityPositive(System.Double,ParaglidingWeather.Core.Units.Cloudiness,System.Double,ParaglidingWeather.Core.Units.Cloudiness)">
             <summary>
             Represents a test case for equality.
             </summary>
@@ -44,7 +44,7 @@
             <param name="valueB">The value of cloudiness of the second instance.</param>
             <param name="unitB">The unit of cloudiness of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.InequalityPositive(System.Int32,ParaglidingWeather.Core.Units.Cloudiness,System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.InequalityPositive(System.Double,ParaglidingWeather.Core.Units.Cloudiness,System.Double,ParaglidingWeather.Core.Units.Cloudiness)">
             <summary>
             Represents a test case for inequality.
             </summary>
@@ -53,7 +53,7 @@
             <param name="valueB">The value of cloudiness of the second instance.</param>
             <param name="unitB">The unit of cloudiness of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.ToString(System.String,System.Double,ParaglidingWeather.Core.Units.Cloudiness)">
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Cloudiness.ToString"/> method.
             </summary>
@@ -136,14 +136,14 @@
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Humidity"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.Constructor(System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.Constructor(System.Double,ParaglidingWeather.Core.Units.Humidity)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Humidity.#ctor(System.Int32,ParaglidingWeather.Core.Units.Humidity)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Humidity.#ctor(System.Double,ParaglidingWeather.Core.Units.Humidity)"/> method.
             </summary>
             <param name="humidity">The value of humidity.</param>
             <param name="unit">The unit of pressure.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.EqualityPositive(System.Int32,ParaglidingWeather.Core.Units.Humidity,System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.EqualityPositive(System.Double,ParaglidingWeather.Core.Units.Humidity,System.Double,ParaglidingWeather.Core.Units.Humidity)">
             <summary>
             Represents a test case for equality.
             </summary>
@@ -152,7 +152,7 @@
             <param name="valueB">The value of humidity of the second instance.</param>
             <param name="unitB">The unit of humidity of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.InequalityPositive(System.Int32,ParaglidingWeather.Core.Units.Humidity,System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.InequalityPositive(System.Double,ParaglidingWeather.Core.Units.Humidity,System.Double,ParaglidingWeather.Core.Units.Humidity)">
             <summary>
             Represents a test case for inequality.
             </summary>
@@ -161,7 +161,7 @@
             <param name="valueB">The value of humidity of the second instance.</param>
             <param name="unitB">The unit of humidity of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Humidity)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Humidity.ToString(System.String,System.Double,ParaglidingWeather.Core.Units.Humidity)">
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Humidity.ToString"/> method.
             </summary>
@@ -212,14 +212,14 @@
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Pressure"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.Constructor(System.Int32,ParaglidingWeather.Core.Units.Pressure)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.Constructor(System.Double,ParaglidingWeather.Core.Units.Pressure)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Pressure.#ctor(System.Int32,ParaglidingWeather.Core.Units.Pressure)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Pressure.#ctor(System.Double,ParaglidingWeather.Core.Units.Pressure)"/> method.
             </summary>
             <param name="pressure">The value of pressure.</param>
             <param name="unit">The unit of pressure.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.EqualityPositive(System.Int32,ParaglidingWeather.Core.Units.Pressure,System.Int32,ParaglidingWeather.Core.Units.Pressure)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.EqualityPositive(System.Double,ParaglidingWeather.Core.Units.Pressure,System.Double,ParaglidingWeather.Core.Units.Pressure)">
             <summary>
             Represents a test case for equality.
             </summary>
@@ -228,7 +228,7 @@
             <param name="valueB">The value of pressure of the second instance.</param>
             <param name="unitB">The unit of pressure of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.InequalityPositive(System.Int32,ParaglidingWeather.Core.Units.Pressure,System.Int32,ParaglidingWeather.Core.Units.Pressure)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.InequalityPositive(System.Double,ParaglidingWeather.Core.Units.Pressure,System.Double,ParaglidingWeather.Core.Units.Pressure)">
             <summary>
             Represents a test case for inequality.
             </summary>
@@ -237,7 +237,7 @@
             <param name="valueB">The value of pressure of the second instance.</param>
             <param name="unitB">The unit of pressure of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Pressure)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Pressure.ToString(System.String,System.Double,ParaglidingWeather.Core.Units.Pressure)">
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Pressure.ToString"/> method.
             </summary>
@@ -250,14 +250,14 @@
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Speed"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.Constructor(System.Int32,ParaglidingWeather.Core.Units.Speed)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.Constructor(System.Double,ParaglidingWeather.Core.Units.Speed)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Speed.#ctor(System.Int32,ParaglidingWeather.Core.Units.Speed)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Speed.#ctor(System.Double,ParaglidingWeather.Core.Units.Speed)"/> method.
             </summary>
             <param name="speed">The value of speed.</param>
             <param name="unit">The unit of speed.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.EqualityPositive(System.Int32,ParaglidingWeather.Core.Units.Speed,System.Int32,ParaglidingWeather.Core.Units.Speed)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.EqualityPositive(System.Double,ParaglidingWeather.Core.Units.Speed,System.Double,ParaglidingWeather.Core.Units.Speed)">
             <summary>
             Represents a test case for equality.
             </summary>
@@ -266,7 +266,7 @@
             <param name="valueB">The value of speed of the second instance.</param>
             <param name="unitB">The unit of speed of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.InequalityPositive(System.Int32,ParaglidingWeather.Core.Units.Speed,System.Int32,ParaglidingWeather.Core.Units.Speed)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.InequalityPositive(System.Double,ParaglidingWeather.Core.Units.Speed,System.Double,ParaglidingWeather.Core.Units.Speed)">
             <summary>
             Represents a test case for inequality.
             </summary>
@@ -275,7 +275,7 @@
             <param name="valueB">The value of speed of the second instance.</param>
             <param name="unitB">The unit of speed of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Speed)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Speed.ToString(System.String,System.Double,ParaglidingWeather.Core.Units.Speed)">
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Speed.ToString"/> method.
             </summary>
@@ -288,14 +288,14 @@
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Temperature"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.Constructor(System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.Constructor(System.Double,ParaglidingWeather.Core.Units.Temperature)">
             <summary>
-            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Temperature.#ctor(System.Int32,ParaglidingWeather.Core.Units.Temperature)"/> method.
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Temperature.#ctor(System.Double,ParaglidingWeather.Core.Units.Temperature)"/> method.
             </summary>
             <param name="temperature">The value of temperature.</param>
             <param name="unit">The unit of temperature.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.EqualityPositive(System.Int32,ParaglidingWeather.Core.Units.Temperature,System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.EqualityPositive(System.Double,ParaglidingWeather.Core.Units.Temperature,System.Double,ParaglidingWeather.Core.Units.Temperature)">
             <summary>
             Represents a test case for equality.
             </summary>
@@ -304,7 +304,7 @@
             <param name="valueB">The value of temperature of the second instance.</param>
             <param name="unitB">The unit of temperature of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.InequalityPositive(System.Int32,ParaglidingWeather.Core.Units.Temperature,System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.InequalityPositive(System.Double,ParaglidingWeather.Core.Units.Temperature,System.Double,ParaglidingWeather.Core.Units.Temperature)">
             <summary>
             Represents a test case for inequality.
             </summary>
@@ -313,7 +313,7 @@
             <param name="valueB">The value of temperature of the second instance.</param>
             <param name="unitB">The unit of temperature of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Temperature)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Temperature.ToString(System.String,System.Double,ParaglidingWeather.Core.Units.Temperature)">
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Temperature.ToString"/> method.
             </summary>
@@ -326,7 +326,7 @@
             Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Wind"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.Constructor(System.Int32,System.Double,System.Int32)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.Constructor(System.Double,System.Double,System.Double)">
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Wind.#ctor(ParaglidingWeather.Core.Types.ISpeed,ParaglidingWeather.Core.Types.IDirection,ParaglidingWeather.Core.Types.ISpeed)"/> method.
             </summary>
@@ -334,7 +334,7 @@
             <param name="direction">The value of wind direction.</param>
             <param name="gust">The value of wind gust.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.EqualityPositive(System.Int32,System.Double,System.Int32,System.Int32,System.Double,System.Int32)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.EqualityPositive(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
             <summary>
             Represents a test case for equality.
             </summary>
@@ -345,7 +345,7 @@
             <param name="directionB">The value of wind direction of the second instance.</param>
             <param name="gustB">The value of wind gust of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.InequalityPositive(System.Int32,System.Double,System.Int32,System.Int32,System.Double,System.Int32)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.InequalityPositive(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
             <summary>
             Represents a test case for inequality.
             </summary>
@@ -356,7 +356,7 @@
             <param name="directionB">The value of wind direction of the second instance.</param>
             <param name="gustB">The value of wind gust of the second instance.</param>
         </member>
-        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.ToString(System.String,System.Int32,System.Double,System.Int32)">
+        <member name="M:ParaglidingWeather.Core.Test.Types.Wind.ToString(System.String,System.Double,System.Double,System.Double)">
             <summary>
             Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Temperature.ToString"/> method.
             </summary>
