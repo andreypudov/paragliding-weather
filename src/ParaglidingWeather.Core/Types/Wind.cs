@@ -17,7 +17,7 @@ namespace ParaglidingWeather.Core.Types
         /// <param name="speed">The value of wind speend.</param>
         /// <param name="direction">The value of wind direction.</param>
         /// <param name="gust">The value of wind gust.</param>
-        public Wind(ISpeed speed, Direction direction, ISpeed gust)
+        public Wind(ISpeed speed, IDirection direction, ISpeed gust)
         {
             this.Speed = speed;
             this.Direction = direction;
@@ -28,7 +28,7 @@ namespace ParaglidingWeather.Core.Types
         public ISpeed Speed { get; }
 
         /// <inheritdoc/>
-        public Direction Direction { get; }
+        public IDirection Direction { get; }
 
         /// <inheritdoc/>
         public ISpeed Gust { get; }
@@ -52,9 +52,9 @@ namespace ParaglidingWeather.Core.Types
         /// <inheritdoc/>
         public bool Equals(Wind other)
         {
-            return this.Speed == other.Speed &&
-                   this.Direction == other.Direction &&
-                   this.Gust == other.Gust;
+            return this.Speed.Equals(other.Speed) &&
+                   this.Direction.Equals(other.Direction) &&
+                   this.Gust.Equals(other.Gust);
         }
 
         /// <inheritdoc/>

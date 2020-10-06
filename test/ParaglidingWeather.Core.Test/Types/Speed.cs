@@ -26,6 +26,47 @@ namespace ParaglidingWeather.Core.Test.Types
         }
 
         /// <summary>
+        /// Represents a test case for equality.
+        /// </summary>
+        /// <param name="valueA">The value of speed of the first instance.</param>
+        /// <param name="unitA">The unit of speed of the first instance.</param>
+        /// <param name="valueB">The value of speed of the second instance.</param>
+        /// <param name="unitB">The unit of speed of the second instance.</param>
+        [TestCase(10, Units.Speed.MeterPerSecond, 10, Units.Speed.MeterPerSecond)]
+        [TestCase(int.MaxValue, Units.Speed.MeterPerSecond, int.MaxValue, Units.Speed.MeterPerSecond)]
+        [TestCase(int.MinValue, Units.Speed.MeterPerSecond, int.MinValue, Units.Speed.MeterPerSecond)]
+        public void EqualityPositive(int valueA, Units.Speed unitA, int valueB, Units.Speed unitB)
+        {
+            var first = new Core.Types.Speed(valueA, unitA);
+            var second = new Core.Types.Speed(valueB, unitB);
+
+            Assert.AreEqual(first, second);
+            Assert.AreEqual((object)first, (object)second);
+            Assert.AreEqual(first.GetHashCode(), second.GetHashCode());
+            Assert.IsTrue(first == second);
+        }
+
+        /// <summary>
+        /// Represents a test case for inequality.
+        /// </summary>
+        /// <param name="valueA">The value of speed of the first instance.</param>
+        /// <param name="unitA">The unit of speed of the first instance.</param>
+        /// <param name="valueB">The value of speed of the second instance.</param>
+        /// <param name="unitB">The unit of speed of the second instance.</param>
+        [TestCase(10, Units.Speed.MeterPerSecond, 20, Units.Speed.MeterPerSecond)]
+        [TestCase(int.MinValue, Units.Speed.MeterPerSecond, int.MaxValue, Units.Speed.MeterPerSecond)]
+        public void InequalityPositive(int valueA, Units.Speed unitA, int valueB, Units.Speed unitB)
+        {
+            var first = new Core.Types.Speed(valueA, unitA);
+            var second = new Core.Types.Speed(valueB, unitB);
+
+            Assert.AreNotEqual(first, second);
+            Assert.AreNotEqual((object)first, (object)second);
+            Assert.AreNotEqual(first.GetHashCode(), second.GetHashCode());
+            Assert.IsTrue(first != second);
+        }
+
+        /// <summary>
         /// Represents a test case for <see cref="Core.Types.Speed.ToString"/> method.
         /// </summary>
         /// <param name="expected">The value of expected return.</param>

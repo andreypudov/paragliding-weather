@@ -26,6 +26,47 @@ namespace ParaglidingWeather.Core.Test.Types
         }
 
         /// <summary>
+        /// Represents a test case for equality.
+        /// </summary>
+        /// <param name="valueA">The value of precipitation of the first instance.</param>
+        /// <param name="unitA">The unit of precipitation of the first instance.</param>
+        /// <param name="valueB">The value of precipitation of the second instance.</param>
+        /// <param name="unitB">The unit of precipitation of the second instance.</param>
+        [TestCase(10.0, Units.Precipitation.Millimetres, 10.0, Units.Precipitation.Millimetres)]
+        [TestCase(double.MaxValue, Units.Precipitation.Millimetres, double.MaxValue, Units.Precipitation.Millimetres)]
+        [TestCase(double.MinValue, Units.Precipitation.Millimetres, double.MinValue, Units.Precipitation.Millimetres)]
+        public void EqualityPositive(double valueA, Units.Precipitation unitA, double valueB, Units.Precipitation unitB)
+        {
+            var first = new Core.Types.Precipitation(valueA, unitA);
+            var second = new Core.Types.Precipitation(valueB, unitB);
+
+            Assert.AreEqual(first, second);
+            Assert.AreEqual((object)first, (object)second);
+            Assert.AreEqual(first.GetHashCode(), second.GetHashCode());
+            Assert.IsTrue(first == second);
+        }
+
+        /// <summary>
+        /// Represents a test case for inequality.
+        /// </summary>
+        /// <param name="valueA">The value of precipitation of the first instance.</param>
+        /// <param name="unitA">The unit of precipitation of the first instance.</param>
+        /// <param name="valueB">The value of precipitation of the second instance.</param>
+        /// <param name="unitB">The unit of precipitation of the second instance.</param>
+        [TestCase(10.0, Units.Precipitation.Millimetres, 20.0, Units.Precipitation.Millimetres)]
+        [TestCase(double.MinValue, Units.Precipitation.Millimetres, double.MaxValue, Units.Precipitation.Millimetres)]
+        public void InequalityPositive(double valueA, Units.Precipitation unitA, double valueB, Units.Precipitation unitB)
+        {
+            var first = new Core.Types.Precipitation(valueA, unitA);
+            var second = new Core.Types.Precipitation(valueB, unitB);
+
+            Assert.AreNotEqual(first, second);
+            Assert.AreNotEqual((object)first, (object)second);
+            Assert.AreNotEqual(first.GetHashCode(), second.GetHashCode());
+            Assert.IsTrue(first != second);
+        }
+
+        /// <summary>
         /// Represents a test case for <see cref="Core.Types.Precipitation.ToString"/> method.
         /// </summary>
         /// <param name="expected">The value of expected return.</param>

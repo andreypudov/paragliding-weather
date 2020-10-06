@@ -17,7 +17,7 @@ namespace ParaglidingWeather.Core.Types
         /// <summary>
         /// Gets the value of wind direction.
         /// </summary>
-        Direction Direction { get; }
+        IDirection Direction { get; }
 
         /// <summary>
         /// Gets the value of wind gust.

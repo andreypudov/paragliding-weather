@@ -564,7 +564,7 @@
             Represents a wind entity.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Types.Wind.#ctor(ParaglidingWeather.Core.Types.ISpeed,ParaglidingWeather.Core.Types.Direction,ParaglidingWeather.Core.Types.ISpeed)">
+        <member name="M:ParaglidingWeather.Core.Types.Wind.#ctor(ParaglidingWeather.Core.Types.ISpeed,ParaglidingWeather.Core.Types.IDirection,ParaglidingWeather.Core.Types.ISpeed)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Wind"/> struct.
             </summary>
