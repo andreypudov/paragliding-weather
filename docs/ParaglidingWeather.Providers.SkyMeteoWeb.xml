@@ -9,11 +9,12 @@
             Provides methods to parse HTML document.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser.#ctor(HtmlAgilityPack.HtmlDocument)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser.#ctor(HtmlAgilityPack.HtmlDocument,System.DateTime)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser"/> class.
             </summary>
             <param name="document">The HTML document to parse.</param>
+            <param name="date">The date of the forecast.</param>
         </member>
         <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.DocumentParser.Parse">
             <summary>
@@ -66,11 +67,12 @@
             Provides methods to parse HTML node.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser.#ctor(HtmlAgilityPack.HtmlNode)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser.#ctor(HtmlAgilityPack.HtmlNode,System.DateTime)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser"/> class.
             </summary>
             <param name="node">The HTML node to parse.</param>
+            <param name="date">The date of the forecast.</param>
         </member>
         <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.NodeParser.Parse">
             <summary>
@@ -83,11 +85,12 @@
             Provides a weather forecast by fetching a data from a web page of SkyMeteo service.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.#ctor(ParaglidingWeather.Providers.SkyMeteoWeb.IFetcher)">
+        <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.#ctor(ParaglidingWeather.Providers.SkyMeteoWeb.IFetcher,System.DateTime)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider"/> class.
             </summary>
             <param name="fetcher">The instance of the data fetcher.</param>
+            <param name="date">The date of the forecast.</param>
         </member>
         <member name="M:ParaglidingWeather.Providers.SkyMeteoWeb.SkyMeteoWebForecastProvider.GetForecast(ParaglidingWeather.Core.Types.Coordinate)">
             <inheritdoc/>

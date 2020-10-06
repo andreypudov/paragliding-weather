@@ -35,29 +35,29 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Directions.resx">
+    <EmbeddedResource Update="Resources\CompassPoints.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Directions.Designer.cs</LastGenOutput>
+      <LastGenOutput>CompassPoints.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Directions.ru.resx">
+    <EmbeddedResource Update="Resources\CompassPoints.ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Directions.ru.Designer.cs</LastGenOutput>
+      <LastGenOutput>CompassPoints.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Directions.resx">
+    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="CompassPoints.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Directions.Designer.cs</LastGenOutput>
+      <LastGenOutput>CompassPoints.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Directions.ru.resx">
+    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="CompassPoints.ru.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Directions.ru.Designer.cs</LastGenOutput>
+      <LastGenOutput>CompassPoints.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Directions.Designer.cs">
-      <DependentUpon>Directions.resx</DependentUpon>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="CompassPoints.Designer.cs">
+      <DependentUpon>CompassPoints.resx</DependentUpon>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Directions.ru.Designer.cs">
-      <DependentUpon>Directions.ru.resx</DependentUpon>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="CompassPoints.ru.Designer.cs">
+      <DependentUpon>CompassPoints.ru.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

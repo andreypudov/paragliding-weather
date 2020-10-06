@@ -16,21 +16,21 @@ namespace ParaglidingWeather.Resources {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Directions_ru {
+    public class CompassPoints_ru {
         
         private static System.Resources.ResourceManager resourceMan;
         
         private static System.Globalization.CultureInfo resourceCulture;
         
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Directions_ru() {
+        internal CompassPoints_ru() {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("ParaglidingWeather.Resources.Directions.ru", typeof(Directions_ru).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("ParaglidingWeather.Resources.CompassPoints.ru", typeof(CompassPoints_ru).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

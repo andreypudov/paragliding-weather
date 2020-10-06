@@ -56,5 +56,11 @@ namespace ParaglidingWeather.Core.Types
         {
             return HashCode.Combine(this.Latitude, this.Longitude);
         }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return $"[{this.Latitude:0.0}, {this.Longitude:0.0}]";
+        }
     }
 }

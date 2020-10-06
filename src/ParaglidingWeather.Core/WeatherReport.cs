@@ -5,6 +5,8 @@
 namespace ParaglidingWeather.Core
 {
     using System;
+    using System.Globalization;
+    using System.Text;
     using ParaglidingWeather.Core.Types;
 
     /// <summary>
@@ -40,39 +42,42 @@ namespace ParaglidingWeather.Core
             this.Precipitation = precipitation;
         }
 
-        /// <summary>
-        /// Gets the value of time.
-        /// </summary>
+        /// <inheritdoc/>
         public DateTime Time { get; }
 
-        /// <summary>
-        /// Gets the value of temperature.
-        /// </summary>
+        /// <inheritdoc/>
         public ITemperature Temperature { get; }
 
-        /// <summary>
-        /// Gets the value of atmospheric pressure.
-        /// </summary>
+        /// <inheritdoc/>
         public IPressure Pressure { get; }
 
-        /// <summary>
-        /// Gets the value of humidity.
-        /// </summary>
+        /// <inheritdoc/>
         public IHumidity Humidity { get; }
 
-        /// <summary>
-        /// Gets the value of wind.
-        /// </summary>
+        /// <inheritdoc/>
         public IWind Wind { get; }
 
-        /// <summary>
-        /// Gets the value of cloudiness.
-        /// </summary>
+        /// <inheritdoc/>
         public ICloudiness Cloudiness { get; }
 
-        /// <summary>
-        /// Gets the value of precipitation.
-        /// </summary>
+        /// <inheritdoc/>
         public IPrecipitation Precipitation { get; }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            var builder = new StringBuilder();
+
+            builder
+                .Append(this.Time.ToString("yyy-MMMM-dd HH:mm:ss", CultureInfo.InvariantCulture)).Append(", ")
+                .Append(this.Temperature).Append(", ")
+                .Append(this.Pressure).Append(", ")
+                .Append(this.Humidity).Append(", ")
+                .Append(this.Wind).Append(", ")
+                .Append(this.Cloudiness).Append(", ")
+                .Append(this.Precipitation);
+
+            return builder.ToString();
+        }
     }
 }

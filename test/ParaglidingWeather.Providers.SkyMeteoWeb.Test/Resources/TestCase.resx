@@ -13,8 +13,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="SkyMeteo_Forecast_NizhnyNovgorod_Valid" xml:space="preserve">
-        <value>
-&lt;!doctype html&gt;
+        <value>&lt;!doctype html&gt;
 &lt;html lang=&quot;ru&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
@@ -949,7 +948,6 @@ qk8k=&quot;a id=&apos;mail&apos; h&quot;; b141x=&quot;ref=\&apos;mai&quot;; fgy4
 &lt;/div&gt;
 &lt;!-- Yandex.Metrika counter --&gt; &lt;script type=&quot;text/javascript&quot;&gt; (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter21635089 = new Ya.Metrika({ id:21635089, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName(&quot;script&quot;)[0], s = d.createElement(&quot;script&quot;), f = function () { n.parentNode.insertBefore(s, n); }; s.type = &quot;text/javascript&quot;; s.async = true; s.src = &quot;https://mc.yandex.ru/metrika/watch.js&quot;; if (w.opera == &quot;[object Opera]&quot;) { d.addEventListener(&quot;DOMContentLoaded&quot;, f, false); } else { f(); } })(document, window, &quot;yandex_metrika_callbacks&quot;); &lt;/script&gt; &lt;noscript&gt;&lt;div&gt;&lt;img src=&quot;https://mc.yandex.ru/watch/21635089&quot; style=&quot;position:absolute; left:-9999px;&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/noscript&gt; &lt;!-- /Yandex.Metrika counter --&gt;
 &lt;/body&gt;
-&lt;/html&gt;&lt;!-- 0.011 с, 2020.9.21 11:13 --&gt;
-        </value>
+&lt;/html&gt;&lt;!-- 0.011 с, 2020.9.21 11:13 --&gt;</value>
     </data>
 </root>

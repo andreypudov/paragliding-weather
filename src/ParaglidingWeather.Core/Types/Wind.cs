@@ -62,5 +62,11 @@ namespace ParaglidingWeather.Core.Types
         {
             return HashCode.Combine(this.Speed, this.Direction, this.Gust);
         }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return $"[{this.Speed}, {this.Direction}, {this.Gust}]";
+        }
     }
 }

@@ -62,5 +62,11 @@ namespace ParaglidingWeather.Core.Types
         {
             return this.pressure.GetHashCode();
         }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return $"{this.pressure}";
+        }
     }
 }

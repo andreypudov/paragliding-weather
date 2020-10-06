@@ -4,24 +4,100 @@
         <name>ParaglidingWeather.Core.Test</name>
     </assembly>
     <members>
-        <member name="T:ParaglidingWeatherTest.Core.CompassPoint">
+        <member name="T:ParaglidingWeather.Core.Test.CompassPoint">
             <summary>
             Represents a test class for <see cref="T:ParaglidingWeather.Core.CompassPoint"/>.
             </summary>
         </member>
-        <member name="M:ParaglidingWeatherTest.Core.CompassPoint.GetAbbreviation(System.String,ParaglidingWeather.Core.CompassPoint)">
+        <member name="M:ParaglidingWeather.Core.Test.CompassPoint.GetAbbreviation(System.String,ParaglidingWeather.Core.CompassPoint)">
             <summary>
             Represents a non-localized test case for <see cref="M:ParaglidingWeather.Core.CompassPointExtension.GetAbbreviation(ParaglidingWeather.Core.CompassPoint,System.Globalization.CultureInfo)"/> method.
             </summary>
             <param name="abbreviation">The expected value of abbreviation.</param>
             <param name="point">The value of compass point.</param>
         </member>
-        <member name="M:ParaglidingWeatherTest.Core.CompassPoint.GetLocalizedAbbreviation(System.String,ParaglidingWeather.Core.CompassPoint)">
+        <member name="M:ParaglidingWeather.Core.Test.CompassPoint.GetLocalizedAbbreviation(System.String,ParaglidingWeather.Core.CompassPoint)">
             <summary>
             Represents a localized test case for <see cref="M:ParaglidingWeather.Core.CompassPointExtension.GetAbbreviation(ParaglidingWeather.Core.CompassPoint,System.Globalization.CultureInfo)"/> method.
             </summary>
             <param name="abbreviation">The expected value of abbreviation.</param>
             <param name="point">The value of compass point.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Cloudiness">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.Constructor(System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Cloudiness.#ctor(System.Int32,ParaglidingWeather.Core.Units.Cloudiness)"/> method.
+            </summary>
+            <param name="cloudiness">The value of cloudiness.</param>
+            <param name="unit">The unit of cloudiness.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.EqualityPositive(System.Int32,ParaglidingWeather.Core.Units.Cloudiness,System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+            <summary>
+            Represents a test case for equality.
+            </summary>
+            <param name="valueA">The value of cloudiness of the first instance.</param>
+            <param name="unitA">The unit of cloudiness of the first instance.</param>
+            <param name="valueB">The value of cloudiness of the second instance.</param>
+            <param name="unitB">The unit of cloudiness of the second instance.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.InequalityPositive(System.Int32,ParaglidingWeather.Core.Units.Cloudiness,System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+            <summary>
+            Represents a test case for inequality.
+            </summary>
+            <param name="valueA">The value of cloudiness of the first instance.</param>
+            <param name="unitA">The unit of cloudiness of the first instance.</param>
+            <param name="valueB">The value of cloudiness of the second instance.</param>
+            <param name="unitB">The unit of cloudiness of the second instance.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Cloudiness.ToString(System.String,System.Int32,ParaglidingWeather.Core.Units.Cloudiness)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Cloudiness.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
+            <param name="cloudiness">The value of cloudiness.</param>
+            <param name="unit">The unit of cloudiness.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Core.Test.Types.Coordinate">
+            <summary>
+            Represents a test class for <see cref="T:ParaglidingWeather.Core.Types.Coordinate"/>.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Coordinate.Constructor(System.Double,System.Double)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Coordinate.#ctor(System.Double,System.Double)"/> method.
+            </summary>
+            <param name="latitude">The latitude coordinate of the location.</param>
+            <param name="longitude">The longitude coordinate of the location.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Coordinate.EqualityPositive(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Represents a test case for equality.
+            </summary>
+            <param name="latitudeA">The latitude coordinate of the first location.</param>
+            <param name="longitudeA">The longitude coordinate of the first location.</param>
+            <param name="latitudeB">The latitude coordinate of the second location.</param>
+            <param name="longitudeB">The longitude coordinate of the second location.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Coordinate.InequalityPositive(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Represents a test case for inequality.
+            </summary>
+            <param name="latitudeA">The latitude coordinate of the first location.</param>
+            <param name="longitudeA">The longitude coordinate of the first location.</param>
+            <param name="latitudeB">The latitude coordinate of the second location.</param>
+            <param name="longitudeB">The longitude coordinate of the second location.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Test.Types.Coordinate.ToString(System.String,System.Double,System.Double)">
+            <summary>
+            Represents a test case for <see cref="M:ParaglidingWeather.Core.Types.Coordinate.ToString"/> method.
+            </summary>
+            <param name="expected">The value of expected return.</param>
+            <param name="latitude">The latitude coordinate of the location.</param>
+            <param name="longitude">The longitude coordinate of the location.</param>
         </member>
     </members>
 </doc>

@@ -38,4 +38,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\ParaglidingWeather.Core\ParaglidingWeather.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Types\" />
+  </ItemGroup>
 </Project>

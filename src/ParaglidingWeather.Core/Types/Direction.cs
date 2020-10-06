@@ -15,13 +15,13 @@ namespace ParaglidingWeather.Core.Types
         /// Initializes a new instance of the <see cref="Direction"/> struct.
         /// </summary>
         /// <param name="degree">The value of the compass degree.</param>
-        public Direction(int degree)
+        public Direction(double degree)
         {
             this.Degree = degree;
         }
 
         /// <inheritdoc/>
-        public int Degree { get; }
+        public double Degree { get; }
 
         public static bool operator ==(Direction left, Direction right)
         {
@@ -49,6 +49,12 @@ namespace ParaglidingWeather.Core.Types
         public override int GetHashCode()
         {
             return this.Degree.GetHashCode();
+        }
+
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return $"{this.Degree}";
         }
     }
 }

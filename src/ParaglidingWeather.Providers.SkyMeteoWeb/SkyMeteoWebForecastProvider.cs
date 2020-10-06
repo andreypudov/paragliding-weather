@@ -16,21 +16,24 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
     public class SkyMeteoWebForecastProvider : IForecastProvider
     {
         private readonly IFetcher fetcher;
+        private readonly DateTime date;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SkyMeteoWebForecastProvider"/> class.
         /// </summary>
         /// <param name="fetcher">The instance of the data fetcher.</param>
-        public SkyMeteoWebForecastProvider(IFetcher fetcher)
+        /// <param name="date">The date of the forecast.</param>
+        public SkyMeteoWebForecastProvider(IFetcher fetcher, DateTime date)
         {
             this.fetcher = fetcher;
+            this.date = date;
         }
 
         /// <inheritdoc/>
         public List<IWeatherReport> GetForecast(Coordinate coordinate)
         {
             var document = this.fetcher.Fetch();
-            var parser = new DocumentParser(document);
+            var parser = new DocumentParser(document, this.date);
 
             return parser.Parse();
         }
@@ -38,7 +41,7 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
         /// <inheritdoc/>
         public Task<List<IWeatherReport>> GetForecastAsync(Coordinate coordinate)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,6 +12,6 @@ namespace ParaglidingWeather.Core.Types
         /// <summary>
         /// Gets the compass direction in degrees.
         /// </summary>
-        int Degree { get; }
+        double Degree { get; }
     }
 }

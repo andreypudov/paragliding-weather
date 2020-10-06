@@ -248,6 +248,9 @@
         <member name="M:ParaglidingWeather.Core.Types.Cloudiness.GetHashCode">
             <inheritdoc/>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.ToString">
+            <inheritdoc/>
+        </member>
         <member name="T:ParaglidingWeather.Core.Types.Coordinate">
             <summary>
             Represents a geographic coordinate.
@@ -275,12 +278,15 @@
         <member name="M:ParaglidingWeather.Core.Types.Coordinate.GetHashCode">
             <inheritdoc/>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Coordinate.ToString">
+            <inheritdoc/>
+        </member>
         <member name="T:ParaglidingWeather.Core.Types.Direction">
             <summary>
             Represents a compass direction.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Core.Types.Direction.#ctor(System.Int32)">
+        <member name="M:ParaglidingWeather.Core.Types.Direction.#ctor(System.Double)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Core.Types.Direction"/> struct.
             </summary>
@@ -296,6 +302,9 @@
             <inheritdoc/>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Direction.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Direction.ToString">
             <inheritdoc/>
         </member>
         <member name="T:ParaglidingWeather.Core.Types.Humidity">
@@ -320,6 +329,9 @@
             <inheritdoc/>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Humidity.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.ToString">
             <inheritdoc/>
         </member>
         <member name="T:ParaglidingWeather.Core.Types.ICloudiness">
@@ -463,6 +475,9 @@
         <member name="M:ParaglidingWeather.Core.Types.Precipitation.GetHashCode">
             <inheritdoc/>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.ToString">
+            <inheritdoc/>
+        </member>
         <member name="T:ParaglidingWeather.Core.Types.Pressure">
             <summary>
             Represents a pressure entity.
@@ -485,6 +500,9 @@
             <inheritdoc/>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Pressure.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.ToString">
             <inheritdoc/>
         </member>
         <member name="T:ParaglidingWeather.Core.Types.Speed">
@@ -511,6 +529,9 @@
         <member name="M:ParaglidingWeather.Core.Types.Speed.GetHashCode">
             <inheritdoc/>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Speed.ToString">
+            <inheritdoc/>
+        </member>
         <member name="T:ParaglidingWeather.Core.Types.Temperature">
             <summary>
             Represents a temperature entity.
@@ -533,6 +554,9 @@
             <inheritdoc/>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Temperature.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.ToString">
             <inheritdoc/>
         </member>
         <member name="T:ParaglidingWeather.Core.Types.Wind">
@@ -564,6 +588,9 @@
             <inheritdoc/>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Wind.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Wind.ToString">
             <inheritdoc/>
         </member>
         <member name="T:ParaglidingWeather.Core.Units.Cloudiness">
@@ -644,39 +671,28 @@
             <param name="precipitation">The value of precipitation.</param>
         </member>
         <member name="P:ParaglidingWeather.Core.WeatherReport.Time">
-            <summary>
-            Gets the value of time.
-            </summary>
+            <inheritdoc/>
         </member>
         <member name="P:ParaglidingWeather.Core.WeatherReport.Temperature">
-            <summary>
-            Gets the value of temperature.
-            </summary>
+            <inheritdoc/>
         </member>
         <member name="P:ParaglidingWeather.Core.WeatherReport.Pressure">
-            <summary>
-            Gets the value of atmospheric pressure.
-            </summary>
+            <inheritdoc/>
         </member>
         <member name="P:ParaglidingWeather.Core.WeatherReport.Humidity">
-            <summary>
-            Gets the value of humidity.
-            </summary>
+            <inheritdoc/>
         </member>
         <member name="P:ParaglidingWeather.Core.WeatherReport.Wind">
-            <summary>
-            Gets the value of wind.
-            </summary>
+            <inheritdoc/>
         </member>
         <member name="P:ParaglidingWeather.Core.WeatherReport.Cloudiness">
-            <summary>
-            Gets the value of cloudiness.
-            </summary>
+            <inheritdoc/>
         </member>
         <member name="P:ParaglidingWeather.Core.WeatherReport.Precipitation">
-            <summary>
-            Gets the value of precipitation.
-            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.WeatherReport.ToString">
+            <inheritdoc/>
         </member>
     </members>
 </doc>
