@@ -4,6 +4,23 @@
         <name>ParaglidingWeather.Bot</name>
     </assembly>
     <members>
+        <member name="T:ParaglidingWeather.Bot.LongPollingClient">
+            <summary>
+            Represents a console running instance for the application.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.LongPollingClient.#ctor(ParaglidingWeather.Bot.WeaherBotConfiguration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeather.Bot.LongPollingClient})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.LongPollingClient"/> class.
+            </summary>
+            <param name="configuration">The instance of a application configuration.</param>
+            <param name="logger">The instance of an application logger.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.LongPollingClient.Run">
+            <summary>
+            The main entry point for the bot.
+            </summary>
+        </member>
         <member name="T:ParaglidingWeather.Bot.Program">
             <summary>
             An entry point of the application.
@@ -41,22 +58,24 @@
             Gets or sets authentication token.
             </summary>
         </member>
-        <member name="T:ParaglidingWeather.Bot.WeatherBot">
+        <member name="T:ParaglidingWeather.Bot.WebhookClient">
             <summary>
-            Represents a console running instance for the application.
+            Represents the handler of web hook requests.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Bot.WeatherBot.#ctor(ParaglidingWeather.Bot.WeaherBotConfiguration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeather.Bot.WeatherBot})">
+        <member name="M:ParaglidingWeather.Bot.WebhookClient.#ctor(System.String,Microsoft.Extensions.Logging.ILogger)">
             <summary>
-            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.WeatherBot"/> class.
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.WebhookClient"/> class.
             </summary>
-            <param name="configuration">The instance of a applicaiton configuration.</param>
-            <param name="logger">The instance of an application logger.</param>
+            <param name="token">The token of the bot.</param>
+            <param name="logger">The instance of the logger.</param>
         </member>
-        <member name="M:ParaglidingWeather.Bot.WeatherBot.Run">
+        <member name="M:ParaglidingWeather.Bot.WebhookClient.Update(System.String)">
             <summary>
-            The main entry point for the bot.
+            Processes client request from the web hook.
             </summary>
+            <param name="request">The HTTP request from the client.</param>
+            <returns>The task that processes a request.</returns>
         </member>
     </members>
 </doc>

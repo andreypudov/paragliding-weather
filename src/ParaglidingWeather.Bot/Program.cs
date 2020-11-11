@@ -27,7 +27,7 @@ namespace ParaglidingWeather.Bot
             configuration.Bind(botConfiguration);
 
             services
-                .AddTransient<WeatherBot>()
+                .AddTransient<LongPollingClient>()
                 .AddLogging(builder =>
                 {
                     builder.ClearProviders();
@@ -58,7 +58,7 @@ namespace ParaglidingWeather.Bot
                 var serviceProvider = serviceCollection.BuildServiceProvider();
                 using (serviceProvider)
                 {
-                    var bot = serviceProvider.GetService<WeatherBot>();
+                    var bot = serviceProvider.GetService<LongPollingClient>();
                     bot.Run();
                 }
             }

@@ -1,33 +1,36 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Core", "src\ParaglidingWeather.Core\ParaglidingWeather.Core.csproj", "{DDDD3FD9-8378-4951-B0DA-2A599D044AAD}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Core", "src\ParaglidingWeather.Core\ParaglidingWeather.Core.csproj", "{DDDD3FD9-8378-4951-B0DA-2A599D044AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Resources", "src\ParaglidingWeather.Resources\ParaglidingWeather.Resources.csproj", "{C7E11BB8-E2C3-4080-B9E0-EC67A5DF61F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Resources", "src\ParaglidingWeather.Resources\ParaglidingWeather.Resources.csproj", "{C7E11BB8-E2C3-4080-B9E0-EC67A5DF61F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Bot", "src\ParaglidingWeather.Bot\ParaglidingWeather.Bot.csproj", "{1E840737-E733-446D-BF21-189268D34354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Bot", "src\ParaglidingWeather.Bot\ParaglidingWeather.Bot.csproj", "{1E840737-E733-446D-BF21-189268D34354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Providers", "src\ParaglidingWeather.Providers\ParaglidingWeather.Providers.csproj", "{08AFC100-CE1E-4639-8B95-D58DD6241985}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Providers", "src\ParaglidingWeather.Providers\ParaglidingWeather.Providers.csproj", "{08AFC100-CE1E-4639-8B95-D58DD6241985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Core.Test", "test\ParaglidingWeather.Core.Test\ParaglidingWeather.Core.Test.csproj", "{CE6ACF05-F956-40BC-87EB-6DCB0776B45E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Core.Test", "test\ParaglidingWeather.Core.Test\ParaglidingWeather.Core.Test.csproj", "{CE6ACF05-F956-40BC-87EB-6DCB0776B45E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Helpers", "src\ParaglidingWeather.Helpers\ParaglidingWeather.Helpers.csproj", "{E8A28E57-0C11-4875-9CCB-260A3403681A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Helpers", "src\ParaglidingWeather.Helpers\ParaglidingWeather.Helpers.csproj", "{E8A28E57-0C11-4875-9CCB-260A3403681A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Helpers.Test", "test\ParaglidingWeather.Helpers.Test\ParaglidingWeather.Helpers.Test.csproj", "{FE483A9F-D5BA-494E-AF31-7DF6B6E49F68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Helpers.Test", "test\ParaglidingWeather.Helpers.Test\ParaglidingWeather.Helpers.Test.csproj", "{FE483A9F-D5BA-494E-AF31-7DF6B6E49F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Bot.Test", "test\ParaglidingWeather.Bot.Test\ParaglidingWeather.Bot.Test.csproj", "{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Bot.Test", "test\ParaglidingWeather.Bot.Test\ParaglidingWeather.Bot.Test.csproj", "{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Providers.Test", "test\ParaglidingWeather.Providers.Test\ParaglidingWeather.Providers.Test.csproj", "{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Providers.Test", "test\ParaglidingWeather.Providers.Test\ParaglidingWeather.Providers.Test.csproj", "{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Providers.SkyMeteo", "src\ParaglidingWeather.Providers.SkyMeteo\ParaglidingWeather.Providers.SkyMeteo.csproj", "{A16E2E3A-D4F7-4850-BB37-4F6DC52CA2F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Providers.SkyMeteo", "src\ParaglidingWeather.Providers.SkyMeteo\ParaglidingWeather.Providers.SkyMeteo.csproj", "{A16E2E3A-D4F7-4850-BB37-4F6DC52CA2F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Providers.SkyMeteoWeb", "src\ParaglidingWeather.Providers.SkyMeteoWeb\ParaglidingWeather.Providers.SkyMeteoWeb.csproj", "{B18917E5-442C-44C9-8F83-1A14237AFB03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Providers.SkyMeteoWeb", "src\ParaglidingWeather.Providers.SkyMeteoWeb\ParaglidingWeather.Providers.SkyMeteoWeb.csproj", "{B18917E5-442C-44C9-8F83-1A14237AFB03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Providers.SkyMeteo.Test", "test\ParaglidingWeather.Providers.SkyMeteo.Test\ParaglidingWeather.Providers.SkyMeteo.Test.csproj", "{6B45B210-BCA9-4C75-A520-B3B7D63B45A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Providers.SkyMeteo.Test", "test\ParaglidingWeather.Providers.SkyMeteo.Test\ParaglidingWeather.Providers.SkyMeteo.Test.csproj", "{6B45B210-BCA9-4C75-A520-B3B7D63B45A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.Providers.SkyMeteoWeb.Test", "test\ParaglidingWeather.Providers.SkyMeteoWeb.Test\ParaglidingWeather.Providers.SkyMeteoWeb.Test.csproj", "{D799073D-126B-4971-9915-1CC295F4A9C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Providers.SkyMeteoWeb.Test", "test\ParaglidingWeather.Providers.SkyMeteoWeb.Test\ParaglidingWeather.Providers.SkyMeteoWeb.Test.csproj", "{D799073D-126B-4971-9915-1CC295F4A9C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.AzureFunction", "src\ParaglidingWeather.AzureFunction\ParaglidingWeather.AzureFunction.csproj", "{18AB11A1-8CC6-4517-8313-63E0A2CD3DCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,13 +90,23 @@ Global
 		{D799073D-126B-4971-9915-1CC295F4A9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D799073D-126B-4971-9915-1CC295F4A9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D799073D-126B-4971-9915-1CC295F4A9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18AB11A1-8CC6-4517-8313-63E0A2CD3DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18AB11A1-8CC6-4517-8313-63E0A2CD3DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18AB11A1-8CC6-4517-8313-63E0A2CD3DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18AB11A1-8CC6-4517-8313-63E0A2CD3DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
 		{CE6ACF05-F956-40BC-87EB-6DCB0776B45E} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
 		{FE483A9F-D5BA-494E-AF31-7DF6B6E49F68} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
+		{C4D8B04F-378E-47E5-9D97-2B3E8EA8A5DA} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
+		{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
 		{6B45B210-BCA9-4C75-A520-B3B7D63B45A3} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
 		{D799073D-126B-4971-9915-1CC295F4A9C4} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
-		{1F7E620A-5A70-4974-ACB6-E750CA9EBDF4} = {EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C802B563-6233-49A3-963F-79759E53776D}
 	EndGlobalSection
 EndGlobal

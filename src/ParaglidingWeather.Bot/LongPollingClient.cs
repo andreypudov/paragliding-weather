@@ -1,10 +1,11 @@
-﻿// <copyright file="WeatherBot.cs" company="Andrey Pudov">
+﻿// <copyright file="LongPollingClient.cs" company="Andrey Pudov">
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
 namespace ParaglidingWeather.Bot
 {
     using System;
+    using System.Net;
     using System.Text;
     using System.Threading.Tasks;
     using HtmlAgilityPack;
@@ -16,17 +17,17 @@ namespace ParaglidingWeather.Bot
     /// <summary>
     /// Represents a console running instance for the application.
     /// </summary>
-    public class WeatherBot
+    public class LongPollingClient
     {
         private readonly ITelegramBotClient client;
-        private readonly ILogger<WeatherBot> logger;
+        private readonly ILogger<LongPollingClient> logger;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="WeatherBot"/> class.
+        /// Initializes a new instance of the <see cref="LongPollingClient"/> class.
         /// </summary>
-        /// <param name="configuration">The instance of a applicaiton configuration.</param>
+        /// <param name="configuration">The instance of a application configuration.</param>
         /// <param name="logger">The instance of an application logger.</param>
-        public WeatherBot(WeaherBotConfiguration configuration, ILogger<WeatherBot> logger)
+        public LongPollingClient(WeaherBotConfiguration configuration, ILogger<LongPollingClient> logger)
         {
             // TODO
             if (configuration == null)
@@ -52,6 +53,11 @@ namespace ParaglidingWeather.Bot
             Console.ReadKey();
 
             this.client.StopReceiving();
+        }
+
+        private static string GetInnerTextValue(HtmlNode node)
+        {
+            return WebUtility.HtmlDecode(node.InnerText.Trim());
         }
 
         private async void OnMessageHandler(object? sender, MessageEventArgs e)
@@ -165,13 +171,13 @@ namespace ParaglidingWeather.Bot
                 }
 
                 buidler
-                    .Append($"{hours[index].InnerText.Trim()}, ")
-                    .Append($"{temperatures[index].InnerText.Trim(),3}, [")
-                    .Append($"{wind_dirs[index].InnerText.Trim().ToUpperInvariant(),3}, ")
-                    .Append($"{winds[index].InnerText.Trim()}, ")
-                    .Append($"{wind_gusts[index].InnerText.Trim(),2}], ")
-                    .Append($"{humidity[index].InnerText.Trim()}, ")
-                    .Append($"{precipitation[index].InnerText.Trim()}\n");
+                    .Append($"{GetInnerTextValue(hours[index])}, ")
+                    .Append($"{GetInnerTextValue(temperatures[index]),3}, [")
+                    .Append($"{GetInnerTextValue(wind_dirs[index]).ToUpperInvariant(),3}, ")
+                    .Append($"{GetInnerTextValue(winds[index])}, ")
+                    .Append($"{GetInnerTextValue(wind_gusts[index]),2}], ")
+                    .Append($"{GetInnerTextValue(humidity[index])}, ")
+                    .Append($"{GetInnerTextValue(precipitation[index])}\n");
 
                 hour = hour + 1;
             }

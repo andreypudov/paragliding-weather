@@ -10,7 +10,7 @@ namespace ParaglidingWeather.Core.Types
     public interface IWind
     {
         /// <summary>
-        /// Gets the value of wind speend.
+        /// Gets the value of wind speed.
         /// </summary>
         ISpeed Speed { get; }
 
