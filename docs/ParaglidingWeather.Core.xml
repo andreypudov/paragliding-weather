@@ -236,6 +236,22 @@
             <param name="cloudiness">The value of cloudiness.</param>
             <param name="unit">The unit of cloudiness.</param>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.op_Equality(ParaglidingWeather.Core.Types.Cloudiness,ParaglidingWeather.Core.Types.Cloudiness)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Cloudiness.op_Inequality(ParaglidingWeather.Core.Types.Cloudiness,ParaglidingWeather.Core.Types.Cloudiness)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Cloudiness"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="M:ParaglidingWeather.Core.Types.Cloudiness.GetCloudiness(ParaglidingWeather.Core.Units.Cloudiness)">
             <inheritdoc/>
         </member>
@@ -269,6 +285,22 @@
         <member name="P:ParaglidingWeather.Core.Types.Coordinate.Longitude">
             <inheritdoc/>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Coordinate.op_Equality(ParaglidingWeather.Core.Types.Coordinate,ParaglidingWeather.Core.Types.Coordinate)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Coordinate"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Coordinate"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Coordinate.op_Inequality(ParaglidingWeather.Core.Types.Coordinate,ParaglidingWeather.Core.Types.Coordinate)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Coordinate"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Coordinate"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="M:ParaglidingWeather.Core.Types.Coordinate.Equals(System.Object)">
             <inheritdoc/>
         </member>
@@ -295,6 +327,22 @@
         <member name="P:ParaglidingWeather.Core.Types.Direction.Degree">
             <inheritdoc/>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Direction.op_Equality(ParaglidingWeather.Core.Types.Direction,ParaglidingWeather.Core.Types.Direction)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Direction"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Direction"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Direction.op_Inequality(ParaglidingWeather.Core.Types.Direction,ParaglidingWeather.Core.Types.Direction)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Direction"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Direction"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="M:ParaglidingWeather.Core.Types.Direction.Equals(System.Object)">
             <inheritdoc/>
         </member>
@@ -318,6 +366,22 @@
             </summary>
             <param name="humidity">The value of humidity.</param>
             <param name="unit">The unit of pressure.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.op_Equality(ParaglidingWeather.Core.Types.Humidity,ParaglidingWeather.Core.Types.Humidity)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Humidity"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Humidity"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Humidity.op_Inequality(ParaglidingWeather.Core.Types.Humidity,ParaglidingWeather.Core.Types.Humidity)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Humidity"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Humidity"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Humidity.GetHumidity(ParaglidingWeather.Core.Units.Humidity)">
             <inheritdoc/>
@@ -463,6 +527,22 @@
             <param name="precipitation">The value of precipitation.</param>
             <param name="unit">The unit of precipitation.</param>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.op_Equality(ParaglidingWeather.Core.Types.Precipitation,ParaglidingWeather.Core.Types.Precipitation)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Precipitation"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Precipitation"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Precipitation.op_Inequality(ParaglidingWeather.Core.Types.Precipitation,ParaglidingWeather.Core.Types.Precipitation)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Precipitation"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Precipitation"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="M:ParaglidingWeather.Core.Types.Precipitation.GetPrecipitation(ParaglidingWeather.Core.Units.Precipitation)">
             <inheritdoc/>
         </member>
@@ -489,6 +569,22 @@
             </summary>
             <param name="pressure">The value of pressure.</param>
             <param name="unit">The unit of pressure.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.op_Equality(ParaglidingWeather.Core.Types.Pressure,ParaglidingWeather.Core.Types.Pressure)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Pressure"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Pressure"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Pressure.op_Inequality(ParaglidingWeather.Core.Types.Pressure,ParaglidingWeather.Core.Types.Pressure)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Pressure"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Pressure"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Pressure.GetPressure(ParaglidingWeather.Core.Units.Pressure)">
             <inheritdoc/>
@@ -517,6 +613,22 @@
             <param name="speed">The value of speed.</param>
             <param name="unit">The unit of speed.</param>
         </member>
+        <member name="M:ParaglidingWeather.Core.Types.Speed.op_Equality(ParaglidingWeather.Core.Types.Speed,ParaglidingWeather.Core.Types.Speed)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Speed"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Speed"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Speed.op_Inequality(ParaglidingWeather.Core.Types.Speed,ParaglidingWeather.Core.Types.Speed)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Speed"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Speed"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="M:ParaglidingWeather.Core.Types.Speed.GetSpeed(ParaglidingWeather.Core.Units.Speed)">
             <inheritdoc/>
         </member>
@@ -543,6 +655,22 @@
             </summary>
             <param name="temperature">The value of temperature.</param>
             <param name="unit">The unit of temperature.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.op_Equality(ParaglidingWeather.Core.Types.Temperature,ParaglidingWeather.Core.Types.Temperature)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Temperature"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Temperature"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Temperature.op_Inequality(ParaglidingWeather.Core.Types.Temperature,ParaglidingWeather.Core.Types.Temperature)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Temperature"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Temperature"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Temperature.GetTemperature(ParaglidingWeather.Core.Units.Temperature)">
             <inheritdoc/>
@@ -580,6 +708,22 @@
         </member>
         <member name="P:ParaglidingWeather.Core.Types.Wind.Gust">
             <inheritdoc/>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Wind.op_Equality(ParaglidingWeather.Core.Types.Wind,ParaglidingWeather.Core.Types.Wind)">
+            <summary>
+            Determines whether two specified strings have the same value.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Wind"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Wind"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Core.Types.Wind.op_Inequality(ParaglidingWeather.Core.Types.Wind,ParaglidingWeather.Core.Types.Wind)">
+            <summary>
+            Determines whether two specified strings have different values.
+            </summary>
+            <param name="left">The first <see cref="T:ParaglidingWeather.Core.Types.Wind"/> to compare, or <c>null</c>.</param>
+            <param name="right">The second <see cref="T:ParaglidingWeather.Core.Types.Wind"/> to compare, or <c>null</c>.</param>
+            <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
         </member>
         <member name="M:ParaglidingWeather.Core.Types.Wind.Equals(System.Object)">
             <inheritdoc/>

@@ -29,11 +29,23 @@ namespace ParaglidingWeather.Core.Types
             }
         }
 
+        /// <summary>
+        /// Determines whether two specified strings have the same value.
+        /// </summary>
+        /// <param name="left">The first <see cref="Precipitation"/> to compare, or <c>null</c>.</param>
+        /// <param name="right">The second <see cref="Precipitation"/> to compare, or <c>null</c>.</param>
+        /// <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
         public static bool operator ==(Precipitation left, Precipitation right)
         {
             return left.Equals(right);
         }
 
+        /// <summary>
+        /// Determines whether two specified strings have different values.
+        /// </summary>
+        /// <param name="left">The first <see cref="Precipitation"/> to compare, or <c>null</c>.</param>
+        /// <param name="right">The second <see cref="Precipitation"/> to compare, or <c>null</c>.</param>
+        /// <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
         public static bool operator !=(Precipitation left, Precipitation right)
         {
             return !(left == right);
