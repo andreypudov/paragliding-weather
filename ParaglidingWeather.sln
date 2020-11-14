@@ -30,7 +30,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.Provider
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EC0AA952-1B3E-411A-AD48-5C99C7EC5B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParaglidingWeather.AzureFunction", "src\ParaglidingWeather.AzureFunction\ParaglidingWeather.AzureFunction.csproj", "{18AB11A1-8CC6-4517-8313-63E0A2CD3DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParaglidingWeather.AzureFunction", "src\ParaglidingWeather.AzureFunction\ParaglidingWeather.AzureFunction.csproj", "{18AB11A1-8CC6-4517-8313-63E0A2CD3DCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

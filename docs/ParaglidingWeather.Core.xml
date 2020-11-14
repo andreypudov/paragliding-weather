@@ -438,7 +438,7 @@
         </member>
         <member name="P:ParaglidingWeather.Core.Types.IWind.Speed">
             <summary>
-            Gets the value of wind speend.
+            Gets the value of wind speed.
             </summary>
         </member>
         <member name="P:ParaglidingWeather.Core.Types.IWind.Direction">

@@ -59,7 +59,7 @@ namespace ParaglidingWeather.Bot
                 using (serviceProvider)
                 {
                     var bot = serviceProvider.GetService<LongPollingClient>();
-                    bot.Run();
+                    bot?.Run();
                 }
             }
             catch (Exception e)
