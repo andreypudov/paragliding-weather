@@ -75,15 +75,15 @@ namespace ParaglidingWeather.Bot
                 return;
             }
 
-            this.logger.LogInformation(
-                $"Received a text message in chat "
-                + $"{update.Message.Chat.Id} "
-                + $"{update.Message.Chat.Username} "
-                + $"{update.Message.Chat.FirstName} "
-                + $"{update.Message.Chat.LastName}");
+            this.Log(
+                $"[{update.Message.Chat.Id}] "
+                + $"[{update.Message.Chat.Username} "
+                + $"{update.Message.Chat.FirstName}] "
+                + $"[{update.Message.Chat.LastName}]");
 
             switch (update.Message.Text.Trim())
             {
+                case "/start":
                 case "/forecast":
                     await this.OnForecastAsync(update.Message.Chat.Id)
                         .ConfigureAwait(false);
@@ -105,13 +105,12 @@ namespace ParaglidingWeather.Bot
                 return;
             }
 
-            this.logger.LogInformation(
-                $"Received a text message in chat "
-                + $"{update.CallbackQuery.Message.Chat.Id} "
-                + $"{update.CallbackQuery.Message.Chat.Username} "
-                + $"{update.CallbackQuery.Message.Chat.FirstName} "
-                + $"{update.CallbackQuery.Message.Chat.LastName} "
-                + $"{update.CallbackQuery.Message.MessageId}");
+            this.Log(
+                $"[{update.CallbackQuery.Message.Chat.Id}] "
+                + $"[{update.CallbackQuery.Message.Chat.Username}] "
+                + $"[{update.CallbackQuery.Message.Chat.FirstName} "
+                + $"{update.CallbackQuery.Message.Chat.LastName}] "
+                + $"[{update.CallbackQuery.Message.MessageId}]");
 
             try
             {
@@ -126,6 +125,7 @@ namespace ParaglidingWeather.Bot
 
             switch (update.CallbackQuery.Data.Trim())
             {
+                case "start":
                 case "forecast":
                     await this.OnForecastAsync(update.CallbackQuery.Message.Chat.Id)
                         .ConfigureAwait(false);
@@ -155,11 +155,11 @@ namespace ParaglidingWeather.Bot
 
             var culture = new System.Globalization.CultureInfo("ru-RU");
 
-            var buidler = new StringBuilder();
+            var builder = new StringBuilder();
             int hour = 0;
             int day = 0;
 
-            buidler
+            builder
                 .Append("*Время, Температура, Ветер, Поровы, Влажность, Осадки*\n\n")
                 .Append($"*{DateTime.Today.Day} - ")
                 .Append($"{culture.DateTimeFormat.GetDayName(DateTime.Today.DayOfWeek)}*\n")
@@ -170,12 +170,12 @@ namespace ParaglidingWeather.Bot
                 {
                     hour = 0;
                     day = day + 1;
-                    buidler
+                    builder
                         .Append($"```\n\n*{DateTime.Today.AddDays(day).Day} - ")
                         .Append($"{culture.DateTimeFormat.GetDayName(DateTime.Today.AddDays(day).DayOfWeek)}*\n```\n");
                 }
 
-                buidler
+                builder
                     .Append($"{GetInnerTextValue(hours[index])}, ")
                     .Append($"{GetInnerTextValue(temperatures[index]),3}, [")
                     .Append($"{GetInnerTextValue(wind_dirs[index]).ToUpperInvariant(),3}, ")
@@ -187,7 +187,7 @@ namespace ParaglidingWeather.Bot
                 hour = hour + 1;
             }
 
-            buidler.Append("```");
+            builder.Append("```");
 
             var keyboard = new InlineKeyboardMarkup(new[]
             {
@@ -199,7 +199,7 @@ namespace ParaglidingWeather.Bot
 
             await this.client.SendTextMessageAsync(
                 chatId: chatId,
-                text: buidler
+                text: builder
                     .ToString()
                     .Replace("<", "\\<", StringComparison.InvariantCulture)
                     .Replace(">", "\\>", StringComparison.InvariantCulture)
@@ -209,6 +209,12 @@ namespace ParaglidingWeather.Bot
                     .Replace("|", "\\|", StringComparison.InvariantCulture),
                 replyMarkup: keyboard,
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
+        }
+
+        private void Log(string message)
+        {
+            // await MissionMonitor.Publish($"{nameof(ParaglidingWeather)} {message}");
+            this.logger.LogInformation(message);
         }
     }
 }

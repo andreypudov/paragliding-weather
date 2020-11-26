@@ -67,12 +67,11 @@ namespace ParaglidingWeather.Bot
                 return;
             }
 
-            this.logger.LogInformation(
-                $"Received a text message in chat "
-                + $"{e.Message.Chat.Id} "
-                + $"{e.Message.Chat.Username} "
-                + $"{e.Message.Chat.FirstName} "
-                + $"{e.Message.Chat.LastName}");
+            this.Log(
+                $"[{e.Message.Chat.Id}] "
+                + $"[{e.Message.Chat.Username}] "
+                + $"[{e.Message.Chat.FirstName} "
+                + $"{e.Message.Chat.LastName}]");
 
             switch (e.Message.Text.Trim())
             {
@@ -97,17 +96,13 @@ namespace ParaglidingWeather.Bot
                 return;
             }
 
-            this.logger.LogInformation(
-                $"Received a text message in chat "
-                + $"{e.CallbackQuery.Message.Chat.Id} "
-                + $"{e.CallbackQuery.Message.Chat.Username} "
-                + $"{e.CallbackQuery.Message.Chat.FirstName} "
-                + $"{e.CallbackQuery.Message.Chat.LastName} "
-                + $"{e.CallbackQuery.Message.MessageId}");
+            this.Log(
+                $"[{e.CallbackQuery.Message.Chat.Id}] "
+                + $"[{e.CallbackQuery.Message.Chat.Username}] "
+                + $"[{e.CallbackQuery.Message.Chat.FirstName} "
+                + $"{e.CallbackQuery.Message.Chat.LastName}] "
+                + $"[{e.CallbackQuery.Message.MessageId}]");
 
-            /* await this.client.AnswerCallbackQueryAsync(
-                e.CallbackQuery.Id,
-                "Received a text message " + e.CallbackQuery.Data).ConfigureAwait(false); */
             try
             {
                 await this.client.EditMessageReplyMarkupAsync(
@@ -204,6 +199,12 @@ namespace ParaglidingWeather.Bot
                     .Replace("|", "\\|", StringComparison.InvariantCulture),
                 replyMarkup: keyboard,
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
+        }
+
+        private void Log(string message)
+        {
+            // await MissionMonitor.Publish($"{nameof(ParaglidingWeather)} {message}");
+            this.logger.LogInformation(message);
         }
     }
 }
