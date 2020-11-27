@@ -31,7 +31,6 @@
             Publishes provided message to the Message monitor channel.
             </summary>
             <param name="message">The value of the message to publish.</param>
-            <returns>The task handling the HTTP publishing request.</returns>
         </member>
         <member name="T:ParaglidingWeather.Bot.Program">
             <summary>
@@ -69,6 +68,29 @@
             <summary>
             Gets or sets authentication token.
             </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.WeatherFormatter">
+            <summary>
+            Represents weather formatter that returns a markdown representation.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.WeatherFormatter.Format(HtmlAgilityPack.HtmlDocument)">
+            <summary>
+            Formats a given weather forecast to markdown representation.
+            </summary>
+            <param name="document">The HTML representation of the weather forecast.</param>
+            <returns>The markdown representation of the given weather forecast.</returns>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.WeatherParser">
+            <summary>
+            Parses the weather inforation on SkyMeteo webpage.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.WeatherParser.GetAsync">
+            <summary>
+            Returns the HTML representation of the forecast information.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
         </member>
         <member name="T:ParaglidingWeather.Bot.WebhookClient">
             <summary>

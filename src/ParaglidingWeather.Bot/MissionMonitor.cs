@@ -4,7 +4,7 @@
 
 namespace ParaglidingWeather.Bot
 {
-    using System.IO;
+    using System;
     using System.Net;
     using System.Threading.Tasks;
 
@@ -20,19 +20,22 @@ namespace ParaglidingWeather.Bot
         /// Publishes provided message to the Message monitor channel.
         /// </summary>
         /// <param name="message">The value of the message to publish.</param>
-        /// <returns>The task handling the HTTP publishing request.</returns>
-        public static async Task<string> Publish(string message)
+        public static void Publish(string message)
         {
             var url = $"https://api.telegram.org/bot{BotApiKey}/sendMessage?chat_id={ChannelName}&text={WebUtility.HtmlEncode(message)}";
 
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-
-            using (var response = (HttpWebResponse)await request.GetResponseAsync())
-            using (var stream = response.GetResponseStream())
-            using (var reader = new StreamReader(stream))
+            try
             {
-                return await reader.ReadToEndAsync();
+                Task.Run(() =>
+                {
+                    var request = (HttpWebRequest)WebRequest.Create(url);
+                    request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
+                    using var response = (HttpWebResponse)request.GetResponse();
+                });
+            }
+            catch (Exception)
+            {
+                // intentionally left blank
             }
         }
     }

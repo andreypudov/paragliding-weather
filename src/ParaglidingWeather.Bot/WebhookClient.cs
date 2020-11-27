@@ -6,7 +6,6 @@ namespace ParaglidingWeather.Bot
 {
     using System;
     using System.Net;
-    using System.Text;
     using System.Threading.Tasks;
     using HtmlAgilityPack;
     using Microsoft.Extensions.Logging;
@@ -48,11 +47,6 @@ namespace ParaglidingWeather.Bot
             return this.HandleUpdate(update);
         }
 
-        private static string GetInnerTextValue(HtmlNode node)
-        {
-            return WebUtility.HtmlDecode(node.InnerText.Trim());
-        }
-
         private async Task HandleUpdate(Update update)
         {
             this.logger.LogInformation($"{nameof(WebhookClient)} HandleUpdate");
@@ -77,9 +71,9 @@ namespace ParaglidingWeather.Bot
 
             this.Log(
                 $"[{update.Message.Chat.Id}] "
-                + $"[{update.Message.Chat.Username} "
-                + $"{update.Message.Chat.FirstName}] "
-                + $"[{update.Message.Chat.LastName}]");
+                + $"[{update.Message.Chat.Username}] "
+                + $"[{update.Message.Chat.FirstName} "
+                + $"{update.Message.Chat.LastName}]");
 
             switch (update.Message.Text.Trim())
             {
@@ -91,7 +85,7 @@ namespace ParaglidingWeather.Bot
                 default:
                     await this.client.SendTextMessageAsync(
                             chatId: update.Message.Chat,
-                            text: $"Invalid command: {update.Message.Text}")
+                            text: $"Неверная команда: {update.Message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
                         .ConfigureAwait(false);
 
                     break;
@@ -133,7 +127,7 @@ namespace ParaglidingWeather.Bot
                 default:
                     await this.client.SendTextMessageAsync(
                             chatId: update.CallbackQuery.Message.Chat,
-                            text: $"Invalid command: {update.CallbackQuery.Data}")
+                            text: $"Неверная команда: {update.CallbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
                         .ConfigureAwait(false);
 
                     break;
@@ -142,53 +136,19 @@ namespace ParaglidingWeather.Bot
 
         private async Task OnForecastAsync(long chatId)
         {
-            var web = new HtmlWeb();
-            var document = web.Load(new Uri("http://meteo.paraplan.net/forecast/summary.html?place=3148"));
-
-            var hours = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, 'hour')])");
-            var temperatures = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '213')])");
-            var wind_dirs = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, 'wind_dir ')])");
-            var winds = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, 'wind ')])");
-            var wind_gusts = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '332 ')])");
-            var precipitation = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '222 ')])");
-            var humidity = document.DocumentNode.SelectNodes("(//table[@id='forecast']//td[contains(@class, '215 ')])");
-
-            var culture = new System.Globalization.CultureInfo("ru-RU");
-
-            var builder = new StringBuilder();
-            int hour = 0;
-            int day = 0;
-
-            builder
-                .Append("*Время, Температура, Ветер, Поровы, Влажность, Осадки*\n\n")
-                .Append($"*{DateTime.Today.Day} - ")
-                .Append($"{culture.DateTimeFormat.GetDayName(DateTime.Today.DayOfWeek)}*\n")
-                .Append("```\n");
-            for (var index = 0; index < hours.Count; ++index)
+            var document = await WeatherParser.GetAsync();
+            if (document == null)
             {
-                if (hour == 8)
-                {
-                    hour = 0;
-                    day = day + 1;
-                    builder
-                        .Append($"```\n\n*{DateTime.Today.AddDays(day).Day} - ")
-                        .Append($"{culture.DateTimeFormat.GetDayName(DateTime.Today.AddDays(day).DayOfWeek)}*\n```\n");
-                }
-
-                builder
-                    .Append($"{GetInnerTextValue(hours[index])}, ")
-                    .Append($"{GetInnerTextValue(temperatures[index]),3}, [")
-                    .Append($"{GetInnerTextValue(wind_dirs[index]).ToUpperInvariant(),3}, ")
-                    .Append($"{GetInnerTextValue(winds[index])}, ")
-                    .Append($"{GetInnerTextValue(wind_gusts[index]),2}], ")
-                    .Append($"{GetInnerTextValue(humidity[index])}, ")
-                    .Append($"{GetInnerTextValue(precipitation[index])}\n");
-
-                hour = hour + 1;
+                await this.SendReply(chatId, "Информация о погоде недоступна.");
+                return;
             }
 
-            builder.Append("```");
+            var markdown = WeatherFormatter.Format(document);
+            await this.SendReply(chatId, markdown);
+        }
 
+        private async Task SendReply(long chatId, string message)
+        {
             var keyboard = new InlineKeyboardMarkup(new[]
             {
                 new[]
@@ -199,21 +159,24 @@ namespace ParaglidingWeather.Bot
 
             await this.client.SendTextMessageAsync(
                 chatId: chatId,
-                text: builder
-                    .ToString()
+                text: message
                     .Replace("<", "\\<", StringComparison.InvariantCulture)
                     .Replace(">", "\\>", StringComparison.InvariantCulture)
                     .Replace("+", "\\+", StringComparison.InvariantCulture)
                     .Replace("-", "\\-", StringComparison.InvariantCulture)
                     .Replace(".", "\\.", StringComparison.InvariantCulture)
-                    .Replace("|", "\\|", StringComparison.InvariantCulture),
+                    .Replace("|", "\\|", StringComparison.InvariantCulture)
+                    .Replace("(", "\\(", StringComparison.InvariantCulture)
+                    .Replace(")", "\\)", StringComparison.InvariantCulture)
+                    .Replace("=", "\\=", StringComparison.InvariantCulture),
                 replyMarkup: keyboard,
+                disableWebPagePreview: true,
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
         }
 
         private void Log(string message)
         {
-            // await MissionMonitor.Publish($"{nameof(ParaglidingWeather)} {message}");
+            MissionMonitor.Publish($"{nameof(ParaglidingWeather)} {message}");
             this.logger.LogInformation(message);
         }
     }
