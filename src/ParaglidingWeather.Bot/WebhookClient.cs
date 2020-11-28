@@ -5,9 +5,7 @@
 namespace ParaglidingWeather.Bot
 {
     using System;
-    using System.Net;
     using System.Threading.Tasks;
-    using HtmlAgilityPack;
     using Microsoft.Extensions.Logging;
     using Newtonsoft.Json;
     using Telegram.Bot;
@@ -21,17 +19,19 @@ namespace ParaglidingWeather.Bot
     public class WebhookClient
     {
         private readonly ITelegramBotClient client;
+        private readonly Configuration configuration;
         private readonly ILogger logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookClient"/> class.
         /// </summary>
-        /// <param name="token">The token of the bot.</param>
+        /// <param name="configuration">The configuration of the bot.</param>
         /// <param name="logger">The instance of the logger.</param>
-        public WebhookClient(string token, ILogger logger)
+        public WebhookClient(Configuration configuration, ILogger logger)
         {
-            this.client = new TelegramBotClient(token);
+            this.configuration = configuration;
             this.logger = logger;
+            this.client = new TelegramBotClient(configuration.Token);
         }
 
         /// <summary>

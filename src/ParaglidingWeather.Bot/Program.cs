@@ -23,7 +23,7 @@ namespace ParaglidingWeather.Bot
         /// <param name="configuration">The instance of a applicaiton configuration.</param>
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            var botConfiguration = new WeaherBotConfiguration();
+            var botConfiguration = new Configuration();
             configuration.Bind(botConfiguration);
 
             services

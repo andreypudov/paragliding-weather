@@ -4,12 +4,22 @@
         <name>ParaglidingWeather.Bot</name>
     </assembly>
     <members>
+        <member name="T:ParaglidingWeather.Bot.Configuration">
+            <summary>
+            Represents application configuration.
+            </summary>
+        </member>
+        <member name="P:ParaglidingWeather.Bot.Configuration.Token">
+            <summary>
+            Gets or sets authentication token.
+            </summary>
+        </member>
         <member name="T:ParaglidingWeather.Bot.LongPollingClient">
             <summary>
             Represents a console running instance for the application.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Bot.LongPollingClient.#ctor(ParaglidingWeather.Bot.WeaherBotConfiguration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeather.Bot.LongPollingClient})">
+        <member name="M:ParaglidingWeather.Bot.LongPollingClient.#ctor(ParaglidingWeather.Bot.Configuration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeather.Bot.LongPollingClient})">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.LongPollingClient"/> class.
             </summary>
@@ -59,16 +69,6 @@
             Represents query to receive a five-days weather forecast.
             </summary>
         </member>
-        <member name="T:ParaglidingWeather.Bot.WeaherBotConfiguration">
-            <summary>
-            Represents application configuration.
-            </summary>
-        </member>
-        <member name="P:ParaglidingWeather.Bot.WeaherBotConfiguration.Token">
-            <summary>
-            Gets or sets authentication token.
-            </summary>
-        </member>
         <member name="T:ParaglidingWeather.Bot.WeatherFormatter">
             <summary>
             Represents weather formatter that returns a markdown representation.
@@ -97,11 +97,11 @@
             Represents the handler of web hook requests.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Bot.WebhookClient.#ctor(System.String,Microsoft.Extensions.Logging.ILogger)">
+        <member name="M:ParaglidingWeather.Bot.WebhookClient.#ctor(ParaglidingWeather.Bot.Configuration,Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.WebhookClient"/> class.
             </summary>
-            <param name="token">The token of the bot.</param>
+            <param name="configuration">The configuration of the bot.</param>
             <param name="logger">The instance of the logger.</param>
         </member>
         <member name="M:ParaglidingWeather.Bot.WebhookClient.Update(System.String)">

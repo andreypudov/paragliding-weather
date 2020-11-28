@@ -17,6 +17,7 @@ namespace ParaglidingWeather.Bot
     public class LongPollingClient
     {
         private readonly ITelegramBotClient client;
+        private readonly Configuration configuration;
         private readonly ILogger<LongPollingClient> logger;
 
         /// <summary>
@@ -24,16 +25,11 @@ namespace ParaglidingWeather.Bot
         /// </summary>
         /// <param name="configuration">The instance of a application configuration.</param>
         /// <param name="logger">The instance of an application logger.</param>
-        public LongPollingClient(WeaherBotConfiguration configuration, ILogger<LongPollingClient> logger)
+        public LongPollingClient(Configuration configuration, ILogger<LongPollingClient> logger)
         {
-            // TODO
-            if (configuration == null)
-            {
-                throw new ArgumentNullException(nameof(configuration));
-            }
-
-            this.client = new TelegramBotClient(configuration.Token);
+            this.configuration = configuration;
             this.logger = logger;
+            this.client = new TelegramBotClient(configuration.Token);
         }
 
         /// <summary>
