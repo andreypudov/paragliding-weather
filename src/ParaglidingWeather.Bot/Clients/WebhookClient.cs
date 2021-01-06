@@ -2,12 +2,14 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Bot
+namespace ParaglidingWeather.Bot.Clients
 {
     using System;
+    using System.Net;
     using System.Threading.Tasks;
     using Microsoft.Extensions.Logging;
     using Newtonsoft.Json;
+    using ParaglidingWeather.Bot.Helpers;
     using Telegram.Bot;
     using Telegram.Bot.Types;
     using Telegram.Bot.Types.Enums;
@@ -70,10 +72,11 @@ namespace ParaglidingWeather.Bot
             }
 
             this.Log(
-                $"[{update.Message.Chat.Id}] "
-                + $"[{update.Message.Chat.Username}] "
-                + $"[{update.Message.Chat.FirstName} "
-                + $"{update.Message.Chat.LastName}]");
+                update.Message.Chat.Id,
+                update.Message.Chat.Username,
+                update.Message.Chat.FirstName,
+                update.Message.Chat.LastName,
+                update.Message.MessageId);
 
             switch (update.Message.Text.Trim())
             {
@@ -87,7 +90,6 @@ namespace ParaglidingWeather.Bot
                             chatId: update.Message.Chat,
                             text: $"Неверная команда: {update.Message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
                         .ConfigureAwait(false);
-
                     break;
             }
         }
@@ -100,11 +102,11 @@ namespace ParaglidingWeather.Bot
             }
 
             this.Log(
-                $"[{update.CallbackQuery.Message.Chat.Id}] "
-                + $"[{update.CallbackQuery.Message.Chat.Username}] "
-                + $"[{update.CallbackQuery.Message.Chat.FirstName} "
-                + $"{update.CallbackQuery.Message.Chat.LastName}] "
-                + $"[{update.CallbackQuery.Message.MessageId}]");
+                update.CallbackQuery.Message.Chat.Id,
+                update.CallbackQuery.Message.Chat.Username,
+                update.CallbackQuery.Message.Chat.FirstName,
+                update.CallbackQuery.Message.Chat.LastName,
+                update.CallbackQuery.Message.MessageId);
 
             try
             {
@@ -129,25 +131,38 @@ namespace ParaglidingWeather.Bot
                             chatId: update.CallbackQuery.Message.Chat,
                             text: $"Неверная команда: {update.CallbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
                         .ConfigureAwait(false);
-
                     break;
             }
         }
 
         private async Task OnForecastAsync(long chatId)
         {
+            var markdown = string.Empty;
+            try
+            {
+                markdown = await this.GetMarkdown(chatId);
+                await this.ReplyAsync(chatId, markdown);
+            }
+            catch (Exception e)
+            {
+                this.logger.LogError($"{nameof(WebhookClient)} OnForecastAsync {e.Message}");
+                await this.ReplyAsync(chatId, "Не удалось получить информацию о погоде");
+            }
+        }
+
+        private async Task<string> GetMarkdown(long chatId)
+        {
             var document = await WeatherParser.GetAsync();
             if (document == null)
             {
-                await this.SendReply(chatId, "Информация о погоде недоступна.");
-                return;
+                await this.ReplyAsync(chatId, "Информация о погоде недоступна.");
+                return string.Empty;
             }
 
-            var markdown = WeatherFormatter.Format(document);
-            await this.SendReply(chatId, markdown);
+            return WeatherFormatter.Format(document);
         }
 
-        private async Task SendReply(long chatId, string message)
+        private async Task ReplyAsync(long chatId, string message)
         {
             var keyboard = new InlineKeyboardMarkup(new[]
             {
@@ -159,23 +174,20 @@ namespace ParaglidingWeather.Bot
 
             await this.client.SendTextMessageAsync(
                 chatId: chatId,
-                text: message
-                    .Replace("<", "\\<", StringComparison.InvariantCulture)
-                    .Replace(">", "\\>", StringComparison.InvariantCulture)
-                    .Replace("+", "\\+", StringComparison.InvariantCulture)
-                    .Replace("-", "\\-", StringComparison.InvariantCulture)
-                    .Replace(".", "\\.", StringComparison.InvariantCulture)
-                    .Replace("|", "\\|", StringComparison.InvariantCulture)
-                    .Replace("(", "\\(", StringComparison.InvariantCulture)
-                    .Replace(")", "\\)", StringComparison.InvariantCulture)
-                    .Replace("=", "\\=", StringComparison.InvariantCulture),
+                text: message,
                 replyMarkup: keyboard,
                 disableWebPagePreview: true,
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
         }
 
-        private void Log(string message)
+        private void Log(long id, string userName, string firstName, string lastName, int messageId)
         {
+            userName = WebUtility.HtmlDecode(userName);
+            firstName = WebUtility.HtmlDecode(firstName);
+            lastName = WebUtility.HtmlDecode(lastName);
+
+            var message = $"[{id}] [{userName}] [{firstName} {lastName}] [{messageId}]";
+
             MissionMonitor.Publish($"{nameof(ParaglidingWeather)} {message}");
             this.logger.LogInformation(message);
         }

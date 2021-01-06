@@ -2,7 +2,7 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Bot
+namespace ParaglidingWeather.Bot.Helpers
 {
     using System;
     using System.Net;
@@ -53,24 +53,19 @@ namespace ParaglidingWeather.Bot
                     }
 
                     buildler
-                        .Append($"{GetInnerTextValue(forecast[firstColumn]).Split(":")[0]}ч, ")
-                        .Append($"{GetInnerTextValue(forecast[firstColumn + 1]),3} [")
-                        .Append($"{GetInnerTextValue(forecast[firstColumn + 3]).ToUpperInvariant(),3}, ")
-                        .Append($"{GetInnerTextValue(forecast[firstColumn + 4])}, ")
-                        .Append($"{GetInnerTextValue(forecast[firstColumn + 5]),2}] ")
-                        .Append($"{GetInnerTextValue(forecast[firstColumn + 6]),3}, ")
-                        .Append($"{GetInnerTextValue(forecast[firstColumn + 8])}\n");
+                        .Append($"{StringUtilities.GetInnerTextValue(forecast[firstColumn]).Split(":")[0]}ч, ")
+                        .Append($"{StringUtilities.GetInnerTextValue(forecast[firstColumn + 1]),3} [")
+                        .Append($"{StringUtilities.GetInnerTextValue(forecast[firstColumn + 3]).ToUpperInvariant(),3}, ")
+                        .Append($"{StringUtilities.GetInnerTextValue(forecast[firstColumn + 4])}, ")
+                        .Append($"{StringUtilities.GetInnerTextValue(forecast[firstColumn + 5]),2}] ")
+                        .Append($"{StringUtilities.GetInnerTextValue(forecast[firstColumn + 6]),3}, ")
+                        .Append($"{StringUtilities.GetInnerTextValue(forecast[firstColumn + 8])}\n");
                 }
             }
 
             buildler.Append("```");
 
-            return buildler.ToString();
-        }
-
-        private static string GetInnerTextValue(HtmlNode node)
-        {
-            return WebUtility.HtmlDecode(node.InnerText.Trim());
+            return StringUtilities.EscapeMarkdown(buildler);
         }
     }
 }
