@@ -4,6 +4,42 @@
         <name>ParaglidingWeather.Bot</name>
     </assembly>
     <members>
+        <member name="T:ParaglidingWeather.Bot.Clients.LongPollingClient">
+            <summary>
+            Represents a console running instance for the application.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Clients.LongPollingClient.#ctor(ParaglidingWeather.Bot.Configuration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeather.Bot.Clients.LongPollingClient})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.Clients.LongPollingClient"/> class.
+            </summary>
+            <param name="configuration">The instance of a application configuration.</param>
+            <param name="logger">The instance of an application logger.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Clients.LongPollingClient.Run">
+            <summary>
+            The main entry point for the bot.
+            </summary>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.Clients.WebhookClient">
+            <summary>
+            Represents the handler of web hook requests.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Clients.WebhookClient.#ctor(ParaglidingWeather.Bot.Configuration,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.Clients.WebhookClient"/> class.
+            </summary>
+            <param name="configuration">The configuration of the bot.</param>
+            <param name="logger">The instance of the logger.</param>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Clients.WebhookClient.Update(System.String)">
+            <summary>
+            Processes client request from the web hook.
+            </summary>
+            <param name="request">The HTTP request from the client.</param>
+            <returns>The task that processes a request.</returns>
+        </member>
         <member name="T:ParaglidingWeather.Bot.Configuration">
             <summary>
             Represents application configuration.
@@ -14,33 +50,58 @@
             Gets or sets authentication token.
             </summary>
         </member>
-        <member name="T:ParaglidingWeather.Bot.LongPollingClient">
-            <summary>
-            Represents a console running instance for the application.
-            </summary>
-        </member>
-        <member name="M:ParaglidingWeather.Bot.LongPollingClient.#ctor(ParaglidingWeather.Bot.Configuration,Microsoft.Extensions.Logging.ILogger{ParaglidingWeather.Bot.LongPollingClient})">
-            <summary>
-            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.LongPollingClient"/> class.
-            </summary>
-            <param name="configuration">The instance of a application configuration.</param>
-            <param name="logger">The instance of an application logger.</param>
-        </member>
-        <member name="M:ParaglidingWeather.Bot.LongPollingClient.Run">
-            <summary>
-            The main entry point for the bot.
-            </summary>
-        </member>
-        <member name="T:ParaglidingWeather.Bot.MissionMonitor">
+        <member name="T:ParaglidingWeather.Bot.Helpers.MissionMonitor">
             <summary>
             Represents the mission monitor.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Bot.MissionMonitor.Publish(System.String)">
+        <member name="M:ParaglidingWeather.Bot.Helpers.MissionMonitor.Publish(System.String)">
             <summary>
             Publishes provided message to the Message monitor channel.
             </summary>
             <param name="message">The value of the message to publish.</param>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.Helpers.StringUtilities">
+            <summary>
+            Provides a set of utility methods.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Helpers.StringUtilities.EscapeMarkdown(System.Text.StringBuilder)">
+            <summary>
+            Returns the string with replaced sequences.
+            </summary>
+            <param name="builder">The instance of the string builder.</param>
+            <returns>The string with escaped sequences.</returns>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Helpers.StringUtilities.GetInnerTextValue(HtmlAgilityPack.HtmlNode)">
+            <summary>
+            Returns the value of the inner text.
+            </summary>
+            <param name="node">The HTML node to use.</param>
+            <returns>Th value of the inner text.</returns>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.Helpers.WeatherFormatter">
+            <summary>
+            Represents weather formatter that returns a markdown representation.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Helpers.WeatherFormatter.Format(HtmlAgilityPack.HtmlDocument)">
+            <summary>
+            Formats a given weather forecast to markdown representation.
+            </summary>
+            <param name="document">The HTML representation of the weather forecast.</param>
+            <returns>The markdown representation of the given weather forecast.</returns>
+        </member>
+        <member name="T:ParaglidingWeather.Bot.Helpers.WeatherParser">
+            <summary>
+            Parses the weather inforation on SkyMeteo webpage.
+            </summary>
+        </member>
+        <member name="M:ParaglidingWeather.Bot.Helpers.WeatherParser.GetAsync">
+            <summary>
+            Returns the HTML representation of the forecast information.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
         </member>
         <member name="T:ParaglidingWeather.Bot.Program">
             <summary>
@@ -58,58 +119,6 @@
             <summary>
             An entry point method of the application.
             </summary>
-        </member>
-        <member name="T:ParaglidingWeather.Bot.Query">
-            <summary>
-            Represents a set of queries supported by the Bot.
-            </summary>
-        </member>
-        <member name="F:ParaglidingWeather.Bot.Query.Forecast">
-            <summary>
-            Represents query to receive a five-days weather forecast.
-            </summary>
-        </member>
-        <member name="T:ParaglidingWeather.Bot.WeatherFormatter">
-            <summary>
-            Represents weather formatter that returns a markdown representation.
-            </summary>
-        </member>
-        <member name="M:ParaglidingWeather.Bot.WeatherFormatter.Format(HtmlAgilityPack.HtmlDocument)">
-            <summary>
-            Formats a given weather forecast to markdown representation.
-            </summary>
-            <param name="document">The HTML representation of the weather forecast.</param>
-            <returns>The markdown representation of the given weather forecast.</returns>
-        </member>
-        <member name="T:ParaglidingWeather.Bot.WeatherParser">
-            <summary>
-            Parses the weather inforation on SkyMeteo webpage.
-            </summary>
-        </member>
-        <member name="M:ParaglidingWeather.Bot.WeatherParser.GetAsync">
-            <summary>
-            Returns the HTML representation of the forecast information.
-            </summary>
-            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
-        </member>
-        <member name="T:ParaglidingWeather.Bot.WebhookClient">
-            <summary>
-            Represents the handler of web hook requests.
-            </summary>
-        </member>
-        <member name="M:ParaglidingWeather.Bot.WebhookClient.#ctor(ParaglidingWeather.Bot.Configuration,Microsoft.Extensions.Logging.ILogger)">
-            <summary>
-            Initializes a new instance of the <see cref="T:ParaglidingWeather.Bot.WebhookClient"/> class.
-            </summary>
-            <param name="configuration">The configuration of the bot.</param>
-            <param name="logger">The instance of the logger.</param>
-        </member>
-        <member name="M:ParaglidingWeather.Bot.WebhookClient.Update(System.String)">
-            <summary>
-            Processes client request from the web hook.
-            </summary>
-            <param name="request">The HTTP request from the client.</param>
-            <returns>The task that processes a request.</returns>
         </member>
     </members>
 </doc>

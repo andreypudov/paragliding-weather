@@ -12,6 +12,7 @@ namespace ParaglidingWeather.AzureFunction
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Logging;
     using ParaglidingWeather.Bot;
+    using ParaglidingWeather.Bot.Clients;
 
     /// <summary>
     /// Represents the Azure function processes requests from a Telegram client.

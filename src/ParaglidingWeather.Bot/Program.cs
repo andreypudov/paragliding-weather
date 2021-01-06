@@ -10,6 +10,7 @@ namespace ParaglidingWeather.Bot
     using Microsoft.Extensions.Logging;
     using NLog;
     using NLog.Extensions.Logging;
+    using ParaglidingWeather.Bot.Clients;
 
     /// <summary>
     /// An entry point of the application.
