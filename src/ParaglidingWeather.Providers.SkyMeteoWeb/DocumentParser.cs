@@ -37,7 +37,7 @@ namespace ParaglidingWeather.Providers.SkyMeteoWeb
             var reports = (List<IWeatherReport>)entries
                 .Select(n => new NodeParser(n).Parse(ref date))
                 .Where(w => w != null)
-                .ToList() !;
+                .ToList()!;
 
             return reports;
         }

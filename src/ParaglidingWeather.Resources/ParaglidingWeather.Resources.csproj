@@ -28,14 +28,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Resources\CompassPoints.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CompassPoints.Designer.cs</LastGenOutput>

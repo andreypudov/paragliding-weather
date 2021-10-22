@@ -26,18 +26,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ParaglidingWeather.Resources\ParaglidingWeather.Resources.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Units\" />
-    <Folder Include="Types\" />
   </ItemGroup>
 </Project>
