@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Authors>Andrey Pudov</Authors>
     <Product>ParaglidingWeather</Product>
-    <RepositoryUrl>https://github.com/andreypudov/ParaglidingWeather</RepositoryUrl>
+    <RepositoryUrl>https://github.com/andreypudov/paragliding-weather</RepositoryUrl>
     <Copyright>Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.</Copyright>
 
     <LangVersion>8.0</LangVersion>
@@ -21,7 +21,6 @@
     <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteoWeb.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType></DebugType>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DocumentationFile>..\..\docs\ParaglidingWeather.Providers.SkyMeteoWeb.xml</DocumentationFile>
   </PropertyGroup>
@@ -31,9 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.11.28" />
-    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
-    <PackageReference Include="NLog" Version="4.7.5" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.37" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
+    <PackageReference Include="NLog" Version="4.7.11" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
   </ItemGroup>
   <ItemGroup>

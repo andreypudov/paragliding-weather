@@ -2,6 +2,7 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
+#pragma warning disable CS0618
 namespace ParaglidingWeather.Bot.Clients
 {
     using System;
@@ -179,3 +180,4 @@ namespace ParaglidingWeather.Bot.Clients
         }
     }
 }
+#pragma warning restore CS0618
