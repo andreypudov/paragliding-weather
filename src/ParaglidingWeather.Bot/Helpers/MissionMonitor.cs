@@ -6,32 +6,31 @@ namespace ParaglidingWeather.Bot.Helpers
 {
     using System;
     using System.Net;
+    using System.Net.Http;
     using System.Threading.Tasks;
 
     /// <summary>
     /// Represents the mission monitor.
     /// </summary>
-    public class MissionMonitor
+    public static class MissionMonitor
     {
         private static readonly string BotApiKey = "1207628089:AAF-ytVyTJsmQ-5y_XTL-ZUUrtIU4LGfnzo";
         private static readonly string ChannelName = "-1001232512421";
+
+        private static readonly HttpClient Client = new HttpClient();
 
         /// <summary>
         /// Publishes provided message to the Message monitor channel.
         /// </summary>
         /// <param name="message">The value of the message to publish.</param>
-        public static void Publish(string message)
+        /// <returns>The instance of the async task.</returns>
+        public static async Task PublishAsync(string message)
         {
             var url = $"https://api.telegram.org/bot{BotApiKey}/sendMessage?chat_id={ChannelName}&text={WebUtility.HtmlEncode(message)}";
 
             try
             {
-                Task.Run(() =>
-                {
-                    var request = (HttpWebRequest)WebRequest.Create(url);
-                    request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-                    using var response = (HttpWebResponse)request.GetResponse();
-                });
+                await Client.GetAsync(url);
             }
             catch (Exception)
             {

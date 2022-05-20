@@ -21,7 +21,7 @@ namespace ParaglidingWeather.Bot
         /// Configures the application's services.
         /// </summary>
         /// <param name="services">Specifies the contract for a collection of service descriptors.</param>
-        /// <param name="configuration">The instance of a applicaiton configuration.</param>
+        /// <param name="configuration">The instance of a application configuration.</param>
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
             var botConfiguration = new Configuration();
