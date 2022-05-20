@@ -55,11 +55,12 @@
             Represents the mission monitor.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Bot.Helpers.MissionMonitor.Publish(System.String)">
+        <member name="M:ParaglidingWeather.Bot.Helpers.MissionMonitor.PublishAsync(System.String)">
             <summary>
             Publishes provided message to the Message monitor channel.
             </summary>
             <param name="message">The value of the message to publish.</param>
+            <returns>The instance of the async task.</returns>
         </member>
         <member name="T:ParaglidingWeather.Bot.Helpers.StringUtilities">
             <summary>
@@ -113,7 +114,7 @@
             Configures the application's services.
             </summary>
             <param name="services">Specifies the contract for a collection of service descriptors.</param>
-            <param name="configuration">The instance of a applicaiton configuration.</param>
+            <param name="configuration">The instance of a application configuration.</param>
         </member>
         <member name="M:ParaglidingWeather.Bot.Program.Main">
             <summary>

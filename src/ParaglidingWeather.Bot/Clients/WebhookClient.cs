@@ -71,7 +71,7 @@ namespace ParaglidingWeather.Bot.Clients
                 return;
             }
 
-            this.Log(
+            await this.LogAsync(
                 update.Message.Chat.Id,
                 update.Message.Chat.Username,
                 update.Message.Chat.FirstName,
@@ -101,7 +101,7 @@ namespace ParaglidingWeather.Bot.Clients
                 return;
             }
 
-            this.Log(
+            await this.LogAsync(
                 update.CallbackQuery.Message.Chat.Id,
                 update.CallbackQuery.Message.Chat.Username,
                 update.CallbackQuery.Message.Chat.FirstName,
@@ -180,7 +180,7 @@ namespace ParaglidingWeather.Bot.Clients
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
         }
 
-        private void Log(long id, string userName, string firstName, string lastName, int messageId)
+        private async Task LogAsync(long id, string userName, string firstName, string lastName, int messageId)
         {
             userName = WebUtility.HtmlDecode(userName);
             firstName = WebUtility.HtmlDecode(firstName);
@@ -188,7 +188,7 @@ namespace ParaglidingWeather.Bot.Clients
 
             var message = $"[{id}] [{userName}] [{firstName} {lastName}] [{messageId}]";
 
-            MissionMonitor.Publish($"{nameof(ParaglidingWeather)} {message}");
+            await MissionMonitor.PublishAsync($"{nameof(ParaglidingWeather)} {message}");
             this.logger.LogInformation(message);
         }
     }
