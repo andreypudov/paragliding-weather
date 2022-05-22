@@ -33,7 +33,7 @@ public static class ParaglidingWeatherFunction
     {
         logger.LogInformation($"{nameof(ParaglidingWeatherFunction)} HTTP trigger function processed a request.");
 
-        var body = await request.ReadAsStringAsync().ConfigureAwait(false);
+        var body = await request.ReadAsStringAsync();
         if (string.IsNullOrEmpty(body))
         {
             return new BadRequestResult();
@@ -47,7 +47,7 @@ public static class ParaglidingWeatherFunction
         }
 
         var client = new WebhookClient(configuration, logger);
-        await client.Update(body).ConfigureAwait(false);
+        await client.Update(body);
 
         return new OkResult();
     }
