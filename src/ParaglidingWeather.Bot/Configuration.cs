@@ -2,16 +2,15 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Bot
+namespace ParaglidingWeather.Bot;
+
+/// <summary>
+/// Represents application configuration.
+/// </summary>
+public class Configuration
 {
     /// <summary>
-    /// Represents application configuration.
+    /// Gets or sets authentication token.
     /// </summary>
-    public class Configuration
-    {
-        /// <summary>
-        /// Gets or sets authentication token.
-        /// </summary>
-        public string Token { get; set; } = string.Empty;
-    }
+    public string Token { get; set; } = string.Empty;
 }

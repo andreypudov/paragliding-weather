@@ -2,40 +2,36 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Bot.Helpers
+namespace ParaglidingWeather.Bot.Helpers;
+
+using System.Net;
+
+/// <summary>
+/// Represents the mission monitor.
+/// </summary>
+public static class MissionMonitor
 {
-    using System;
-    using System.Net;
-    using System.Net.Http;
-    using System.Threading.Tasks;
+    private static readonly string BotApiKey = "1207628089:AAF-ytVyTJsmQ-5y_XTL-ZUUrtIU4LGfnzo";
+    private static readonly string ChannelName = "-1001232512421";
+
+    private static readonly HttpClient Client = new HttpClient();
 
     /// <summary>
-    /// Represents the mission monitor.
+    /// Publishes provided message to the Message monitor channel.
     /// </summary>
-    public static class MissionMonitor
+    /// <param name="message">The value of the message to publish.</param>
+    /// <returns>The instance of the async task.</returns>
+    public static async Task PublishAsync(string message)
     {
-        private static readonly string BotApiKey = "1207628089:AAF-ytVyTJsmQ-5y_XTL-ZUUrtIU4LGfnzo";
-        private static readonly string ChannelName = "-1001232512421";
+        var url = $"https://api.telegram.org/bot{BotApiKey}/sendMessage?chat_id={ChannelName}&text={WebUtility.HtmlEncode(message)}";
 
-        private static readonly HttpClient Client = new HttpClient();
-
-        /// <summary>
-        /// Publishes provided message to the Message monitor channel.
-        /// </summary>
-        /// <param name="message">The value of the message to publish.</param>
-        /// <returns>The instance of the async task.</returns>
-        public static async Task PublishAsync(string message)
+        try
         {
-            var url = $"https://api.telegram.org/bot{BotApiKey}/sendMessage?chat_id={ChannelName}&text={WebUtility.HtmlEncode(message)}";
-
-            try
-            {
-                await Client.GetAsync(url);
-            }
-            catch (Exception)
-            {
-                // intentionally left blank
-            }
+            await Client.GetAsync(url);
+        }
+        catch (Exception)
+        {
+            // intentionally left blank
         }
     }
 }

@@ -6,13 +6,16 @@
     <RepositoryUrl>https://github.com/andreypudov/paragliding-weather</RepositoryUrl>
     <Copyright>Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.</Copyright>
 
-    <LangVersion>8.0</LangVersion>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <Nullable>enable</Nullable>
     <TargetFramework>netcoreapp6</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <NeutralLanguage>en-US</NeutralLanguage>
     <IsPackable>false</IsPackable>
+
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

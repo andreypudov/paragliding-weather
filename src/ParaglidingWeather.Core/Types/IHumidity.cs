@@ -2,18 +2,17 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Core.Types
+namespace ParaglidingWeather.Core.Types;
+
+/// <summary>
+/// Represents a pressure entity.
+/// </summary>
+public interface IHumidity
 {
     /// <summary>
-    /// Represents a pressure entity.
+    /// Returns the value of humidity in specified units.
     /// </summary>
-    public interface IHumidity
-    {
-        /// <summary>
-        /// Returns the value of humidity in specified units.
-        /// </summary>
-        /// <param name="unit">The unit system to use.</param>
-        /// <returns>Returns the value of humidity.</returns>
-        double GetHumidity(Units.Humidity unit);
-    }
+    /// <param name="unit">The unit system to use.</param>
+    /// <returns>Returns the value of humidity.</returns>
+    double GetHumidity(Units.Humidity unit);
 }
