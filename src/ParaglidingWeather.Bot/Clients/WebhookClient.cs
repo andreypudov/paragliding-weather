@@ -12,6 +12,7 @@ using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using Telegram.Bot.Exceptions;
 
 /// <summary>
 /// Represents the handler of web hook requests.
@@ -51,90 +52,102 @@ public class WebhookClient
     {
         this.logger.LogInformation($"{nameof(WebhookClient)} HandleUpdate");
 
-        switch (update.Type)
+        var handler = update.Type switch
         {
-            case UpdateType.Message:
-                await this.OnMessageHandler(update).ConfigureAwait(false);
-                break;
-            case UpdateType.CallbackQuery:
-                await this.OnCallbackQueryHandler(update).ConfigureAwait(false);
-                break;
+            // UpdateType.Unknown:
+            // UpdateType.ChannelPost:
+            // UpdateType.EditedChannelPost:
+            // UpdateType.ShippingQuery:
+            // UpdateType.PreCheckoutQuery:
+            // UpdateType.Poll:
+            // UpdateType.InlineQuery
+            // UpdateType.ChosenInlineResult
+            UpdateType.Message => this.OnMessageHandler(update.Message!),
+            UpdateType.EditedMessage => this.OnMessageHandler(update.EditedMessage!),
+            UpdateType.CallbackQuery => this.OnCallbackQueryHandler(update.CallbackQuery!),
+            _ => this.UnknownUpdateHandlerAsync(update),
+        };
+
+        try
+        {
+            await handler;
+        }
+        catch (Exception exception)
+        {
+            await this.HandleErrorAsync(exception);
         }
     }
 
-    private async Task OnMessageHandler(Update update)
+    private async Task OnMessageHandler(Message message)
     {
-        if ((update.Type != UpdateType.Message)
-            || (update.Message!.Type != MessageType.Text)
-            || string.IsNullOrEmpty(update.Message.Text))
+        if ((message!.Type != MessageType.Text)
+            || string.IsNullOrEmpty(message.Text))
         {
             return;
         }
 
         await this.LogAsync(
-            update.Message.Chat.Id,
-            update.Message.Chat.Username,
-            update.Message.Chat.FirstName,
-            update.Message.Chat.LastName,
-            update.Message.MessageId);
+            message.Chat.Id,
+            message.Chat.Username,
+            message.Chat.FirstName,
+            message.Chat.LastName,
+            message.MessageId);
 
-        switch (update.Message.Text.Trim())
+        switch (message.Text.Trim())
         {
             case "/start":
             case "/forecast":
-                await this.OnForecastAsync(update.Message.Chat.Id)
+                await this.OnForecastAsync(message.Chat.Id)
                     .ConfigureAwait(false);
                 break;
             default:
                 await this.client.SendTextMessageAsync(
-                        chatId: update.Message.Chat.Id,
-                        text: $"Неверная команда: {update.Message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
+                        chatId: message.Chat.Id,
+                        text: $"Неверная команда: {message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
                     .ConfigureAwait(false);
                 break;
         }
     }
 
-    private async Task OnCallbackQueryHandler(Update update)
+    private async Task OnCallbackQueryHandler(CallbackQuery callbackQuery)
     {
-        if ((update.Type != UpdateType.Message)
-            || (update.Message!.Type != MessageType.Text)
-            || (update.CallbackQuery is null)
-            || (update.CallbackQuery.Message is null)
-            || string.IsNullOrEmpty(update.CallbackQuery.Data)
-            || string.IsNullOrEmpty(update.CallbackQuery.Message.Text))
+        if ((callbackQuery is null)
+            || (callbackQuery.Message is null)
+            || string.IsNullOrEmpty(callbackQuery.Data)
+            || string.IsNullOrEmpty(callbackQuery.Message.Text))
         {
             return;
         }
 
         await this.LogAsync(
-            update.CallbackQuery.Message.Chat.Id,
-            update.CallbackQuery.Message.Chat.Username,
-            update.CallbackQuery.Message.Chat.FirstName,
-            update.CallbackQuery.Message.Chat.LastName,
-            update.CallbackQuery.Message.MessageId);
+            callbackQuery.Message.Chat.Id,
+            callbackQuery.Message.Chat.Username,
+            callbackQuery.Message.Chat.FirstName,
+            callbackQuery.Message.Chat.LastName,
+            callbackQuery.Message.MessageId);
 
         try
         {
             await this.client.EditMessageReplyMarkupAsync(
-                update.CallbackQuery.Message.Chat.Id,
-                update.CallbackQuery.Message.MessageId).ConfigureAwait(false);
+                callbackQuery.Message.Chat.Id,
+                callbackQuery.Message.MessageId).ConfigureAwait(false);
         }
         catch (AggregateException ex)
         {
             this.logger.LogError(ex.ToString());
         }
 
-        switch (update.CallbackQuery.Data.Trim())
+        switch (callbackQuery.Data.Trim())
         {
             case "start":
             case "forecast":
-                await this.OnForecastAsync(update.CallbackQuery.Message.Chat.Id)
+                await this.OnForecastAsync(callbackQuery.Message.Chat.Id)
                     .ConfigureAwait(false);
                 break;
             default:
                 await this.client.SendTextMessageAsync(
-                        chatId: update.CallbackQuery.Message.Chat.Id,
-                        text: $"Неверная команда: {update.CallbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
+                        chatId: callbackQuery.Message.Chat.Id,
+                        text: $"Неверная команда: {callbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
                     .ConfigureAwait(false);
                 break;
         }
@@ -183,6 +196,24 @@ public class WebhookClient
             replyMarkup: keyboard,
             disableWebPagePreview: true,
             parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
+    }
+
+    private Task HandleErrorAsync(Exception exception)
+    {
+        var message = exception switch
+        {
+            ApiRequestException apiRequestException => $"Telegram API Error:\n[{apiRequestException.ErrorCode}]\n{apiRequestException.Message}",
+            _ => exception.ToString(),
+        };
+
+        this.logger.LogInformation(message);
+        return Task.CompletedTask;
+    }
+
+    private Task UnknownUpdateHandlerAsync(Update update)
+    {
+        this.logger.LogInformation($"Unknown update type: {update.Type}");
+        return Task.CompletedTask;
     }
 
     private async Task LogAsync(long id, string? userName, string? firstName, string? lastName, int messageId)
