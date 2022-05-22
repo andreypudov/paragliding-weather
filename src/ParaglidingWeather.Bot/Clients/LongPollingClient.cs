@@ -9,8 +9,11 @@ using Microsoft.Extensions.Logging;
 using System.Net;
 using ParaglidingWeather.Bot.Helpers;
 using Telegram.Bot;
-using Telegram.Bot.Args;
+using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Exceptions;
+using Telegram.Bot.Types;
 using Telegram.Bot.Types.ReplyMarkups;
+using Telegram.Bot.Extensions.Polling;
 
 /// <summary>
 /// Represents a console running instance for the application.
@@ -39,82 +42,120 @@ public class LongPollingClient
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1303:Do not pass literals as localized parameters", Justification = "To be added later.")]
     public void Run()
     {
-        this.client.OnMessage += this.OnMessageHandler;
-        this.client.OnCallbackQuery += this.OnCallbackQueryHandler;
-        this.client.StartReceiving();
+        using var cancellationToken = new CancellationTokenSource();
+
+        this.client.StartReceiving(
+            updateHandler: this.HandleUpdateAsync,
+            errorHandler: this.HandleErrorAsync,
+            receiverOptions: new ReceiverOptions()
+            {
+                AllowedUpdates = Array.Empty<UpdateType>(),
+            },
+            cancellationToken: cancellationToken.Token);
 
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
 
-        this.client.StopReceiving();
+        cancellationToken.Cancel();
     }
 
-    private async void OnMessageHandler(object? sender, MessageEventArgs e)
+    private async Task HandleUpdateAsync(ITelegramBotClient client, Update update, CancellationToken cancellationToken)
     {
-        if (string.IsNullOrEmpty(e.Message.Text))
+        var handler = update.Type switch
+        {
+            // UpdateType.Unknown:
+            // UpdateType.ChannelPost:
+            // UpdateType.EditedChannelPost:
+            // UpdateType.ShippingQuery:
+            // UpdateType.PreCheckoutQuery:
+            // UpdateType.Poll:
+            // UpdateType.InlineQuery
+            // UpdateType.ChosenInlineResult
+            UpdateType.Message => this.OnMessageHandler(client, update.Message!),
+            UpdateType.EditedMessage => this.OnMessageHandler(client, update.EditedMessage!),
+            UpdateType.CallbackQuery => this.OnCallbackQueryHandler(client, update.CallbackQuery!),
+            _ => this.UnknownUpdateHandlerAsync(client, update),
+        };
+
+        try
+        {
+            await handler;
+        }
+        catch (Exception exception)
+        {
+            await this.HandleErrorAsync(client, exception, cancellationToken);
+        }
+    }
+
+    private async Task OnMessageHandler(ITelegramBotClient client, Message message)
+    {
+        if ((message.Type != MessageType.Text)
+            || string.IsNullOrEmpty(message.Text))
         {
             return;
         }
 
         await this.LogAsync(
-            e.Message.Chat.Id,
-            e.Message.Chat.Username,
-            e.Message.Chat.FirstName,
-            e.Message.Chat.LastName,
-            e.Message.MessageId);
+            message.Chat.Id,
+            message.Chat.Username,
+            message.Chat.FirstName,
+            message.Chat.LastName,
+            message.MessageId);
 
-        switch (e.Message.Text.Trim())
+        switch (message.Text.Trim())
         {
             case "/start":
             case "/forecast":
-                await this.OnForecastAsync(e.Message.Chat.Id)
+                await this.OnForecastAsync(message.Chat.Id)
                     .ConfigureAwait(false);
                 break;
             default:
                 await this.client.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: $"Неверная команда: {e.Message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
+                        chatId: message.Chat.Id,
+                        text: $"Неверная команда: {message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
                     .ConfigureAwait(false);
                 break;
         }
     }
 
-    private async void OnCallbackQueryHandler(object? sender, CallbackQueryEventArgs e)
+    private async Task OnCallbackQueryHandler(ITelegramBotClient client, CallbackQuery callbackQuery)
     {
-        if (string.IsNullOrEmpty(e.CallbackQuery.Data))
+        if ((callbackQuery.Message is null)
+            || string.IsNullOrEmpty(callbackQuery.Data)
+            || string.IsNullOrEmpty(callbackQuery.Message.Text))
         {
             return;
         }
 
         await this.LogAsync(
-            e.CallbackQuery.Message.Chat.Id,
-            e.CallbackQuery.Message.Chat.Username,
-            e.CallbackQuery.Message.Chat.FirstName,
-            e.CallbackQuery.Message.Chat.LastName,
-            e.CallbackQuery.Message.MessageId);
+            callbackQuery.Message.Chat.Id,
+            callbackQuery.Message.Chat.Username,
+            callbackQuery.Message.Chat.FirstName,
+            callbackQuery.Message.Chat.LastName,
+            callbackQuery.Message.MessageId);
 
         try
         {
             await this.client.EditMessageReplyMarkupAsync(
-                e.CallbackQuery.Message.Chat.Id,
-                e.CallbackQuery.Message.MessageId).ConfigureAwait(false);
+                callbackQuery.Message.Chat.Id,
+                callbackQuery.Message.MessageId).ConfigureAwait(false);
         }
         catch (AggregateException ex)
         {
             this.logger.LogError(ex.ToString());
         }
 
-        switch (e.CallbackQuery.Data.Trim())
+        switch (callbackQuery.Data.Trim())
         {
             case "start":
             case "forecast":
-                await this.OnForecastAsync(e.CallbackQuery.Message.Chat.Id)
+                await this.OnForecastAsync(callbackQuery.Message.Chat.Id)
                     .ConfigureAwait(false);
                 break;
             default:
                 await this.client.SendTextMessageAsync(
-                        chatId: e.CallbackQuery.Message.Chat,
-                        text: $"Неверная команда: {e.CallbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
+                        chatId: callbackQuery.Message.Chat.Id,
+                        text: $"Неверная команда: {callbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
                     .ConfigureAwait(false);
                 break;
         }
@@ -153,7 +194,7 @@ public class LongPollingClient
         {
             new[]
             {
-                new InlineKeyboardButton() { Text = "Повторить запрос", CallbackData = "forecast" },
+                InlineKeyboardButton.WithCallbackData(text: "Повторить запрос", callbackData: "forecast"),
             },
         });
 
@@ -162,10 +203,28 @@ public class LongPollingClient
             text: message,
             replyMarkup: keyboard,
             disableWebPagePreview: true,
-            parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
+            parseMode: ParseMode.MarkdownV2).ConfigureAwait(false);
     }
 
-    private async Task LogAsync(long id, string userName, string firstName, string lastName, int messageId)
+    private Task HandleErrorAsync(ITelegramBotClient client, Exception exception, CancellationToken cancellationToken)
+    {
+        var message = exception switch
+        {
+            ApiRequestException apiRequestException => $"Telegram API Error:\n[{apiRequestException.ErrorCode}]\n{apiRequestException.Message}",
+            _ => exception.ToString(),
+        };
+
+        this.logger.LogInformation(message);
+        return Task.CompletedTask;
+    }
+
+    private Task UnknownUpdateHandlerAsync(ITelegramBotClient client, Update update)
+    {
+        this.logger.LogInformation($"Unknown update type: {update.Type}");
+        return Task.CompletedTask;
+    }
+
+    private async Task LogAsync(long id, string? userName, string? firstName, string? lastName, int messageId)
     {
         userName = WebUtility.HtmlDecode(userName);
         firstName = WebUtility.HtmlDecode(firstName);

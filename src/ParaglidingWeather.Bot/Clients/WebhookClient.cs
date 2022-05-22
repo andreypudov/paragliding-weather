@@ -64,7 +64,9 @@ public class WebhookClient
 
     private async Task OnMessageHandler(Update update)
     {
-        if (string.IsNullOrEmpty(update.Message.Text))
+        if ((update.Type != UpdateType.Message)
+            || (update.Message!.Type != MessageType.Text)
+            || string.IsNullOrEmpty(update.Message.Text))
         {
             return;
         }
@@ -85,7 +87,7 @@ public class WebhookClient
                 break;
             default:
                 await this.client.SendTextMessageAsync(
-                        chatId: update.Message.Chat,
+                        chatId: update.Message.Chat.Id,
                         text: $"Неверная команда: {update.Message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
                     .ConfigureAwait(false);
                 break;
@@ -94,7 +96,12 @@ public class WebhookClient
 
     private async Task OnCallbackQueryHandler(Update update)
     {
-        if (string.IsNullOrEmpty(update.CallbackQuery.Data))
+        if ((update.Type != UpdateType.Message)
+            || (update.Message!.Type != MessageType.Text)
+            || (update.CallbackQuery is null)
+            || (update.CallbackQuery.Message is null)
+            || string.IsNullOrEmpty(update.CallbackQuery.Data)
+            || string.IsNullOrEmpty(update.CallbackQuery.Message.Text))
         {
             return;
         }
@@ -126,7 +133,7 @@ public class WebhookClient
                 break;
             default:
                 await this.client.SendTextMessageAsync(
-                        chatId: update.CallbackQuery.Message.Chat,
+                        chatId: update.CallbackQuery.Message.Chat.Id,
                         text: $"Неверная команда: {update.CallbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
                     .ConfigureAwait(false);
                 break;
@@ -166,7 +173,7 @@ public class WebhookClient
         {
             new[]
             {
-                new InlineKeyboardButton() { Text = "Повторить запрос", CallbackData = "forecast" },
+                InlineKeyboardButton.WithCallbackData(text: "Повторить запрос", callbackData: "forecast"),
             },
         });
 
@@ -178,7 +185,7 @@ public class WebhookClient
             parseMode: Telegram.Bot.Types.Enums.ParseMode.MarkdownV2).ConfigureAwait(false);
     }
 
-    private async Task LogAsync(long id, string userName, string firstName, string lastName, int messageId)
+    private async Task LogAsync(long id, string? userName, string? firstName, string? lastName, int messageId)
     {
         userName = WebUtility.HtmlDecode(userName);
         firstName = WebUtility.HtmlDecode(firstName);
