@@ -2,71 +2,68 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Core.Types
+namespace ParaglidingWeather.Core.Types;
+
+/// <summary>
+/// Represents a compass direction.
+/// </summary>
+public struct Direction : IDirection, IEquatable<Direction>
 {
-    using System;
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Direction"/> struct.
+    /// </summary>
+    /// <param name="degree">The value of the compass degree.</param>
+    public Direction(double degree)
+    {
+        this.Degree = degree;
+    }
+
+    /// <inheritdoc/>
+    public double Degree { get; }
 
     /// <summary>
-    /// Represents a compass direction.
+    /// Determines whether two specified strings have the same value.
     /// </summary>
-    public struct Direction : IDirection, IEquatable<Direction>
+    /// <param name="left">The first <see cref="Direction"/> to compare, or <c>null</c>.</param>
+    /// <param name="right">The second <see cref="Direction"/> to compare, or <c>null</c>.</param>
+    /// <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
+    public static bool operator ==(Direction left, Direction right)
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Direction"/> struct.
-        /// </summary>
-        /// <param name="degree">The value of the compass degree.</param>
-        public Direction(double degree)
-        {
-            this.Degree = degree;
-        }
+        return left.Equals(right);
+    }
 
-        /// <inheritdoc/>
-        public double Degree { get; }
+    /// <summary>
+    /// Determines whether two specified strings have different values.
+    /// </summary>
+    /// <param name="left">The first <see cref="Direction"/> to compare, or <c>null</c>.</param>
+    /// <param name="right">The second <see cref="Direction"/> to compare, or <c>null</c>.</param>
+    /// <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
+    public static bool operator !=(Direction left, Direction right)
+    {
+        return !(left == right);
+    }
 
-        /// <summary>
-        /// Determines whether two specified strings have the same value.
-        /// </summary>
-        /// <param name="left">The first <see cref="Direction"/> to compare, or <c>null</c>.</param>
-        /// <param name="right">The second <see cref="Direction"/> to compare, or <c>null</c>.</param>
-        /// <returns><c>true</c> if the value of a is the same as the value of b; otherwise, <c>false</c>.</returns>
-        public static bool operator ==(Direction left, Direction right)
-        {
-            return left.Equals(right);
-        }
+    /// <inheritdoc/>
+    public override bool Equals(object? obj)
+    {
+        return obj is Direction direction && this.Equals(direction);
+    }
 
-        /// <summary>
-        /// Determines whether two specified strings have different values.
-        /// </summary>
-        /// <param name="left">The first <see cref="Direction"/> to compare, or <c>null</c>.</param>
-        /// <param name="right">The second <see cref="Direction"/> to compare, or <c>null</c>.</param>
-        /// <returns><c>true</c> if the value of a is different from the value of b; otherwise, <c>false</c>.</returns>
-        public static bool operator !=(Direction left, Direction right)
-        {
-            return !(left == right);
-        }
+    /// <inheritdoc/>
+    public bool Equals(Direction other)
+    {
+        return this.Degree == other.Degree;
+    }
 
-        /// <inheritdoc/>
-        public override bool Equals(object? obj)
-        {
-            return obj is Direction direction && this.Equals(direction);
-        }
+    /// <inheritdoc/>
+    public override int GetHashCode()
+    {
+        return this.Degree.GetHashCode();
+    }
 
-        /// <inheritdoc/>
-        public bool Equals(Direction other)
-        {
-            return this.Degree == other.Degree;
-        }
-
-        /// <inheritdoc/>
-        public override int GetHashCode()
-        {
-            return this.Degree.GetHashCode();
-        }
-
-        /// <inheritdoc/>
-        public override string ToString()
-        {
-            return $"{this.Degree:0.0}";
-        }
+    /// <inheritdoc/>
+    public override string ToString()
+    {
+        return $"{this.Degree:0.0}";
     }
 }

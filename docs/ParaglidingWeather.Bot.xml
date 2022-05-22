@@ -104,19 +104,19 @@
             </summary>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
         </member>
-        <member name="T:ParaglidingWeather.Bot.Program">
+        <member name="T:ParaglidingWeather.Bot.ProgramF">
             <summary>
             An entry point of the application.
             </summary>
         </member>
-        <member name="M:ParaglidingWeather.Bot.Program.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:ParaglidingWeather.Bot.ProgramF.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             Configures the application's services.
             </summary>
             <param name="services">Specifies the contract for a collection of service descriptors.</param>
             <param name="configuration">The instance of a application configuration.</param>
         </member>
-        <member name="M:ParaglidingWeather.Bot.Program.Main">
+        <member name="M:ParaglidingWeather.Bot.ProgramF.Main">
             <summary>
             An entry point method of the application.
             </summary>

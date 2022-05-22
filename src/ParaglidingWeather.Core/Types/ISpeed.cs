@@ -2,18 +2,17 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Core.Types
+namespace ParaglidingWeather.Core.Types;
+
+/// <summary>
+/// Represents a speed entity.
+/// </summary>
+public interface ISpeed
 {
     /// <summary>
-    /// Represents a speed entity.
+    /// Returns the value of speed in specified units.
     /// </summary>
-    public interface ISpeed
-    {
-        /// <summary>
-        /// Returns the value of speed in specified units.
-        /// </summary>
-        /// <param name="unit">The unit system to use.</param>
-        /// <returns>Returns the value of speed.</returns>
-        double GetSpeed(Units.Speed unit);
-    }
+    /// <param name="unit">The unit system to use.</param>
+    /// <returns>Returns the value of speed.</returns>
+    double GetSpeed(Units.Speed unit);
 }

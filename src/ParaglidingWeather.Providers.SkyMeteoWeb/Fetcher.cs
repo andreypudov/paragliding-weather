@@ -2,48 +2,45 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Providers.SkyMeteoWeb
+namespace ParaglidingWeather.Providers.SkyMeteoWeb;
+
+using HtmlAgilityPack;
+
+/// <summary>
+/// Provides a methods to fetch content from the web resource.
+/// </summary>
+public sealed class Fetcher : IFetcher
 {
-    using System;
-    using System.Threading.Tasks;
-    using HtmlAgilityPack;
+    private readonly Uri uri;
 
     /// <summary>
-    /// Provides a methods to fetch content from the web resource.
+    /// Initializes a new instance of the <see cref="Fetcher"/> class.
     /// </summary>
-    public sealed class Fetcher : IFetcher
+    /// <param name="uri">The address of the web page.</param>
+    public Fetcher(Uri uri)
     {
-        private readonly Uri uri;
+        this.uri = uri;
+    }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Fetcher"/> class.
-        /// </summary>
-        /// <param name="uri">The address of the web page.</param>
-        public Fetcher(Uri uri)
-        {
-            this.uri = uri;
-        }
+    /// <summary>
+    /// Returns the web page from the specified address.
+    /// </summary>
+    /// <returns>The web page document.</returns>
+    public HtmlDocument Fetch()
+    {
+        var web = new HtmlWeb();
 
-        /// <summary>
-        /// Returns the web page from the specified address.
-        /// </summary>
-        /// <returns>The web page document.</returns>
-        public HtmlDocument Fetch()
-        {
-            var web = new HtmlWeb();
+        return web.Load(this.uri);
+    }
 
-            return web.Load(this.uri);
-        }
+    /// <summary>
+    /// Returns the web page from the specified address.
+    /// </summary>
+    /// <returns>The web page document.</returns>
+    public Task<HtmlDocument> FetchAsync()
+    {
+        var web = new HtmlWeb();
 
-        /// <summary>
-        /// Returns the web page from the specified address.
-        /// </summary>
-        /// <returns>The web page document.</returns>
-        public Task<HtmlDocument> FetchAsync()
-        {
-            var web = new HtmlWeb();
-
-            return web.LoadFromWebAsync(this.uri.AbsolutePath);
-        }
+        return web.LoadFromWebAsync(this.uri.AbsolutePath);
     }
 }

@@ -2,16 +2,15 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Core.Types
+namespace ParaglidingWeather.Core.Types;
+
+/// <summary>
+/// Represents a compass direction.
+/// </summary>
+public interface IDirection
 {
     /// <summary>
-    /// Represents a compass direction.
+    /// Gets the compass direction in degrees.
     /// </summary>
-    public interface IDirection
-    {
-        /// <summary>
-        /// Gets the compass direction in degrees.
-        /// </summary>
-        double Degree { get; }
-    }
+    double Degree { get; }
 }

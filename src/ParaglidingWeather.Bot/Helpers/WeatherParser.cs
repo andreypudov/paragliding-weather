@@ -2,24 +2,22 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Bot.Helpers
-{
-    using System.Threading.Tasks;
-    using HtmlAgilityPack;
+namespace ParaglidingWeather.Bot.Helpers;
 
+using HtmlAgilityPack;
+
+/// <summary>
+/// Parses the weather inforation on SkyMeteo webpage.
+/// </summary>
+public static class WeatherParser
+{
     /// <summary>
-    /// Parses the weather inforation on SkyMeteo webpage.
+    /// Returns the HTML representation of the forecast information.
     /// </summary>
-    public static class WeatherParser
+    /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
+    public static async Task<HtmlDocument?> GetAsync()
     {
-        /// <summary>
-        /// Returns the HTML representation of the forecast information.
-        /// </summary>
-        /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
-        public static async Task<HtmlDocument?> GetAsync()
-        {
-            var web = new HtmlWeb();
-            return await web.LoadFromWebAsync("http://meteo.paraplan.net/ru/forecast/summary.html?place=3148");
-        }
+        var web = new HtmlWeb();
+        return await web.LoadFromWebAsync("http://meteo.paraplan.net/ru/forecast/summary.html?place=3148");
     }
 }

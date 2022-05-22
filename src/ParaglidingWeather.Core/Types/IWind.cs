@@ -2,26 +2,25 @@
 //     Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 // </copyright>
 
-namespace ParaglidingWeather.Core.Types
+namespace ParaglidingWeather.Core.Types;
+
+/// <summary>
+/// Represents a wind entity.
+/// </summary>
+public interface IWind
 {
     /// <summary>
-    /// Represents a wind entity.
+    /// Gets the value of wind speed.
     /// </summary>
-    public interface IWind
-    {
-        /// <summary>
-        /// Gets the value of wind speed.
-        /// </summary>
-        ISpeed Speed { get; }
+    ISpeed Speed { get; }
 
-        /// <summary>
-        /// Gets the value of wind direction.
-        /// </summary>
-        IDirection Direction { get; }
+    /// <summary>
+    /// Gets the value of wind direction.
+    /// </summary>
+    IDirection Direction { get; }
 
-        /// <summary>
-        /// Gets the value of wind gust.
-        /// </summary>
-        ISpeed Gust { get; }
-    }
+    /// <summary>
+    /// Gets the value of wind gust.
+    /// </summary>
+    ISpeed Gust { get; }
 }
