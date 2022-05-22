@@ -92,6 +92,7 @@ public class LongPollingClient
         if ((message.Type != MessageType.Text)
             || string.IsNullOrEmpty(message.Text))
         {
+            await this.ReplyInvalidRequestAsync(client, message);
             return;
         }
 
@@ -106,14 +107,12 @@ public class LongPollingClient
         {
             case "/start":
             case "/forecast":
-                await this.OnForecastAsync(message.Chat.Id)
-                    .ConfigureAwait(false);
+                await this.OnForecastAsync(message.Chat.Id);
                 break;
             default:
                 await this.client.SendTextMessageAsync(
                         chatId: message.Chat.Id,
-                        text: $"Неверная команда: {message.Text}\nИспользуйте /forecast для получения прогноза погоды.")
-                    .ConfigureAwait(false);
+                        text: $"Неверная команда: {message.Text}\nИспользуйте /forecast для получения прогноза погоды.");
                 break;
         }
     }
@@ -124,6 +123,7 @@ public class LongPollingClient
             || string.IsNullOrEmpty(callbackQuery.Data)
             || string.IsNullOrEmpty(callbackQuery.Message.Text))
         {
+            await this.ReplyInvalidRequestAsync(client, callbackQuery.Message);
             return;
         }
 
@@ -138,7 +138,7 @@ public class LongPollingClient
         {
             await this.client.EditMessageReplyMarkupAsync(
                 callbackQuery.Message.Chat.Id,
-                callbackQuery.Message.MessageId).ConfigureAwait(false);
+                callbackQuery.Message.MessageId);
         }
         catch (AggregateException ex)
         {
@@ -149,24 +149,21 @@ public class LongPollingClient
         {
             case "start":
             case "forecast":
-                await this.OnForecastAsync(callbackQuery.Message.Chat.Id)
-                    .ConfigureAwait(false);
+                await this.OnForecastAsync(callbackQuery.Message.Chat.Id);
                 break;
             default:
                 await this.client.SendTextMessageAsync(
                         chatId: callbackQuery.Message.Chat.Id,
-                        text: $"Неверная команда: {callbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.")
-                    .ConfigureAwait(false);
+                        text: $"Неверная команда: {callbackQuery.Data}\nИспользуйте /forecast для получения прогноза погоды.");
                 break;
         }
     }
 
     private async Task OnForecastAsync(long chatId)
     {
-        var markdown = string.Empty;
         try
         {
-            markdown = await this.GetMarkdown(chatId);
+            var markdown = await this.GetMarkdown(chatId);
             await this.ReplyAsync(chatId, markdown);
         }
         catch (Exception e)
@@ -203,7 +200,7 @@ public class LongPollingClient
             text: message,
             replyMarkup: keyboard,
             disableWebPagePreview: true,
-            parseMode: ParseMode.MarkdownV2).ConfigureAwait(false);
+            parseMode: ParseMode.MarkdownV2);
     }
 
     private Task HandleErrorAsync(ITelegramBotClient client, Exception exception, CancellationToken cancellationToken)
@@ -220,8 +217,25 @@ public class LongPollingClient
 
     private Task UnknownUpdateHandlerAsync(ITelegramBotClient client, Update update)
     {
+        if (update.Message is not null)
+        {
+            client.SendTextMessageAsync(
+                    chatId: update.Message.Chat.Id,
+                    text: $"Неверная команда.\nИспользуйте /forecast для получения прогноза погоды.");
+        }
+
         this.logger.LogInformation($"Unknown update type: {update.Type}");
         return Task.CompletedTask;
+    }
+
+    private async Task ReplyInvalidRequestAsync(ITelegramBotClient client, Message? message)
+    {
+        if (message is not null)
+        {
+            await client.SendTextMessageAsync(
+                chatId: message.Chat.Id,
+                text: $"Неверная команда. Используйте /forecast для получения прогноза погоды.");
+        }
     }
 
     private async Task LogAsync(long id, string? userName, string? firstName, string? lastName, int messageId)
