@@ -32,8 +32,8 @@ public class DocumentParser
     {
         var entries = this.document.DocumentNode.SelectNodes("(//table[@id='forecast']//tr)");
         var reports = (List<IWeatherReport>)entries
-            .Select(n => new NodeParser(n).Parse(ref date))
-            .Where(w => w != null)
+            .Select(node => new NodeParser(node).Parse(ref date))
+            .Where(report => report != null)
             .ToList()!;
 
         return reports;
