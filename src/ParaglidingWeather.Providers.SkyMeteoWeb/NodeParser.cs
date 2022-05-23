@@ -29,21 +29,11 @@ public class NodeParser
     /// </summary>
     /// <param name="date">The date of the forecast.</param>
     /// <returns>The instance of weather reports.</returns>
-    public IWeatherReport? Parse(ref DateTime date)
+    public IWeatherReport? Parse(ref DateTime date) => this.node.SelectNodes("*").Count switch
     {
-        int columns = this.node.SelectNodes("*").Count;
-
-        if (columns == 12)
-        {
-            return this.ParseDateRow(ref date);
-        }
-        else if (columns == 11)
-        {
-            return this.ParseGeneralRow(ref date);
-        }
-
-        return null;
-    }
+        11 or 12 => this.ParseDateRow(ref date),
+        _ => null,
+    };
 
     private static void UpdateDate(ref DateTime date, int day)
     {
@@ -56,55 +46,6 @@ public class NodeParser
     private IWeatherReport? ParseDateRow(ref DateTime date)
     {
         const int DATE_COLUMN = 0;
-        const int TIME_COLUMN = 1;
-        const int TEMPERATURE_COLUMN = 2;
-        const int WIND_DIRECTION_COLUMN = 3;
-        const int WIND_SPEED_COLUMN = 5;
-        const int WIND_GUST_COLUMN = 6;
-        const int HUMIDITY_COLUMN = 7;
-        const int CLOUDINESS_COLUMN = 8;
-        const int PRECIPITATION_COLUMN = 9;
-        const int PRESSURE_COLUMN = 10;
-
-        var columns = this.node.SelectNodes("*");
-        if ((columns[DATE_COLUMN].SelectNodes("*")?.Count != 2)
-            || (int.TryParse(columns[DATE_COLUMN].SelectNodes("*")[1].InnerText, out _) == false)
-            || (int.TryParse(columns[TEMPERATURE_COLUMN].InnerText, out _) == false))
-        {
-            return null;
-        }
-
-        if (int.TryParse(new string(columns[DATE_COLUMN].SelectNodes("*")[1].InnerText.Where(char.IsDigit).ToArray()), out int day)
-            && int.TryParse(new string(columns[TIME_COLUMN].InnerText.Where(char.IsDigit).ToArray()), out int time)
-            && int.TryParse(columns[TEMPERATURE_COLUMN].InnerText, out int temperature)
-            && double.TryParse(columns[WIND_DIRECTION_COLUMN].LastChild.GetAttributeValue("alt", "0"), out double wind_direction)
-            && int.TryParse(columns[WIND_SPEED_COLUMN].InnerText, out int wind_speed)
-            && int.TryParse(columns[WIND_GUST_COLUMN].InnerText, out int wind_gust)
-            && int.TryParse(columns[HUMIDITY_COLUMN].InnerText, out int humidity)
-            && int.TryParse(columns[CLOUDINESS_COLUMN].InnerText, out int cloudiness)
-            && double.TryParse(columns[PRECIPITATION_COLUMN].InnerText, out double precipitation)
-            && int.TryParse(columns[PRESSURE_COLUMN].InnerText, out int pressure))
-        {
-            UpdateDate(ref date, day);
-
-            return new WeatherReport(
-                time: date.AddHours(time),
-                temperature: new Temperature(temperature, Core.Units.Temperature.Celsius),
-                pressure: new Pressure(pressure, Core.Units.Pressure.Pascal),
-                humidity: new Humidity(humidity, Core.Units.Humidity.Relative),
-                wind: new Wind(
-                    speed: new Speed(wind_speed, Core.Units.Speed.MeterPerSecond),
-                    direction: new Direction(wind_direction),
-                    gust: new Speed(wind_gust, Core.Units.Speed.MeterPerSecond)),
-                cloudiness: new Cloudiness(cloudiness, Core.Units.Cloudiness.Relative),
-                precipitation: new Precipitation(precipitation, Core.Units.Precipitation.Millimetres));
-        }
-
-        return null;
-    }
-
-    private IWeatherReport? ParseGeneralRow(ref DateTime date)
-    {
         const int TIME_COLUMN = 0;
         const int TEMPERATURE_COLUMN = 1;
         const int WIND_DIRECTION_COLUMN = 2;
@@ -116,30 +57,35 @@ public class NodeParser
         const int PRESSURE_COLUMN = 9;
 
         var columns = this.node.SelectNodes("*");
-        if (int.TryParse(columns[TEMPERATURE_COLUMN].InnerText, out _) == false)
+        int firstColumn = 0;
+        int day = 0;
+
+        if (columns.Count == 12)
         {
-            return null;
+            int.TryParse(new string(columns[DATE_COLUMN].SelectNodes("*")[1].InnerText.Where(char.IsDigit).ToArray()), out day);
+            UpdateDate(ref date, day);
+            firstColumn = 1;
         }
 
-        if (int.TryParse(new string(columns[TIME_COLUMN].InnerText.Where(char.IsDigit).ToArray()), out int time)
-            && int.TryParse(columns[TEMPERATURE_COLUMN].InnerText, out int temperature)
-            && double.TryParse(columns[WIND_DIRECTION_COLUMN].LastChild.GetAttributeValue("alt", "0"), out double wind_direction)
-            && int.TryParse(columns[WIND_SPEED_COLUMN].InnerText, out int wind_speed)
-            && int.TryParse(columns[WIND_GUST_COLUMN].InnerText, out int wind_gust)
-            && int.TryParse(columns[HUMIDITY_COLUMN].InnerText, out int humidity)
-            && int.TryParse(columns[CLOUDINESS_COLUMN].InnerText, out int cloudiness)
-            && double.TryParse(columns[PRECIPITATION_COLUMN].InnerText, out double precipitation)
-            && int.TryParse(columns[PRESSURE_COLUMN].InnerText, out int pressure))
+        if (int.TryParse(new string(columns[TIME_COLUMN + firstColumn].InnerText.Where(char.IsDigit).ToArray()), out int time)
+            && int.TryParse(columns[TEMPERATURE_COLUMN + firstColumn].InnerText.Replace("−", "-"), out int temperature)
+            && double.TryParse(new string(columns[WIND_DIRECTION_COLUMN + firstColumn].LastChild.GetAttributeValue("data-tippy-content", "0").Where(char.IsDigit).ToArray()), out double windDirection)
+            && int.TryParse(columns[WIND_SPEED_COLUMN + firstColumn].InnerText, out int windSpeed)
+            && int.TryParse(columns[WIND_GUST_COLUMN + firstColumn].InnerText, out int windGust)
+            && int.TryParse(columns[HUMIDITY_COLUMN + firstColumn].InnerText, out int humidity)
+            && int.TryParse(columns[CLOUDINESS_COLUMN + firstColumn].InnerText, out int cloudiness)
+            && double.TryParse(columns[PRECIPITATION_COLUMN + firstColumn].InnerText, out double precipitation)
+            && int.TryParse(columns[PRESSURE_COLUMN + firstColumn].InnerText, out int pressure))
         {
             return new WeatherReport(
-                time: date.AddHours(time),
+                time: date.AddHours((int)(time / 100)),
                 temperature: new Temperature(temperature, Core.Units.Temperature.Celsius),
                 pressure: new Pressure(pressure, Core.Units.Pressure.Pascal),
                 humidity: new Humidity(humidity, Core.Units.Humidity.Relative),
                 wind: new Wind(
-                    speed: new Speed(wind_speed, Core.Units.Speed.MeterPerSecond),
-                    direction: new Direction(wind_direction),
-                    gust: new Speed(wind_gust, Core.Units.Speed.MeterPerSecond)),
+                    speed: new Speed(windSpeed, Core.Units.Speed.MeterPerSecond),
+                    direction: new Direction(windDirection),
+                    gust: new Speed(windGust, Core.Units.Speed.MeterPerSecond)),
                 cloudiness: new Cloudiness(cloudiness, Core.Units.Cloudiness.Relative),
                 precipitation: new Precipitation(precipitation, Core.Units.Precipitation.Millimetres));
         }

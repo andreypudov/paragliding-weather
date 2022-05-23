@@ -14,940 +14,416 @@
     </resheader>
     <data name="SkyMeteo_Forecast_NizhnyNovgorod_Valid" xml:space="preserve">
         <value>&lt;!doctype html&gt;
-&lt;html lang=&quot;ru&quot;&gt;
+&lt;html lang="en"&gt;
 &lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot;&gt;
-&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
-&lt;title&gt;Погода в Нижнем Новгороде
-&lt;/title&gt;
-&lt;meta http-equiv=&apos;Pragma&apos; content=&apos;no-cache&apos;&gt;
-&lt;meta http-equiv=&apos;Cache-Control&apos; content=&apos;no-cache, must-revalidate&apos;&gt;
-&lt;meta http-equiv=&apos;Expires&apos; content=&apos;-1&apos;&gt;
-&lt;meta name=&quot;keywords&quot; content=&quot;погода, город, городе, Нижний Новгород, подробный, Прогноз, погоды, апрель, май, мая, 2007, Аэрологическая диаграмма, 5 дней, ветер, влажность, облачность, осадки, давление, спутник, карта, снимки&quot; /&gt;
-&lt;meta name=&quot;description&quot; content=&quot;Прогноз погоды — Нижний Новгород. Погода на неделю.&quot; /&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;&gt;
-&lt;link href=&quot;https://fonts.googleapis.com/css?family=PT+Sans&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;http://meteo.paraplan.net/_css/style.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;http://meteo.paraplan.net/_css/style_2.css&quot;&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;
+
+    
+    
+        
+        &lt;title&gt;🌈 Five-day weather forecast for Nizhny Novgorod&lt;/title&gt;
+        &lt;meta property="og:title" content="🌈 Five-day weather forecast for Nizhny Novgorod"/&gt;
+        &lt;meta name="description" content="🌈 Five-day weather forecast for Nizhny Novgorod, Russia. 🪂 Weather for paraglider and small aircraft pilots. Accurate aviation weather forecast."/&gt;
+    
+
+    &lt;link rel="canonical" href="https://meteo.paraplan.net/en/forecast/nizhny-novgorod/" /&gt;
+    &lt;meta property="og:url" content="https://meteo.paraplan.net/en/forecast/nizhny-novgorod/" /&gt;
+
+    &lt;meta name="keywords" content="🌈, Nizhny Novgorod, city, town, detailed, forecast, weather, upper-air chart, 5 days, wind, humidity, cloudiness, precipitation, pressure" /&gt;
+
+
+    &lt;meta property="og:site_name" content="meteo.paraplan.net"/&gt;
+    &lt;meta property="og:locale" content="en"/&gt;
+    &lt;meta property="og:type" content="website"/&gt;
+    &lt;meta property="og:image" content="https://meteo.paraplan.net/static/og_image.92fbabff0541.png"/&gt;
+
+    &lt;meta name="twitter:card" content="summary_large_image"/&gt;
+    &lt;meta name="twitter:image" content="https://meteo.paraplan.net/static/og_image.92fbabff0541.png"/&gt;
+
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0"&gt;
+
+    &lt;link rel="apple-touch-icon" sizes="180x180" href="https://meteo.paraplan.net/static/apple-touch-icon.01f6c1d346f9.png"/&gt;
+    &lt;link rel="icon" type="image/png" sizes="32x32" href="https://meteo.paraplan.net/static/favicon-32x32.35632b872b5e.png"/&gt;
+    &lt;link rel="icon" type="image/png" sizes="16x16" href="https://meteo.paraplan.net/static/favicon-16x16.ccbcd49ea7d4.png"/&gt;
+    &lt;link rel="manifest" href="https://meteo.paraplan.net/static/site.053100cb84a5.webmanifest"/&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="/static/css/style.7d74669ff455.css"&gt;
+
+    
+    
+        &lt;link rel="alternate" href="https://meteo.paraplan.net/forecast/summary.html?place=3148" hreflang="x-default" /&gt;
+        &lt;link rel="alternate" href="https://meteo.paraplan.net/ru/forecast/summary.html?place=3148" hreflang="ru" /&gt;
+        &lt;link rel="alternate" href="https://meteo.paraplan.net/en/forecast/summary.html?place=3148" hreflang="en" /&gt;
+        
+    
+
+    &lt;meta name='yandex-verification' content='57304d404a8e6b95' /&gt;
+
+    &lt;script type="text/javascript"&gt;
+        window.placeholder = "Search";
+        window.no_results = "No results were found";
+        window.base_place_url = "/en/forecast/";
+        window.base_place_autocomplete_url = "/en/api/place_autocomplete/";
+    &lt;/script&gt;
+
+    
 &lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&quot;header padding&quot;&gt;
-&lt;div class=&quot;header-title&quot;&gt;Погода&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;main_nav padding&quot;&gt;
-&lt;div class=&quot;main_nav-item&quot;&gt;&lt;a href=&quot;/forecast/&quot;&gt;Прогноз погоды&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&quot;main_nav-item&quot;&gt;&lt;a href=&quot;/world/&quot;&gt;Погода в мире&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&quot;main_nav-item&quot;&gt;&lt;a href=&quot;/metar/&quot;&gt;METAR&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content padding&quot;&gt;
-&lt;div class=&quot;content-title&quot;&gt;
-&lt;h1&gt;Нижний Новгород&lt;/h1&gt;
-&lt;a href=&quot;/forecast/&quot; rel=&quot;nofollow&quot; title=&quot;Посмотреть прогноз в другом городе&quot;&gt;другой&amp;nbsp;город&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&quot;sub_nav&quot;&gt;
-&lt;div class=&quot;sub_nav-item active&quot;&gt;&lt;span&gt;Прогноз погоды на 5 дней&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;sub_nav-item&quot;&gt;&lt;a title=&quot;Аэрологическая диаграмма&quot; href=&quot;/forecast/aerological_diagram.html?place=3148&quot;&gt;Аэрологическая диаграмма&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;forecast&quot;&gt;
-&lt;table id=&apos;forecast&apos;&gt;
-&lt;tr&gt;
-&lt;th class=&apos;date&apos;&gt;&lt;/th&gt;
-&lt;th class=&apos;hour&apos;&gt;время,&lt;/th&gt;
-&lt;th class=&apos;213 help&apos; title=&apos;Температура&apos;&gt;темп.,&lt;/th&gt;
-&lt;th class=&apos;wind_dir_pic help&apos; title=&apos;&apos;&gt;&lt;/th&gt;
-&lt;th class=&apos;wind_dir help&apos; title=&apos;Направление ветра&apos;&gt;ветер,&lt;/th&gt;
-&lt;th class=&apos;wind help&apos; title=&apos;&apos;&gt;&lt;/th&gt;
-&lt;th class=&apos;332 help&apos; title=&apos;Скорость ветра в порывах&apos;&gt;пор.,&lt;/th&gt;
-&lt;th class=&apos;215 help&apos; title=&apos;Относительная влажность&apos;&gt;влажн.,&lt;/th&gt;
-&lt;th class=&apos;248 help&apos; title=&apos;Облачность&apos;&gt;обл.,&lt;/th&gt;
-&lt;th class=&apos;222 help&apos; title=&apos;Конденсированные осадки&apos;&gt;осадки,&lt;/th&gt;
-&lt;th class=&apos;327 help&apos; title=&apos;Атмосферное давление у поверхности&apos;&gt;давление,&lt;/th&gt;
-&lt;th class=&apos;pbl_h help&apos; title=&apos;Высота пограничного слоя атмосферы&apos;&gt;погр.,&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;th class=&apos;date&apos;&gt;&lt;br/&gt;&lt;/th&gt;
-&lt;th class=&apos;hour&apos;&gt;ч&lt;/th&gt;
-&lt;th class=&apos;213&apos;&gt;&amp;deg;C&lt;/th&gt;
-&lt;th class=&apos;wind_dir_pic&apos;&gt;&lt;/th&gt;
-&lt;th class=&apos;wind_dir&apos;&gt;м/с&lt;/th&gt;
-&lt;th class=&apos;wind&apos;&gt;&lt;/th&gt;
-&lt;th class=&apos;332&apos;&gt;м/с&lt;/th&gt;
-&lt;th class=&apos;215&apos;&gt;%&lt;/th&gt;
-&lt;th class=&apos;248&apos;&gt;%&lt;/th&gt;
-&lt;th class=&apos;222&apos;&gt;мм/ч&lt;/th&gt;
-&lt;th class=&apos;327&apos;&gt;гПа&lt;/th&gt;
-&lt;th class=&apos;pbl_h&apos;&gt;м&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&apos;top_spacer&apos; colspan=&apos;12&apos;&gt;&lt;span class=&quot;date_spacer &quot;&gt;21 сентября, пн&lt;/span&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;date&apos; rowspan=&apos;8&apos;&gt;
-&lt;span class=&apos;weekday &apos;&gt;пн&lt;/span&gt;&lt;span class=&apos;day &apos;&gt;21&lt;/span&gt;
-&lt;/td&gt;
-&lt;td class=&apos;hour odd&apos;&gt;00ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+5&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/293.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;290&quot; title=&quot;290&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;зсз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   4
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    10
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    86
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    75
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1013
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  370
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;03ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+4&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;277&quot; title=&quot;277&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  4
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   10
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   90
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   87
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1013
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 360
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;06ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+5&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/248.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;258&quot; title=&quot;258&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;зюз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    12
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    88
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    99
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1012
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  420
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;09ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+8&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;261&quot; title=&quot;261&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  7
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   13
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   76
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   100
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1010
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 830
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;12ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+9&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;267&quot; title=&quot;267&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   7
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    13
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    81
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    100
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.4
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1009
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  1110
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;15ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+9&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;276&quot; title=&quot;276&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  7
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   13
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   84
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   100
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.8
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1009
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 910
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;18ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+9&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;279&quot; title=&quot;279&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   6
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    13
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    87
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    100
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.2
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1010
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  840
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;21ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+10&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;281&quot; title=&quot;281&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  5
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   13
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   88
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   100
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.3
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1010
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 750
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&apos;spacer&apos; colspan=&apos;12&apos;&gt;&lt;span class=&quot;date_spacer &quot;&gt;22 сентября, вт&lt;/span&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;date&apos; rowspan=&apos;8&apos;&gt;
-&lt;span class=&apos;weekday &apos;&gt;вт&lt;/span&gt;&lt;span class=&apos;day &apos;&gt;22&lt;/span&gt;
-&lt;/td&gt;
-&lt;td class=&apos;hour odd&apos;&gt;00ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+9&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;279&quot; title=&quot;279&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    11
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    93
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    100
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.1
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1010
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  490
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;03ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+9&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;269&quot; title=&quot;269&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  4
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   11
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   94
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   100
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.1
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1011
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 440
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;06ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+9&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/248.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;252&quot; title=&quot;252&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;зюз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    10
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    95
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    100
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1011
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  400
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;09ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+11&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/248.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;249&quot; title=&quot;249&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;зюз&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  7
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   12
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   86
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   100
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1010
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 640
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;12ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+15&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/248.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;257&quot; title=&quot;257&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;зюз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   8
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    12
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    75
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    100
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1009
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  890
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;15ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+17&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;262&quot; title=&quot;262&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  7
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   12
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   68
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   98
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1008
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 1190
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;18ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+14&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;262&quot; title=&quot;262&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    14
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    77
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    75
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1009
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  720
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;21ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+13&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;270&quot; title=&quot;270&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  5
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   15
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   76
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   85
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1009
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 710
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&apos;spacer&apos; colspan=&apos;12&apos;&gt;&lt;span class=&quot;date_spacer &quot;&gt;23 сентября, ср&lt;/span&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;date&apos; rowspan=&apos;8&apos;&gt;
-&lt;span class=&apos;weekday &apos;&gt;ср&lt;/span&gt;&lt;span class=&apos;day &apos;&gt;23&lt;/span&gt;
-&lt;/td&gt;
-&lt;td class=&apos;hour odd&apos;&gt;00ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+12&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;272&quot; title=&quot;272&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    14
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    81
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    71
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1010
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  560
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;03ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+11&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;275&quot; title=&quot;275&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  5
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   12
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   85
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   76
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1012
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 450
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;06ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+10&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;275&quot; title=&quot;275&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    11
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    90
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    87
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1013
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  330
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;09ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+13&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;279&quot; title=&quot;279&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  5
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   8
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   79
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   52
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1015
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 410
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;12ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+17&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;277&quot; title=&quot;277&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   4
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    7
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    66
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    2
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1015
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  710
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;15ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+18&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/270.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;271&quot; title=&quot;271&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;з&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  4
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   6
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   61
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   1
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1016
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 840
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;18ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+13&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/248.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;257&quot; title=&quot;257&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;зюз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    3
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    78
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    1
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1016
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  20
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;21ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+11&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/225.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;220&quot; title=&quot;220&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;юз&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  2
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   82
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   30
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1017
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 20
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&apos;spacer&apos; colspan=&apos;12&apos;&gt;&lt;span class=&quot;date_spacer &quot;&gt;24 сентября, чт&lt;/span&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;date&apos; rowspan=&apos;8&apos;&gt;
-&lt;span class=&apos;weekday &apos;&gt;чт&lt;/span&gt;&lt;span class=&apos;day &apos;&gt;24&lt;/span&gt;
-&lt;/td&gt;
-&lt;td class=&apos;hour odd&apos;&gt;00ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+10&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;206&quot; title=&quot;206&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    3
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    88
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    47
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1017
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  30
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;03ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+10&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;203&quot; title=&quot;203&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  2
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   3
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   92
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   52
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1018
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 40
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;06ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+10&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;196&quot; title=&quot;196&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    3
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    95
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    65
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1019
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  60
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;09ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+14&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;204&quot; title=&quot;204&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  3
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   82
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   70
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1019
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 270
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;12ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+19&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/225.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;215&quot; title=&quot;215&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;юз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   3
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    5
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    67
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    80
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1019
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  560
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;15ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+20&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/225.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;226&quot; title=&quot;226&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;юз&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  3
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   4
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   64
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   85
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1019
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 760
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;18ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+15&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;195&quot; title=&quot;195&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    2
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    85
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    72
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1019
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  20
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;21ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+14&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;195&quot; title=&quot;195&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  2
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   3
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   90
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   80
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1021
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 30
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;&lt;td class=&apos;spacer&apos; colspan=&apos;12&apos;&gt;&lt;span class=&quot;date_spacer &quot;&gt;25 сентября, пт&lt;/span&gt;&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;date&apos; rowspan=&apos;8&apos;&gt;
-&lt;span class=&apos;weekday &apos;&gt;пт&lt;/span&gt;&lt;span class=&apos;day &apos;&gt;25&lt;/span&gt;
-&lt;/td&gt;
-&lt;td class=&apos;hour odd&apos;&gt;00ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+13&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;201&quot; title=&quot;201&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    3
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    91
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    94
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1021
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  30
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;03ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+12&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/203.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;200&quot; title=&quot;200&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;ююз&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  2
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   91
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   94
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1022
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 20
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;06ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+11&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/180.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;186&quot; title=&quot;186&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;ю&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    2
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    92
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    61
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1022
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  20
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;09ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+16&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/180.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;181&quot; title=&quot;181&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;ю&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  2
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   3
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   75
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   38
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1022
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 240
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;12ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+20&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/180.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;178&quot; title=&quot;178&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;ю&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    3
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    59
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    10
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1023
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  700
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;15ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+21&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/180.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;175&quot; title=&quot;175&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;ю&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  3
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   4
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   57
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   5
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1022
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 1000
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour odd&apos;&gt;18ч&lt;/td&gt;
-&lt;td class=&apos;213 odd&apos;&gt;+16&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic odd&apos;&gt;&lt;img src=&quot;/_img/wind_dir/158.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;157&quot; title=&quot;157&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir odd&apos;&gt;ююв&lt;/td&gt;
-&lt;td class=&apos;wind odd&apos;&gt;   2
-&lt;/td&gt;
-&lt;td class=&apos;332 odd&apos;&gt;    3
-&lt;/td&gt;
-&lt;td class=&apos;215 odd&apos;&gt;    77
-&lt;/td&gt;
-&lt;td class=&apos;248 odd&apos;&gt;    4
-&lt;/td&gt;
-&lt;td class=&apos;222 odd&apos;&gt;    0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 odd&apos;&gt;    1022
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h odd&apos;&gt;  30
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&apos;hour even&apos;&gt;21ч&lt;/td&gt;
-&lt;td class=&apos;213 even&apos;&gt;+14&lt;/td&gt;
-&lt;td class=&apos;wind_dir_pic even&apos;&gt;&lt;img src=&quot;/_img/wind_dir/158.gif&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;164&quot; title=&quot;164&quot;&gt;&lt;/td&gt;
-&lt;td class=&apos;wind_dir even&apos;&gt;ююв&lt;/td&gt;
-&lt;td class=&apos;wind even&apos;&gt;  2
-&lt;/td&gt;
-&lt;td class=&apos;332 even&apos;&gt;   3
-&lt;/td&gt;
-&lt;td class=&apos;215 even&apos;&gt;   83
-&lt;/td&gt;
-&lt;td class=&apos;248 even&apos;&gt;   34
-&lt;/td&gt;
-&lt;td class=&apos;222 even&apos;&gt;   0.0
-&lt;/td&gt;
-&lt;td class=&apos;327 even&apos;&gt;   1023
-&lt;/td&gt;
-&lt;td class=&apos;pbl_h even&apos;&gt; 40
-&lt;/td&gt;
-&lt;/tr&gt;
+&lt;body onload="onload()"&gt;
+
+    &lt;div class="header padding"&gt;
+        &lt;div class="wrap" id="search_container"&gt;
+            &lt;div id="logotype"&gt;
+                &lt;div id="logo"&gt;&lt;/div&gt;
+                
+                    &lt;div id="type"&gt;&lt;a href="/en/"&gt;Weather&lt;/a&gt;&lt;/div&gt;
+                
+            &lt;/div&gt;
+            &lt;div id="search"&gt;
+                &lt;label for="place_search_input" style="position: absolute; top: -100px"&gt;Search&lt;/label&gt;
+                &lt;input id="place_search_input" type="text" dir="ltr" spellcheck="false" autocomplete="off" maxlength="100"&gt;
+                &lt;div id="search_icon"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="main_nav padding"&gt;
+        &lt;div class="wrap"&gt;
+            &lt;div class="main_nav-item sm_hide"&gt;&lt;a href="/en/weather/494/"&gt;Weather forecast&lt;/a&gt;&lt;/div&gt;
+            &lt;div class="main_nav-item"&gt;&lt;a href="/en/weather/"&gt;World weather&lt;/a&gt;&lt;/div&gt;
+            &lt;div class="main_nav-item"&gt;&lt;a href="/ukraine/"&gt;Нет войне!&lt;/a&gt;&lt;/div&gt;
+
+            &lt;div class="main_nav-language"&gt;
+                
+                    
+                    &lt;div class="main_nav-item "&gt;
+                        
+                            &lt;a href="/ru/forecast/summary.html?place=3148"&gt;Русский&lt;/a&gt;
+                        
+                    &lt;/div&gt;
+                
+                    
+                    &lt;div class="main_nav-item active"&gt;
+                        
+                            &lt;span&gt;English&lt;/span&gt;
+                        
+                    &lt;/div&gt;
+                
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    
+
+    &lt;div class="content padding"&gt;
+        &lt;div class="wrap"&gt;
+            
+
+    &lt;div class="content-title"&gt;
+        
+            &lt;h1&gt;Weather in Nizhny Novgorod&lt;/h1&gt;
+        
+
+        &lt;span class="md_hide"&gt;
+            &lt;a href="/en/weather/494/"&gt;Russia&lt;/a&gt;
+            
+                / &lt;a href="/en/weather/603/"&gt;Nizhny Novgorod Oblast&amp;#39;&lt;/a&gt;
+            
+        &lt;/span&gt;
+        &amp;nbsp;&amp;nbsp;&amp;nbsp;
+        &lt;span class="lat_lon md_hide" style="color: #666"&gt;56°19′36″N&amp;nbsp;&amp;nbsp;&amp;nbsp;44°00′21″E&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div class="sub_nav"&gt;
+        &lt;div class="sub_nav-item active"&gt;&lt;span&gt;Five-day weather forecast&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="sub_nav-item"&gt;
+            &lt;a title="Skew-T log-P diagram"
+               href="/en/forecast/nizhny-novgorod/aerological_diagram/"&gt;Skew-T log-P diagram&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="forecast"&gt;
+        
+
+&lt;table id="forecast"&gt;
+    &lt;tr class="thead"&gt;
+        &lt;td class="date"&gt;&lt;/td&gt;
+        &lt;td class="time"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span data-tippy-content="Temperature"&gt;temp.,&lt;br/&gt;°C&lt;/span&gt;&lt;/td&gt;
+        &lt;td colspan=3&gt;&lt;span data-tippy-content="Wind direction and speed"&gt;wind,&lt;br/&gt;m/s&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span data-tippy-content="Wind speed in gusts"&gt;gust,&lt;br/&gt;m/s&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span data-tippy-content="Relative humidity"&gt;humid.,&lt;br/&gt;%&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span data-tippy-content="Clouds"&gt;clouds,&lt;br/&gt;%&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span data-tippy-content="Condensed precipitation"&gt;prec.,&lt;br/&gt;mm/h&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span data-tippy-content="Atmospheric pressure at the surface"&gt;press.,&lt;br/&gt;hPa&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span data-tippy-content="Planetary Boundary Layer Height"&gt;HPBL,&lt;br/&gt;m&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    
+        &lt;tr class="top_spacer"&gt;
+            &lt;td colspan=12&gt;&lt;span class="date_spacer "&gt;23 may, mon&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;th rowspan="8" class="date "&gt;&lt;span class="weekday"&gt;mon&lt;/span&gt;&lt;span class="day"&gt;23&lt;/span&gt;&lt;/th&gt;&lt;td class="time"&gt;00:00&lt;/td&gt;&lt;td&gt;+1&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="337˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(517,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nnw&lt;/td&gt;&lt;td class="speed"&gt;2&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;75&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1003&lt;/td&gt;&lt;td&gt;193&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;03:00&lt;/td&gt;&lt;td&gt;−1&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="319˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(499,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;2&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;80&lt;/td&gt;&lt;td&gt;13&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1002&lt;/td&gt;&lt;td&gt;161&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;06:00&lt;/td&gt;&lt;td&gt;+2&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="305˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(485,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;77&lt;/td&gt;&lt;td&gt;80&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1002&lt;/td&gt;&lt;td&gt;409&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;09:00&lt;/td&gt;&lt;td&gt;+4&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="302˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(482,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wnw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.1
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;1364&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;12:00&lt;/td&gt;&lt;td&gt;+5&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="304˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(484,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;63&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.1
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;1247&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;15:00&lt;/td&gt;&lt;td&gt;+6&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="298˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(478,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wnw&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;56&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.3
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;1611&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;18:00&lt;/td&gt;&lt;td&gt;+5&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="299˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(479,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wnw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;td&gt;77&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.3
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;1293&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;21:00&lt;/td&gt;&lt;td&gt;+3&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="283˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(463,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wnw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;88&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        0.6
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;741&lt;/td&gt;&lt;/tr&gt;
+        
+    
+        &lt;tr class="spacer"&gt;
+            &lt;td colspan=12&gt;&lt;span class="date_spacer "&gt;24 may, tue&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;th rowspan="8" class="date "&gt;&lt;span class="weekday"&gt;tue&lt;/span&gt;&lt;span class="day"&gt;24&lt;/span&gt;&lt;/th&gt;&lt;td class="time"&gt;00:00&lt;/td&gt;&lt;td&gt;+2&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="281˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(461,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;w&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;96&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.4
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;531&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;03:00&lt;/td&gt;&lt;td&gt;+1&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="248˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(428,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wsw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        0.5
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;450&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;06:00&lt;/td&gt;&lt;td&gt;+2&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="259˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(439,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;w&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        0.7
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;327&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;09:00&lt;/td&gt;&lt;td&gt;+2&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="314˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(494,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;2&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;97&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        1.2
+                    &lt;/td&gt;&lt;td&gt;1003&lt;/td&gt;&lt;td&gt;333&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;12:00&lt;/td&gt;&lt;td&gt;+4&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="319˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(499,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;78&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        0.6
+                    &lt;/td&gt;&lt;td&gt;1004&lt;/td&gt;&lt;td&gt;843&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;15:00&lt;/td&gt;&lt;td&gt;+7&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="321˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(501,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;56&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        1.2
+                    &lt;/td&gt;&lt;td&gt;1005&lt;/td&gt;&lt;td&gt;1503&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;18:00&lt;/td&gt;&lt;td&gt;+6&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="331˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(511,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nnw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.3
+                    &lt;/td&gt;&lt;td&gt;1007&lt;/td&gt;&lt;td&gt;1094&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;21:00&lt;/td&gt;&lt;td&gt;+3&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="313˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(493,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;2&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;80&lt;/td&gt;&lt;td&gt;82&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.4
+                    &lt;/td&gt;&lt;td&gt;1008&lt;/td&gt;&lt;td&gt;145&lt;/td&gt;&lt;/tr&gt;
+        
+    
+        &lt;tr class="spacer"&gt;
+            &lt;td colspan=12&gt;&lt;span class="date_spacer "&gt;25 may, wed&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;th rowspan="8" class="date "&gt;&lt;span class="weekday"&gt;wed&lt;/span&gt;&lt;span class="day"&gt;25&lt;/span&gt;&lt;/th&gt;&lt;td class="time"&gt;00:00&lt;/td&gt;&lt;td&gt;+2&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="315˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(495,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;2&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;83&lt;/td&gt;&lt;td&gt;94&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1009&lt;/td&gt;&lt;td&gt;171&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;03:00&lt;/td&gt;&lt;td&gt;+1&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="321˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(501,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;93&lt;/td&gt;&lt;td&gt;40&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1010&lt;/td&gt;&lt;td&gt;237&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;06:00&lt;/td&gt;&lt;td&gt;+3&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="330˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(510,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nnw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;88&lt;/td&gt;&lt;td&gt;53&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1010&lt;/td&gt;&lt;td&gt;377&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;09:00&lt;/td&gt;&lt;td&gt;+6&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="325˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(505,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;75&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.1
+                    &lt;/td&gt;&lt;td&gt;1011&lt;/td&gt;&lt;td&gt;943&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;12:00&lt;/td&gt;&lt;td&gt;+7&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="321˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(501,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;68&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.3
+                    &lt;/td&gt;&lt;td&gt;1012&lt;/td&gt;&lt;td&gt;1187&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;15:00&lt;/td&gt;&lt;td&gt;+9&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="305˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(485,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;61&lt;/td&gt;&lt;td&gt;99&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        1.0
+                    &lt;/td&gt;&lt;td&gt;1012&lt;/td&gt;&lt;td&gt;1550&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;18:00&lt;/td&gt;&lt;td&gt;+8&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="304˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(484,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;68&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        0.6
+                    &lt;/td&gt;&lt;td&gt;1012&lt;/td&gt;&lt;td&gt;1170&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;21:00&lt;/td&gt;&lt;td&gt;+5&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="286˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(466,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wnw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;89&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        1.1
+                    &lt;/td&gt;&lt;td&gt;1013&lt;/td&gt;&lt;td&gt;221&lt;/td&gt;&lt;/tr&gt;
+        
+    
+        &lt;tr class="spacer"&gt;
+            &lt;td colspan=12&gt;&lt;span class="date_spacer "&gt;26 may, thu&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;th rowspan="8" class="date "&gt;&lt;span class="weekday"&gt;thu&lt;/span&gt;&lt;span class="day"&gt;26&lt;/span&gt;&lt;/th&gt;&lt;td class="time"&gt;00:00&lt;/td&gt;&lt;td&gt;+4&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="286˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(466,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wnw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1013&lt;/td&gt;&lt;td&gt;265&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;03:00&lt;/td&gt;&lt;td&gt;+5&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="269˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(449,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;w&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;87&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1013&lt;/td&gt;&lt;td&gt;294&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;06:00&lt;/td&gt;&lt;td&gt;+5&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="263˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(443,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;w&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;80&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1013&lt;/td&gt;&lt;td&gt;329&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;09:00&lt;/td&gt;&lt;td&gt;+10&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="258˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(438,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wsw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;55&lt;/td&gt;&lt;td&gt;76&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1012&lt;/td&gt;&lt;td&gt;1046&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;12:00&lt;/td&gt;&lt;td&gt;+12&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="232˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(412,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;sw&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;46&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1010&lt;/td&gt;&lt;td&gt;1877&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;15:00&lt;/td&gt;&lt;td&gt;+13&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="233˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(413,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;sw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;52&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1008&lt;/td&gt;&lt;td&gt;1776&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;18:00&lt;/td&gt;&lt;td&gt;+14&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="186˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(366,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;s&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;57&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.0
+                    &lt;/td&gt;&lt;td&gt;1005&lt;/td&gt;&lt;td&gt;681&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;21:00&lt;/td&gt;&lt;td&gt;+11&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="196˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(376,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;ssw&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;11&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.4
+                    &lt;/td&gt;&lt;td&gt;1003&lt;/td&gt;&lt;td&gt;479&lt;/td&gt;&lt;/tr&gt;
+        
+    
+        &lt;tr class="spacer"&gt;
+            &lt;td colspan=12&gt;&lt;span class="date_spacer "&gt;27 may, fri&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;th rowspan="8" class="date "&gt;&lt;span class="weekday"&gt;fri&lt;/span&gt;&lt;span class="day"&gt;27&lt;/span&gt;&lt;/th&gt;&lt;td class="time"&gt;00:00&lt;/td&gt;&lt;td&gt;+10&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="113˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(293,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;ese&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-strong"&gt;
+                        4.1
+                    &lt;/td&gt;&lt;td&gt;998&lt;/td&gt;&lt;td&gt;336&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;03:00&lt;/td&gt;&lt;td&gt;+10&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="143˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(323,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;se&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-strong"&gt;
+                        9.2
+                    &lt;/td&gt;&lt;td&gt;994&lt;/td&gt;&lt;td&gt;425&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;06:00&lt;/td&gt;&lt;td&gt;+10&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="265˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(445,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;w&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;99&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-small"&gt;
+                        2.3
+                    &lt;/td&gt;&lt;td&gt;992&lt;/td&gt;&lt;td&gt;451&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;09:00&lt;/td&gt;&lt;td&gt;+9&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="290˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(470,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;wnw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-strong"&gt;
+                        5.5
+                    &lt;/td&gt;&lt;td&gt;994&lt;/td&gt;&lt;td&gt;429&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;12:00&lt;/td&gt;&lt;td&gt;+9&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="311˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(491,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;nw&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;97&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-strong"&gt;
+                        3.5
+                    &lt;/td&gt;&lt;td&gt;997&lt;/td&gt;&lt;td&gt;557&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;15:00&lt;/td&gt;&lt;td&gt;+13&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="278˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(458,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;w&lt;/td&gt;&lt;td class="speed"&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;81&lt;/td&gt;&lt;td&gt;98&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-strong"&gt;
+                        5.4
+                    &lt;/td&gt;&lt;td&gt;1000&lt;/td&gt;&lt;td&gt;910&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="odd"&gt;&lt;td class="time"&gt;18:00&lt;/td&gt;&lt;td&gt;+12&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="271˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(451,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;w&lt;/td&gt;&lt;td class="speed"&gt;4&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;td&gt;84&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.3
+                    &lt;/td&gt;&lt;td&gt;1001&lt;/td&gt;&lt;td&gt;788&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr class="even"&gt;&lt;td class="time"&gt;21:00&lt;/td&gt;&lt;td&gt;+9&lt;/td&gt;&lt;td class="arrow"&gt;&lt;span data-tippy-placement="left" data-tippy-content="228˚"&gt;&lt;svg version="1.1" viewBox="0 0 100 100"&gt;&lt;g transform="rotate(408,50,50) translate(0,5)"&gt;&lt;path d="m50,0 -20,30 16,-3 -3,63 14,0 -3,-63 16,3 -20,-30z" fill="black" stroke-width="0"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class="rhumb"&gt;sw&lt;/td&gt;&lt;td class="speed"&gt;3&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;95&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td class="precipitations
+                        precipitations-zero"&gt;
+                        0.3
+                    &lt;/td&gt;&lt;td&gt;1003&lt;/td&gt;&lt;td&gt;162&lt;/td&gt;&lt;/tr&gt;
+        
+    
 &lt;/table&gt;
-&lt;div class=&quot;glad&quot;&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-google_ad_client = &quot;ca-pub-0755730198631808&quot;;
-google_ad_slot = &quot;6110567889&quot;;
-google_ad_width = 240;
-google_ad_height = 400;
-&lt;/script&gt;
-&lt;!-- Баннер 240 --&gt;
-&lt;script type=&quot;text/javascript&quot;
-src=&quot;//pagead2.googlesyndication.com/pagead/show_ads.js&quot;&gt;
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;br clear=&quot;both&quot; /&gt;
-&lt;div class=&quot;glad_b&quot;&gt;
-&lt;script async src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
-&lt;ins class=&quot;adsbygoogle&quot;
-style=&quot;display:block&quot;
-data-ad-format=&quot;fluid&quot;
-data-ad-layout-key=&quot;-6t+ed+2i-1n-4w&quot;
-data-ad-client=&quot;ca-pub-0755730198631808&quot;
-data-ad-slot=&quot;4113415348&quot;&gt;&lt;/ins&gt;
-&lt;script&gt;
-(adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;footer padding&quot;&gt;
-&lt;div class=&quot;counters&quot;&gt;
-&lt;!--LiveInternet counter--&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.write(&quot;&lt;a href=&apos;http://www.liveinternet.ru/click&apos; target=_blank rel=&apos;nofollow&apos;&gt;&lt;img src=&apos;http://counter.yadro.ru/hit?t44.3;r&quot; + escape(document.referrer) + ((typeof(screen)==&quot;undefined&quot;)?&quot;&quot;:&quot;;s&quot;+screen.width+&quot;*&quot;+screen.height+&quot;*&quot;+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + &quot;;u&quot; + escape(document.URL) +&quot;;i&quot; + escape(&quot;Жж&quot;+document.title.substring(0,80)) + &quot;;&quot; + Math.random() + &quot;&apos; border=0 width=31 height=31 alt=&apos;&apos; title=&apos;LiveInternet&apos;&gt;&lt;\/a&gt;&quot;)&lt;/script&gt;&lt;!--/LiveInternet--&gt;
-&lt;/noindex&gt;
-&lt;/div&gt;
-&lt;div class=&quot;copyright-container&quot;&gt;
-&lt;div class=&quot;copyright&quot;&gt;
-&lt;nobr&gt;&amp;copy; 2006&amp;ndash;2019 &amp;laquo;&lt;a href=&quot;http://www.stopdesign.ru&quot;&gt;StopDesign&lt;/a&gt;&amp;raquo;&lt;/nobr&gt;
-&lt;/div&gt;
-&lt;div class=&quot;copyright&quot;&gt;
-E-mail:
-&lt;script type=&quot;text/javascript&quot;&gt;&lt;!--
-qk8k=&quot;a id=&apos;mail&apos; h&quot;; b141x=&quot;ref=\&apos;mai&quot;; fgy49=&quot;lto:&quot;; fi=&quot;mail&quot;; om03b=&quot;stopdesign.ru&quot;; c6s=&quot;&lt;&quot;+qk8k+b141x+fgy49; klh=fi+&quot;@&quot;+om03b; document.write(c6s+klh+&quot;&apos;&gt;&quot;+klh+&quot;&lt;/a&gt;&quot;);
-//&lt; --&gt;&lt;/script&gt;
-&lt;noscript&gt;
-&lt;img src=&quot;/_img/mail_no_spam.gif&quot; width=&quot;95&quot; height=&quot;10&quot; border=&quot;0&quot; hspace=&quot;0&quot; vspace=&quot;0&quot; align=&quot;absmiddle&quot; alt=&quot;&quot;&gt;
-&lt;/noscript&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- Yandex.Metrika counter --&gt; &lt;script type=&quot;text/javascript&quot;&gt; (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter21635089 = new Ya.Metrika({ id:21635089, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName(&quot;script&quot;)[0], s = d.createElement(&quot;script&quot;), f = function () { n.parentNode.insertBefore(s, n); }; s.type = &quot;text/javascript&quot;; s.async = true; s.src = &quot;https://mc.yandex.ru/metrika/watch.js&quot;; if (w.opera == &quot;[object Opera]&quot;) { d.addEventListener(&quot;DOMContentLoaded&quot;, f, false); } else { f(); } })(document, window, &quot;yandex_metrika_callbacks&quot;); &lt;/script&gt; &lt;noscript&gt;&lt;div&gt;&lt;img src=&quot;https://mc.yandex.ru/watch/21635089&quot; style=&quot;position:absolute; left:-9999px;&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/noscript&gt; &lt;!-- /Yandex.Metrika counter --&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        &lt;br clear="both"/&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &lt;/div&gt;
+
+
+
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="footer padding"&gt;
+        &lt;div class="wrap"&gt;
+            &lt;div class="copyright-container"&gt;
+                &lt;div class="copyright"&gt;
+                    ©&amp;nbsp;2006–2022&amp;nbsp;StopDesign
+                &lt;/div&gt;
+                &lt;div class="copyright"&gt;
+
+
+
+
+
+
+
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script defer src="/static/js/vendor/popper.min.0269e72ea643.js"&gt;&lt;/script&gt;
+    &lt;script defer src="/static/js/vendor/tippy-bundle.umd.min.118edbc6679c.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        onload = function() {
+            tippy('[data-tippy-content]');
+        };
+
+        document.querySelector("#place_search_input").addEventListener("focus", function () {
+            return document.querySelector("#search_container").classList.add("search_focused");
+        }, true);
+        document.querySelector("#place_search_input").addEventListener("blur", function () {
+            return document.querySelector("#search_container").classList.remove("search_focused");
+        }, true);
+    &lt;/script&gt;
+
+    &lt;script defer src="/static/js/vendor/autoComplete.min.1cd39407a80a.js"&gt;&lt;/script&gt;
+    &lt;script defer src="/static/js/search_1.f07e9e028003.js"&gt;&lt;/script&gt;
+
+    &lt;script async type="text/javascript"&gt; (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter21635089 = new Ya.Metrika({ id:21635089, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); &lt;/script&gt; &lt;noscript&gt;&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/21635089" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;&lt;/noscript&gt;
 &lt;/body&gt;
-&lt;/html&gt;&lt;!-- 0.011 с, 2020.9.21 11:13 --&gt;</value>
+&lt;/html&gt;
+</value>
     </data>
 </root>
